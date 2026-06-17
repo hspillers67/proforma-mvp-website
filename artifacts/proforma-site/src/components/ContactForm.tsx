@@ -20,8 +20,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
+import { useLocation } from "wouter";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -37,7 +37,7 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 export default function ContactForm() {
-  const { toast } = useToast();
+  const [, setLocation] = useLocation();
   const submitContact = useSubmitContact();
 
   const form = useForm<FormValues>({
@@ -66,18 +66,11 @@ export default function ContactForm() {
       },
       {
         onSuccess: () => {
-          toast({
-            title: "Message received.",
-            description: "Our team will be in touch within 24 hours.",
-            variant: "default",
-          });
-          form.reset();
+          setLocation("/thank-you");
         },
         onError: () => {
-          toast({
-            title: "Something went wrong.",
-            description: "Please try submitting the form again.",
-            variant: "destructive",
+          form.setError("root", {
+            message: "Something went wrong. Please try again.",
           });
         },
       }
@@ -188,6 +181,10 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
+
+        {form.formState.errors.root && (
+          <p className="text-sm text-destructive">{form.formState.errors.root.message}</p>
+        )}
 
         <Button 
           type="submit" 
