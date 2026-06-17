@@ -13,13 +13,11 @@ export interface ContactInput {
   /** @minLength 1 */
   name: string;
   email: string;
-  company?: string;
+  /** @nullable */
+  company?: string | null;
   /** @nullable */
   phone?: string | null;
-  /**
-     * Type of project (e.g. Branded Apparel, Tradeshow Giveaways, Signage, Print, Other)
-     * @nullable
-     */
+  /** @nullable */
   projectType?: string | null;
   /** @minLength 1 */
   message: string;
@@ -37,6 +35,14 @@ export interface ContactSubmission {
   projectType?: string | null;
   message: string;
   createdAt: string;
+}
+
+export interface AdminLoginInput {
+  password: string;
+}
+
+export interface AdminLoginResponse {
+  token: string;
 }
 
 export interface ErrorResponse {

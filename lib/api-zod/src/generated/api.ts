@@ -28,10 +28,44 @@ export const HealthCheckResponse = zod.object({
 export const SubmitContactBody = zod.object({
   "name": zod.string().min(1),
   "email": zod.string().email(),
-  "company": zod.string().optional(),
+  "company": zod.string().nullish(),
   "phone": zod.string().nullish(),
-  "projectType": zod.string().nullish().describe('Type of project (e.g. Branded Apparel, Tradeshow Giveaways, Signage, Print, Other)'),
+  "projectType": zod.string().nullish(),
   "message": zod.string().min(1)
 })
+
+
+/**
+ * Validates admin password and returns a session token
+ * @summary Admin login
+ */
+export const AdminLoginBody = zod.object({
+  "password": zod.string()
+})
+
+export const AdminLoginResponse = zod.object({
+  "token": zod.string()
+})
+
+
+/**
+ * Returns all contact form submissions, newest first
+ * @summary List all contact submissions
+ */
+export const ListContactsHeader = zod.object({
+  "x-admin-token": zod.string()
+})
+
+export const ListContactsResponseItem = zod.object({
+  "id": zod.number(),
+  "name": zod.string(),
+  "email": zod.string(),
+  "company": zod.string().nullish(),
+  "phone": zod.string().nullish(),
+  "projectType": zod.string().nullish(),
+  "message": zod.string(),
+  "createdAt": zod.coerce.date()
+})
+export const ListContactsResponse = zod.array(ListContactsResponseItem)
 
 
