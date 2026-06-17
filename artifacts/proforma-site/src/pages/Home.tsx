@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, PenTool, Box, Printer } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import Testimonials from "@/components/Testimonials";
 import logoPath from "@/assets/logo.png";
 
 export default function Home() {
@@ -174,6 +175,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Testimonials Section */}
+        <Testimonials />
 
         {/* Process Section */}
         <section id="process" className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
