@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "LGzqXAnVJzvZ0tocKcacW"
+uri = "file://artifacts/proforma-site/src/assets/apparel.png"
+type = "image"
+title = "premium branded apparel"
+
+[[generated]]
+id = "Fn-dqdFeHsR8DyjqxX-bX"
+uri = "file://artifacts/proforma-site/src/assets/tradeshow.png"
+type = "image"
+title = "modern tradeshow booth"
+
+[[generated]]
+id = "JqRu6CeruE1ep3gke5UEA"
+uri = "file://artifacts/proforma-site/src/assets/signage.png"
+type = "image"
+title = "premium corporate signage"
+
+[[generated]]
+id = "2fMba6KDHDT8iPGdnekVA"
+uri = "file://artifacts/proforma-site/src/assets/kits.png"
+type = "image"
+title = "premium corporate welcome kit"
+
+[[generated]]
+id = "amg7uc_ZONCVBSeHFfIpy"
+uri = "file://artifacts/proforma-site/src/assets/hero.png"
+type = "image"
+title = "abstract modern hero background"
