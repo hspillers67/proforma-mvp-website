@@ -3,6 +3,7 @@ import { ArrowRight, MapPin, PenTool, Box, Printer } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
 import logoPath from "@/assets/logo.png";
+import logoWhitePath from "@/assets/logo-white.png";
 
 export default function Home() {
   return (
@@ -216,20 +217,42 @@ export default function Home() {
             <div className="max-w-5xl mx-auto bg-card border border-border shadow-2xl rounded-3xl overflow-hidden flex flex-col md:flex-row">
               <div className="w-full md:w-5/12 bg-primary p-10 md:p-12 flex flex-col justify-between">
                 <div>
-                  <img src={logoPath} alt="ProForma MVP Marketing" className="h-14 w-auto mb-8 brightness-0 invert" />
+                  <img src={logoWhitePath} alt="ProForma MVP Marketing" className="h-14 w-auto mb-8" />
                   <h3 className="text-3xl font-bold text-white mb-4">Let's talk about your next project.</h3>
                   <p className="text-primary-foreground/70 mb-8">
                     Fill out the form with a few details, and our team will get back to you within 24 hours with strategic recommendations.
                   </p>
 
-                  <div className="space-y-6">
+                  <div className="space-y-5">
                     <div className="flex items-start gap-4 text-primary-foreground/70">
                       <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
                         <MapPin className="w-4 h-4 text-secondary" />
                       </div>
                       <div>
-                        <p className="font-display font-medium text-white">Headquarters</p>
-                        <p className="text-sm">1200 Innovation Drive<br />Suite 400<br />Chicago, IL 60601</p>
+                        <p className="font-display font-medium text-white">Address</p>
+                        <p className="text-sm leading-relaxed">Proforma MVP Marketing<br />22136 Westheimer Parkway #856<br />Katy, TX 77450</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4 text-primary-foreground/70">
+                      <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
+                        <svg className="w-4 h-4 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="font-display font-medium text-white">Email</p>
+                        <a href="mailto:info.mvp@proforma.com" className="text-sm hover:text-white transition-colors">info.mvp@proforma.com</a>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4 text-primary-foreground/70">
+                      <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
+                        <svg className="w-4 h-4 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="font-display font-medium text-white">Phone</p>
+                        <a href="tel:2818313527" className="text-sm hover:text-white transition-colors">281.831.3527</a>
                       </div>
                     </div>
                   </div>
@@ -247,7 +270,7 @@ export default function Home() {
       <footer className="bg-primary text-primary-foreground py-12 border-t border-primary-foreground/10">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <img src={logoPath} alt="ProForma MVP Marketing" className="h-10 w-auto brightness-0 invert" />
+            <img src={logoWhitePath} alt="ProForma MVP Marketing" className="h-10 w-auto" />
             <p className="text-sm text-primary-foreground/50">
               &copy; {new Date().getFullYear()} ProForma MVP Marketing. All rights reserved.
             </p>
