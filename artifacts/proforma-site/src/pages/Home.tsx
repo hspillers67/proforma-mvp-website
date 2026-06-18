@@ -17,6 +17,7 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Services</a>
             <a href="#process" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Process</a>
+            <a href="/blog" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Blog</a>
             <a href="#contact" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Contact</a>
           </nav>
           <a
