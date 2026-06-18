@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MapPin, PenTool, Box, Printer } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
+import { posts } from "@/data/posts";
 import logoPath from "@/assets/logo.png";
 import logoWhitePath from "@/assets/logo-white.png";
 
@@ -180,6 +181,66 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <Testimonials />
+
+        {/* Blog Preview Section */}
+        <section className="py-24 md:py-32 bg-muted/30">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+              <div className="max-w-xl">
+                <div className="text-xs font-display font-semibold tracking-widest uppercase text-secondary mb-3">Resources</div>
+                <h2 className="text-3xl md:text-5xl font-bold text-primary">Latest from the blog</h2>
+              </div>
+              <a href="/blog" className="inline-flex items-center gap-2 text-sm font-display font-semibold text-secondary hover:gap-3 transition-all shrink-0">
+                View all posts <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
+              {posts.slice(0, 2).map((post) => (
+                <motion.a
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4 }}
+                  className="group flex flex-col bg-white border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="w-full aspect-[16/9] overflow-hidden bg-primary/10">
+                    {post.image ? (
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center">
+                        <img src={logoWhitePath} alt="" className="w-1/3 opacity-30" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-7 flex flex-col flex-grow">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs font-display font-semibold text-secondary bg-secondary/10 px-3 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                      <span className="text-xs text-muted-foreground">{post.date}</span>
+                    </div>
+                    <h3 className="font-bold text-primary text-lg leading-snug mb-3 group-hover:text-secondary transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 flex-grow mb-5">
+                      {post.excerpt}
+                    </p>
+                    <span className="inline-flex items-center gap-1.5 text-sm font-display font-semibold text-secondary group-hover:gap-2.5 transition-all">
+                      Read article <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Process Section */}
         <section id="process" className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
