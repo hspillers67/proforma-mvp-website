@@ -60,6 +60,7 @@ export default function Blog() {
             <img src={logoPath} alt="ProForma MVP Marketing" className="h-12 w-auto cursor-pointer" />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Home</Link>
             <Link href="/#services" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Services</Link>
             <Link href="/#process" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Process</Link>
             <Link href="/blog" className="text-sm font-display font-medium text-secondary transition-colors">Blog</Link>

@@ -16,6 +16,7 @@ export default function Home() {
             <img src={logoPath} alt="ProForma MVP Marketing" className="h-12 w-auto" />
           </a>
           <nav className="hidden md:flex items-center gap-8">
+            <a href="/" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Home</a>
             <a href="#services" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Services</a>
             <a href="#process" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Process</a>
             <a href="/blog" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Blog</a>
