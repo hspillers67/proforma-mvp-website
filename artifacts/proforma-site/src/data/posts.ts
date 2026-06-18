@@ -1,3 +1,8 @@
+import imgApparel from "@/assets/blog/branded-apparel-vs-tech-gadgets.jpg";
+import imgCost from "@/assets/blog/real-cost-of-promotional-products.jpg";
+import imgOnboarding from "@/assets/blog/make-onboarding-unforgettable.jpg";
+import imgPlanning from "@/assets/blog/planning-2026-promotional-marketing.png";
+
 export type ContentBlock =
   | { type: "paragraph"; text: string }
   | { type: "heading"; level: 2 | 3; text: string }
@@ -25,7 +30,7 @@ export const posts: Post[] = [
     category: "Giveaway Strategy",
     date: "May 14, 2025",
     readTime: "6 min read",
-    image: null,
+    image: imgApparel,
     content: [
       { type: "paragraph", text: "When it comes to promotional products in the Greater Houston area, one question comes up all the time: Which makes the better giveaway: branded apparel or tech gadgets?" },
       { type: "paragraph", text: "Both have serious marketing power. Branded apparel turns your audience into walking billboards across Katy and the greater Houston area. Tech gadgets, on the other hand, bring instant usefulness and a sleek, modern vibe that connects with today's tech-loving professionals." },
@@ -84,7 +89,7 @@ export const posts: Post[] = [
     category: "Budget & ROI",
     date: "April 28, 2025",
     readTime: "8 min read",
-    image: null,
+    image: imgCost,
     content: [
       { type: "paragraph", text: "Promotional product costs vary widely depending on item type, quantity, and customization — but one thing is consistent: when done well, branded merchandise outperforms almost every other marketing channel in terms of cost per impression." },
       { type: "paragraph", text: "In an era where marketing budgets are under a microscope, every dollar needs to stretch farther. Paid ads get scrolled past, email open rates fluctuate, and social algorithms seem to change by the minute. But that branded hoodie your team handed out at the last event? It's still being worn months later, quietly creating impressions every time someone leaves the house." },
@@ -146,7 +151,7 @@ export const posts: Post[] = [
     category: "Employee Experience",
     date: "March 19, 2025",
     readTime: "5 min read",
-    image: null,
+    image: imgOnboarding,
     content: [
       { type: "paragraph", text: "Onboarding is often seen as a necessary step, but it's really an untapped branding opportunity. It's your first big chance to make employees and clients feel seen, appreciated, and aligned with your culture. Done right, onboarding can lead to better retention, higher satisfaction, and long-lasting loyalty." },
       { type: "heading", level: 2, text: "Key Takeaways" },
@@ -181,7 +186,7 @@ export const posts: Post[] = [
     category: "Planning",
     date: "February 3, 2025",
     readTime: "5 min read",
-    image: null,
+    image: imgPlanning,
     content: [
       { type: "paragraph", text: "Before we all sprint into January with color-coded calendars and ambitious goals, there's one strategic move that separates reactive spending from intentional growth: strategic promotional planning." },
       { type: "paragraph", text: "Promotional products aren't giveaways or trinkets. When used intentionally, they are communication tools that reinforce culture, deepen loyalty, celebrate milestones, and extend your brand long after the moment has passed." },
