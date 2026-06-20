@@ -268,7 +268,7 @@ export default function Home() {
           <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-secondary/20 to-transparent pointer-events-none" />
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-3xl mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">Not just another print shop.</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">Not just another vendor.</h2>
               <p className="text-lg md:text-xl text-primary-foreground/80">
                 We operate as an extension of your marketing team. No more chasing down proofs, worrying about color matching, or stressing about delivery dates.
               </p>
