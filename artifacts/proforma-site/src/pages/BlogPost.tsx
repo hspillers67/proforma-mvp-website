@@ -101,15 +101,15 @@ export default function BlogPost() {
           </Link>
           <nav className="hidden md:flex items-center gap-10">
             <Link href="/" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Home</Link>
-            <Link href="/#services" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Services</Link>
-            <Link href="/#process" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Process</Link>
+            <a href="/#services" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Services</a>
+            <a href="/#process" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
             <Link href="/blog" className="text-sm font-display font-medium text-white hover:text-white transition-colors border-b border-secondary pb-0.5">Blog</Link>
             <Link href="/testimonials" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</Link>
-            <Link href="/#contact" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Contact</Link>
+            <a href="/#contact" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
           </nav>
-          <Link href="/#contact" className="hidden md:inline-flex h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90">
+          <a href="/#contact" className="hidden md:inline-flex h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90">
             Start a Project
-          </Link>
+          </a>
         </div>
       </header>
 
@@ -158,12 +158,12 @@ export default function BlogPost() {
             <p className="text-white/70 mb-6">
               At Proforma MVP Marketing, we help companies across the Greater Houston area design promotional campaigns that make your brand impossible to ignore.
             </p>
-            <Link
+            <a
               href="/#contact"
               className="inline-flex h-12 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90"
             >
               Contact Us Today
-            </Link>
+            </a>
           </div>
         </div>
       </main>

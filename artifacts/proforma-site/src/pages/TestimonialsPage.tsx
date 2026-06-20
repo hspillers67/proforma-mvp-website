@@ -110,18 +110,18 @@ export default function TestimonialsPage() {
           </Link>
           <nav className="hidden md:flex items-center gap-10">
             <Link href="/" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Home</Link>
-            <Link href="/#services" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Services</Link>
-            <Link href="/#process" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Process</Link>
+            <a href="/#services" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Services</a>
+            <a href="/#process" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
             <Link href="/blog" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Blog</Link>
             <Link href="/testimonials" className="text-sm font-display font-medium text-white hover:text-white transition-colors border-b border-secondary pb-0.5">Testimonials</Link>
-            <Link href="/#contact" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Contact</Link>
+            <a href="/#contact" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
           </nav>
-          <Link
+          <a
             href="/#contact"
             className="hidden md:inline-flex h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90"
           >
             Start a Project
-          </Link>
+          </a>
         </div>
       </header>
 
@@ -196,13 +196,13 @@ export default function TestimonialsPage() {
             {/* CTA */}
             <div className="mt-16 text-center">
               <p className="text-muted-foreground mb-6 text-lg">Ready to experience the difference?</p>
-              <Link
+              <a
                 href="/#contact"
                 className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-10 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90"
               >
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </section>
