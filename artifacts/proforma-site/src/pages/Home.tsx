@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Printer, Monitor, Gift, Shirt, Award } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
@@ -15,6 +16,25 @@ import heroSwatchesImg from "@/assets/hero-swatches.png";
 import ourAdvantageImg from "@/assets/our-advantage.jpg";
 
 export default function Home() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const el = document.querySelector(hash);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      const observer = new MutationObserver(() => {
+        const target = document.querySelector(hash);
+        if (target) {
+          observer.disconnect();
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+      setTimeout(() => observer.disconnect(), 3000);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col w-full bg-background selection:bg-secondary selection:text-white">
       {/* Navigation */}
