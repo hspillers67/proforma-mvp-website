@@ -5,6 +5,7 @@ import Testimonials from "@/components/Testimonials";
 import { posts } from "@/data/posts";
 import logoPath from "@/assets/logo.png";
 import logoWhitePath from "@/assets/logo-white.png";
+import companyStoresImg from "@/assets/company-stores.png";
 
 export default function Home() {
   return (
@@ -101,8 +102,8 @@ export default function Home() {
                 {
                   icon: <Monitor className="w-5 h-5" />,
                   title: "Company Stores",
-                  image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&q=80",
-                  description: "Online ordering platforms custom-built for multi-location businesses.",
+                  image: companyStoresImg,
+                  description: "",
                   bullets: ["Custom company web stores", "Multi-location ordering", "Uniform program management", "On-demand fulfillment"],
                 },
                 {
@@ -159,7 +160,7 @@ export default function Home() {
                       style={{ background: "linear-gradient(to top, rgba(0,20,40,0.92) 60%, transparent)" }}
                     >
                       <h3 className="text-white font-bold text-lg leading-snug mb-1">{service.title}</h3>
-                      <p className="text-white/80 text-sm leading-relaxed">{service.description}</p>
+                      {service.description && <p className="text-white/80 text-sm leading-relaxed">{service.description}</p>}
                     </div>
                     {/* Desktop hover overlay — bullets */}
                     <div
