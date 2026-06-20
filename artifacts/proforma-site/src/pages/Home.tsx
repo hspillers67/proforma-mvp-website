@@ -105,14 +105,25 @@ export default function Home() {
           </div>
 
           {/* Right: photo */}
-          <div className="hidden md:block w-5/12 lg:w-1/2 relative overflow-hidden">
-            <img
-              src={heroSwatchesImg}
-              alt="Color branding swatches"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-            />
-            {/* Subtle left fade so copy side blends cleanly */}
-            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent" />
+          <div className="hidden md:flex w-5/12 lg:w-1/2 items-center justify-center py-8 pr-8 pl-4 relative bg-white">
+            {/* Rounded card with soft shadow */}
+            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={heroSwatchesImg}
+                alt="Color branding swatches"
+                className="w-full h-full object-cover object-center"
+              />
+              {/* Left fade — blends into white copy area */}
+              <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white/60 to-transparent pointer-events-none" />
+              {/* Top fade */}
+              <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
+              {/* Bottom fade */}
+              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white/40 to-transparent pointer-events-none" />
+              {/* Very subtle overall softening veil */}
+              <div className="absolute inset-0 bg-white/10 pointer-events-none" />
+            </div>
+            {/* Outer left fade so card blends into the copy column */}
+            <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent pointer-events-none" />
           </div>
         </section>
 
