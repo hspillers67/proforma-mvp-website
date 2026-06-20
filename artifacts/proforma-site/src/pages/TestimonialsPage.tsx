@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import logoWhitePath from "@/assets/logo-white.png";
+import logoHorizontalPath from "@/assets/logo-horizontal.png";
 
 const testimonials = [
   {
@@ -119,7 +120,7 @@ export default function TestimonialsPage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-white/10">
         <div className="mx-auto px-8 h-24 flex items-center justify-between max-w-screen-2xl">
           <Link href="/">
-            <img src={logoWhitePath} alt="ProForma MVP Marketing" className="h-16 w-auto cursor-pointer" />
+            <img src={logoHorizontalPath} alt="ProForma MVP Marketing" className="h-12 w-auto cursor-pointer" style={{ filter: "brightness(0) invert(1)" }} />
           </Link>
           <nav className="hidden md:flex items-center gap-10">
             <Link href="/" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Home</Link>
@@ -226,7 +227,7 @@ export default function TestimonialsPage() {
       <footer className="bg-primary text-primary-foreground py-12 border-t border-primary-foreground/10">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <img src={logoWhitePath} alt="ProForma MVP Marketing" className="h-10 w-auto" />
+            <img src={logoHorizontalPath} alt="ProForma MVP Marketing" className="h-8 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
             <p className="text-sm text-primary-foreground/50">
               &copy; {new Date().getFullYear()} ProForma MVP Marketing. All rights reserved.
             </p>
