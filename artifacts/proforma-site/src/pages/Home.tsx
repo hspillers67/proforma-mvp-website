@@ -96,7 +96,7 @@ export default function Home() {
 
 
         {/* Services Section */}
-        <section id="services" className="py-24 md:py-32 bg-muted/30">
+        <section id="services" className="pt-12 pb-24 md:pt-14 md:pb-32 bg-muted/30">
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
               <div className="max-w-2xl">
