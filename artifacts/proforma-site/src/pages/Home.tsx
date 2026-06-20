@@ -76,21 +76,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Trust Section */}
-        <section className="py-12 border-y border-border bg-white">
-          <div className="container mx-auto px-6">
-            <p className="text-center text-sm font-display font-semibold text-muted-foreground uppercase tracking-widest mb-8">
-              Trusted by marketing teams at growing companies
-            </p>
-            <div className="flex flex-wrap justify-center gap-12 md:gap-24 items-center opacity-40 grayscale">
-              <div className="font-display font-bold text-2xl tracking-tighter">AcmeCorp</div>
-              <div className="font-display font-black text-2xl tracking-widest uppercase">VERTEX</div>
-              <div className="font-display font-medium text-2xl italic">Lumina</div>
-              <div className="font-display font-bold text-2xl tracking-tight">ECHO<span className="font-light">systems</span></div>
-              <div className="font-display font-bold text-2xl">NovaTech</div>
-            </div>
-          </div>
-        </section>
 
         {/* Services Section */}
         <section id="services" className="py-24 md:py-32 bg-muted/30">
