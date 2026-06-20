@@ -64,6 +64,7 @@ export default function Blog() {
             <Link href="/#services" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Services</Link>
             <Link href="/#process" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Process</Link>
             <Link href="/blog" className="text-sm font-display font-medium text-secondary transition-colors">Blog</Link>
+            <Link href="/testimonials" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Testimonials</Link>
             <Link href="/#contact" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Contact</Link>
           </nav>
           <Link href="/#contact" className="hidden md:inline-flex h-10 items-center justify-center rounded-md bg-secondary px-6 text-sm font-display font-medium text-white shadow transition-colors hover:bg-secondary/90">

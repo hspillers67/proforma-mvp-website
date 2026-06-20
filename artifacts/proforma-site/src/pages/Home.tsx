@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Printer, Monitor, Gift, Shirt, Award } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
-import Testimonials from "@/components/Testimonials";
 import { posts } from "@/data/posts";
 import logoPath from "@/assets/logo.png";
 import logoWhitePath from "@/assets/logo-white.png";
@@ -28,6 +27,7 @@ export default function Home() {
             <a href="#services" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Services</a>
             <a href="#process" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
             <a href="/blog" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Blog</a>
+            <a href="/testimonials" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</a>
             <a href="#contact" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
           </nav>
           <a
@@ -204,8 +204,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <Testimonials />
 
         {/* Blog Preview Section */}
         <section className="py-24 md:py-32 bg-muted/30">
