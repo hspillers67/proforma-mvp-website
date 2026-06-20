@@ -111,28 +111,28 @@ export default function Home() {
                   icon: <Gift className="w-5 h-5" />,
                   title: "Promotional Products",
                   image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80",
-                  description: "Unique merchandise that keeps your company brand in front of customers.",
+                  description: "",
                   bullets: ["Giveaways that get noticed", "Event swag that stands out", "Eco-friendly & Made in USA options", "Employee & client gifts that connect"],
                 },
                 {
                   icon: <Shirt className="w-5 h-5" />,
                   title: "Uniforms & Branded Apparel",
                   image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80",
-                  description: "High-quality corporate clothing and team wear.",
+                  description: "",
                   bullets: ["Corporate polos & button-downs", "Branded hoodies & jackets", "Custom headwear & caps", "High-quality safety apparel"],
                 },
                 {
                   icon: <MapPin className="w-5 h-5" />,
                   title: "Tradeshows & Events",
                   image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
-                  description: "Attention-grabbing displays and giveaways to make your booth stand out.",
+                  description: "",
                   bullets: ["Retractable banner stands", "Custom table throws", "Event booth backdrops", "Popular attendee giveaways"],
                 },
                 {
                   icon: <Printer className="w-5 h-5" />,
                   title: "Print & Signage",
                   image: "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=600&q=80",
-                  description: "Professional banners, signage, brochures, business cards and print marketing pieces.",
+                  description: "",
                   bullets: ["Business cards & stationery", "Marketing brochures & flyers", "Large-format window graphics", "Outdoor & indoor event signs"],
                 },
                 {
@@ -141,7 +141,6 @@ export default function Home() {
                   image: recognitionImg,
                   description: "",
                   bullets: ["Engraved glass & crystal awards", "Employee anniversary gifts", "Premium corporate plaques", "Luxury custom gifts"],
-                  largeHover: true,
                 },
               ].map((service) => (
                 <motion.div
@@ -169,10 +168,10 @@ export default function Home() {
                       className="absolute inset-0 flex flex-col justify-center px-6 py-6 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
                       style={{ background: "rgba(0,20,40,0.88)" }}
                     >
-                      <h3 className={`text-white font-bold mb-5 ${service.largeHover ? "text-3xl" : "text-lg"}`}>{service.title}</h3>
-                      <ul className={service.largeHover ? "space-y-4" : "space-y-3"}>
+                      <h3 className="text-white font-bold mb-5 text-3xl">{service.title}</h3>
+                      <ul className="space-y-4">
                         {service.bullets.map((b) => (
-                          <li key={b} className={`flex items-start gap-3 text-white ${service.largeHover ? "text-xl font-medium" : "text-sm"}`}>
+                          <li key={b} className="flex items-start gap-3 text-white text-xl font-medium">
                             <span className="text-secondary font-bold mt-0.5">▸</span>
                             {b}
                           </li>
