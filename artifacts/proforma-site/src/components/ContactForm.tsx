@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useSubmitContact } from "@workspace/api-client-react";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -36,9 +36,15 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
+function encodeFormData(data: Record<string, string>) {
+  return Object.entries(data)
+    .map(([k, v]) => encodeURIComponent(k) + "=" + encodeURIComponent(v))
+    .join("&");
+}
+
 export default function ContactForm() {
   const [, setLocation] = useLocation();
-  const submitContact = useSubmitContact();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -52,34 +58,42 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(data: FormValues) {
-    submitContact.mutate(
-      {
-        data: {
+  async function onSubmit(data: FormValues) {
+    setIsSubmitting(true);
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeFormData({
+          "form-name": "contact",
           name: data.name,
           email: data.email,
           company: data.company,
-          phone: data.phone || null,
+          phone: data.phone ?? "",
           projectType: data.projectType,
           message: data.message,
-        },
-      },
-      {
-        onSuccess: () => {
-          setLocation("/thank-you");
-        },
-        onError: () => {
-          form.setError("root", {
-            message: "Something went wrong. Please try again.",
-          });
-        },
-      }
-    );
+        }),
+      });
+      setLocation("/thank-you");
+    } catch {
+      form.setError("root", {
+        message: "Something went wrong. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form
+        name="contact"
+        data-netlify="true"
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormField
             control={form.control}
@@ -171,10 +185,10 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Project Details</FormLabel>
               <FormControl>
-                <Textarea 
-                  placeholder="Tell us about timelines, quantities, or specific challenges..." 
-                  className="min-h-[120px] resize-none bg-background" 
-                  {...field} 
+                <Textarea
+                  placeholder="Tell us about timelines, quantities, or specific challenges..."
+                  className="min-h-[120px] resize-none bg-background"
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
@@ -186,12 +200,12 @@ export default function ContactForm() {
           <p className="text-sm text-destructive">{form.formState.errors.root.message}</p>
         )}
 
-        <Button 
-          type="submit" 
+        <Button
+          type="submit"
           className="w-full h-12 text-base font-semibold bg-secondary hover:bg-secondary/90 text-white shadow-md transition-all"
-          disabled={submitContact.isPending}
+          disabled={isSubmitting}
         >
-          {submitContact.isPending ? (
+          {isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-5 w-5 animate-spin" />
               Sending...
