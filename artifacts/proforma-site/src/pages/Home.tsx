@@ -102,7 +102,7 @@ export default function Home() {
                 {
                   icon: <Monitor className="w-5 h-5" />,
                   title: "Company Stores",
-                  image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
+                  image: companyStoresImg,
                   description: "",
                   bullets: ["Custom company web stores", "Multi-location ordering", "Uniform program management", "On-demand fulfillment"],
                 },
