@@ -82,7 +82,7 @@ export default function Home() {
                 <span className="text-primary">EVERYWHERE.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
-                The go-to Houston-area partner for businesses who need fast, professional promotional products, branded apparel, and custom printing without the usual headache.
+                From branded merch and apparel to print and signage, we make it easy to get your brand out there—and handle every detail as if it were our own.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
