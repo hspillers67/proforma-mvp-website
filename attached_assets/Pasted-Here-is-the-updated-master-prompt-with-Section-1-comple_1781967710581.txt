@@ -1,0 +1,94 @@
+Here is the updated master prompt with Section 1 completely removed so Replit will not touch your navigation bar.
+You can copy and paste this text block straight into your Replit AI Agent chat box to safely update the rest of your page.
+------------------------------
+Copy and paste this exact text into your Replit AI Agent chat:
+
+Please use the text, image links, and styling rules below to update our website homepage, starting from the Hero section down through the Services section. Leave the navigation bar completely untouched.
+
+=========================================
+1. HERO SECTION (ABOVE THE FOLD)
+=========================================
+- Background Image: Use this colorful creative branding workspace photo URL: https://unsplash.com
+- Layout Rule: Center the background image. Add a clean, white semi-transparent card or soft text overlay so that our dark text is 100% sharp and easy to read over the colorful background.
+- Pill Tag Style: Solid, bold dark magenta background with bold white text reading: "STRATEGIC BRAND PARTNERS"
+- Agency Name (Above Main Headline): "Proforma MVP Marketing"
+- Main Bold Headline: "Branded merchandise done right."
+- Subheadline: "We are the go-to Houston-area partner for businesses who need fast, professional promotional products, branded apparel, and custom printing without the usual headache."
+- Button 1 (Primary): [Let's Talk Project →] (Solid dark magenta background)
+- Button 2 (Secondary): [Explore Services] (White/Clear background with a clean dark border)
+
+=========================================
+2. SERVICES GRID SECTION (MOBILE RESPONSIVE)
+=========================================
+- Section Headline: Rename this entire section title to read simply: "Services"
+- Mobile-Friendly Layout Rule: On desktop screens, use a smooth CSS hover overlay on each card to reveal the bulleted details. On mobile screens (under 768px wide), automatically disable the hover effect and stack the cards into a single column, making all of the bulleted text fully visible and readable as the user scrolls.
+
+Grid Items & Details:
+
+1. Company Stores
+- Image: A clean professional photo representing online company stores or fulfillment.
+- Main Description: Online ordering platforms custom-built for multi-location businesses.
+- Hover/Mobile Details:
+  * Custom company web stores
+  * Multi-location ordering
+  * Uniform program management
+  * On-demand fulfillment
+
+2. Promotional Products
+- Image: A clean professional photo representing high-end promotional items.
+- Main Description: Unique merchandise that keeps your company brand in front of customers.
+- Hover/Mobile Details:
+  * Giveaways that get noticed
+  * Event swag that stands out
+  * Eco-friendly and Made in USA options
+  * Employee & client gifts that connect
+
+3. Uniforms & Branded Apparel
+- Image: A clean professional photo representing high-quality corporate clothing.
+- Main Description: High-quality corporate clothing and team wear.
+- Hover/Mobile Details:
+  * Corporate polos & button-downs
+  * Branded hoodies & jackets
+  * Custom headwear & caps
+  * High-quality safety apparel
+
+4. Tradeshows & Events
+- Image: A clean professional photo representing modern event displays or booth setups.
+- Main Description: Attention-grabbing displays and giveaways to make your booth stand out.
+- Hover/Mobile Details:
+  * Retractable banner stands
+  * Custom table throws
+  * Event booth backdrops
+  * Popular attendee giveaways
+
+5. Print & Signage
+- Image: A clean professional photo representing high-quality marketing print materials.
+- Main Description: Professional banners, signage, brochures, business card and print marketing pieces.
+- Hover/Mobile Details:
+  * Business cards & stationary
+  * Marketing brochures & flyers
+  * Large-format window graphics
+  * Outdoor & indoor event signs
+
+6. Recognition & Incentives
+- Image: A clean professional photo representing premium corporate awards or gifts.
+- Main Description: Recognition and awards your team deserves.
+- Hover/Mobile Details:
+  * Engraved glass & crystal awards
+  * Employee anniversary gifts
+  * Premium corporate plaques
+  * Luxury custom gifts
+
+=========================================
+3. WHY WORK WITH US SECTION
+=========================================
+- Headline: "Why Houston-Area Businesses Work With Us"
+- Paragraph 1: "The Power of Proforma: You get one responsive local contact backed by the buying power and supplier network of Proforma."
+- Paragraph 2: "Built on Real Experience: As a former marketing director, our founder understands deadlines, brand standards, and the pressure to make the right choice the first time. We are proudly based in Katy and serve clients all across the Greater Houston area."
+
+- Final Call to Action Button: [Get a Free Quote]
+
+------------------------------
+Go ahead and drop that update in with the Agent!
+Once it builds out your new hero space and your card rows, check out your live screen. Does the new Services layout and your bold Pill Tag capture the high-end look you want?
+

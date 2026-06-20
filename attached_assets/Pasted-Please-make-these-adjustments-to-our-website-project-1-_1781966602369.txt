@@ -1,0 +1,54 @@
+Please make these adjustments to our website project:
+
+1. Hero Button Update:
+- Change the button text in the main hero section from "Explore Capabilities" to "Explore Services."
+
+2. Services Description Updates:
+Please update the descriptions for these two specific items to match this exact text:
+- Print & Signage: "Professional banners, signage, brochures, business card and print marketing pieces."
+- Recognition & Incentives: "Recognition and awards your team deserves."
+
+3. Restore Images and Add Interactive Hover Effect:
+- Please bring back the images for all 6 service blocks in the grid. If an image is missing for a new category, use a high-quality placeholder image that fits a professional B2B marketing theme.
+- Make each service block interactive by adding a CSS hover overlay effect. 
+- When a user hovers their mouse over a service block, a smooth overlay should appear on top of the image to reveal a short bulleted list of ideas. 
+
+Please use these exact expansion points for the hover details (which will also help with our SEO):
+
+- Company Stores hover details:
+  * Custom company web stores
+  * Multi-location ordering
+  * Uniform program management
+  * On-demand fulfillment
+
+- Promotional Products hover details:
+  * Branded pens and notebooks
+  * Custom drinkware & tumblers
+  * Tech gadgets & chargers
+  * Eco-friendly corporate gifts
+
+- Uniforms & Branded Apparel hover details:
+  * Corporate polos & button-downs
+  * Branded hoodies & jackets
+  * Custom headwear & caps
+  * High-quality safety apparel
+
+- Tradeshows & Events hover details:
+  * Retractable banner stands
+  * Custom table throws
+  * Event booth backdrops
+  * Popular attendee giveaways
+
+- Print & Signage hover details:
+  * Business cards & stationary
+  * Marketing brochures & flyers
+  * Large-format window graphics
+  * Outdoor & indoor event signs
+
+- Recognition & Incentives hover details:
+  * Engraved glass & crystal awards
+  * Employee anniversary gifts
+  * Premium corporate plaques
+  * Luxury custom gifts
+
+Please apply these layout updates and verify that the hover animation is smooth on desktop screens.

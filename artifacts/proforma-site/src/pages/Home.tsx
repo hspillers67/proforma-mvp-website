@@ -35,8 +35,12 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative overflow-hidden pt-24 pb-32 md:pt-32 md:pb-40">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/50 z-10" />
-            <img src="/src/assets/hero.png" alt="Abstract modern architectural background" className="w-full h-full object-cover opacity-20" />
+            <img
+              src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1920&q=80"
+              alt="Creative branding workspace"
+              className="w-full h-full object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-white/80" />
           </div>
 
           <div className="container relative z-10 mx-auto px-6">
@@ -46,15 +50,18 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <span className="inline-block py-1 px-3 rounded-full bg-secondary/10 text-secondary text-sm font-display font-semibold tracking-wider uppercase mb-6 border border-secondary/20">
+                <span className="inline-block py-1.5 px-4 rounded-full bg-secondary text-white text-sm font-display font-bold tracking-wider uppercase mb-6 shadow-sm">
                   Strategic Brand Partners
                 </span>
+                <p className="text-sm font-display font-semibold text-primary/60 tracking-widest uppercase mb-3">
+                  Proforma MVP Marketing
+                </p>
                 <h1 className="text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] tracking-tight mb-8">
                   Branded merchandise <br />
                   <span className="text-secondary">done right.</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
-                  We are the go-to partner for mid-market marketers who need fast, professional promotional products without the usual headache.
+                  We are the go-to Houston-area partner for businesses who need fast, professional promotional products, branded apparel, and custom printing without the usual headache.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
@@ -66,9 +73,9 @@ export default function Home() {
                   </a>
                   <a
                     href="#services"
-                    className="inline-flex h-14 items-center justify-center rounded-md border border-input bg-background px-8 text-base font-display font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                    className="inline-flex h-14 items-center justify-center rounded-md border-2 border-primary bg-white px-8 text-base font-display font-semibold text-primary shadow-sm transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                   >
-                    Explore Capabilities
+                    Explore Services
                   </a>
                 </div>
               </motion.div>
@@ -92,46 +99,89 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
-                  icon: <Monitor className="w-6 h-6" />,
+                  icon: <Monitor className="w-5 h-5" />,
                   title: "Company Stores",
+                  image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&q=80",
                   description: "Online ordering platforms custom-built for multi-location businesses.",
+                  bullets: ["Custom company web stores", "Multi-location ordering", "Uniform program management", "On-demand fulfillment"],
                 },
                 {
-                  icon: <Gift className="w-6 h-6" />,
+                  icon: <Gift className="w-5 h-5" />,
                   title: "Promotional Products",
+                  image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80",
                   description: "Unique merchandise that keeps your company brand in front of customers.",
+                  bullets: ["Giveaways that get noticed", "Event swag that stands out", "Eco-friendly & Made in USA options", "Employee & client gifts that connect"],
                 },
                 {
-                  icon: <Shirt className="w-6 h-6" />,
+                  icon: <Shirt className="w-5 h-5" />,
                   title: "Uniforms & Branded Apparel",
+                  image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80",
                   description: "High-quality corporate clothing and team wear.",
+                  bullets: ["Corporate polos & button-downs", "Branded hoodies & jackets", "Custom headwear & caps", "High-quality safety apparel"],
                 },
                 {
-                  icon: <MapPin className="w-6 h-6" />,
+                  icon: <MapPin className="w-5 h-5" />,
                   title: "Tradeshows & Events",
+                  image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
                   description: "Attention-grabbing displays and giveaways to make your booth stand out.",
+                  bullets: ["Retractable banner stands", "Custom table throws", "Event booth backdrops", "Popular attendee giveaways"],
                 },
                 {
-                  icon: <Printer className="w-6 h-6" />,
+                  icon: <Printer className="w-5 h-5" />,
                   title: "Print & Signage",
-                  description: "Professional banners, brochures, business cards, and print marketing pieces.",
+                  image: "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=600&q=80",
+                  description: "Professional banners, signage, brochures, business cards and print marketing pieces.",
+                  bullets: ["Business cards & stationery", "Marketing brochures & flyers", "Large-format window graphics", "Outdoor & indoor event signs"],
                 },
                 {
-                  icon: <Award className="w-6 h-6" />,
+                  icon: <Award className="w-5 h-5" />,
                   title: "Recognition & Incentives",
-                  description: "Premium corporate rewards to celebrate your team's hard work.",
+                  image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&q=80",
+                  description: "Recognition and awards your team deserves.",
+                  bullets: ["Engraved glass & crystal awards", "Employee anniversary gifts", "Premium corporate plaques", "Luxury custom gifts"],
                 },
               ].map((service) => (
                 <motion.div
                   key={service.title}
                   whileHover={{ y: -4 }}
-                  className="group rounded-2xl bg-card border border-border shadow-sm hover:shadow-lg transition-all duration-300 p-8"
+                  className="group rounded-2xl bg-card border border-border shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
                 >
-                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-6">
-                    {service.icon}
+                  {/* Image with hover overlay (desktop) */}
+                  <div className="relative w-full aspect-[4/3] overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    {/* Desktop hover overlay */}
+                    <div className="absolute inset-0 bg-primary/90 flex flex-col justify-center px-6 py-5 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                      <ul className="space-y-2.5">
+                        {service.bullets.map((b) => (
+                          <li key={b} className="flex items-start gap-2.5 text-white text-sm">
+                            <span className="text-secondary font-bold mt-0.5">▸</span>
+                            {b}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                  {/* Card body */}
+                  <div className="p-6">
+                    <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-4">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-secondary transition-colors">{service.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
+                    {/* Mobile-only bullets — always visible */}
+                    <ul className="mt-4 space-y-1.5 md:hidden">
+                      {service.bullets.map((b) => (
+                        <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <span className="text-secondary font-bold mt-0.5">▸</span>
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -228,6 +278,72 @@ export default function Home() {
                 <h4 className="text-xl font-bold mb-3">Predictable Delivery</h4>
                 <p className="text-primary-foreground/70">We manage the timelines aggressively. If an event is on Thursday, your materials are there on Tuesday. No exceptions, no excuses.</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Work With Us Section */}
+        <section className="py-24 md:py-32 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="text-xs font-display font-semibold tracking-widest uppercase text-secondary mb-4">Our Advantage</div>
+                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 leading-tight">
+                  Why Houston-Area Businesses Work With Us
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1">
+                      <span className="text-secondary font-bold text-sm">01</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-primary mb-1">The Power of Proforma</h4>
+                      <p className="text-muted-foreground leading-relaxed">You get one responsive local contact backed by the buying power and supplier network of Proforma.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1">
+                      <span className="text-secondary font-bold text-sm">02</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-primary mb-1">Built on Real Experience</h4>
+                      <p className="text-muted-foreground leading-relaxed">As a former marketing director, our founder understands deadlines, brand standards, and the pressure to make the right choice the first time. We are proudly based in Katy and serve clients all across the Greater Houston area.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-10">
+                  <a
+                    href="#contact"
+                    className="inline-flex h-12 items-center justify-center rounded-md bg-secondary px-8 text-sm font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90"
+                  >
+                    Get a Free Quote
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </a>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80"
+                  alt="Houston area marketing team collaborating"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-white font-display font-semibold text-lg leading-snug">Proudly based in Katy, TX — serving the Greater Houston area.</p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
