@@ -7,6 +7,7 @@ import logoPath from "@/assets/logo.png";
 import logoWhitePath from "@/assets/logo-white.png";
 import companyStoresImg from "@/assets/company-stores.png";
 import recognitionImg from "@/assets/recognition-incentives.png";
+import apparelImg from "@/assets/apparel.png";
 
 export default function Home() {
   return (
@@ -117,7 +118,7 @@ export default function Home() {
                 {
                   icon: <Shirt className="w-5 h-5" />,
                   title: "Uniforms & Branded Apparel",
-                  image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80",
+                  image: apparelImg,
                   description: "",
                   bullets: ["Corporate polos & button-downs", "Branded hoodies & jackets", "Custom headwear & caps", "High-quality safety apparel"],
                 },
