@@ -1,8 +1,8 @@
 import { Link, useParams } from "wouter";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
 import { getPost, type ContentBlock } from "@/data/posts";
-import logoPath from "@/assets/logo.png";
 import logoWhitePath from "@/assets/logo-white.png";
+import logoHorizontalPath from "@/assets/logo-horizontal.png";
 
 function Block({ block }: { block: ContentBlock }) {
   switch (block.type) {
@@ -94,25 +94,26 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Nav */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border/50">
-        <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-white/10">
+        <div className="mx-auto px-8 h-24 flex items-center justify-between max-w-screen-2xl">
           <Link href="/">
-            <img src={logoPath} alt="ProForma MVP Marketing" className="h-12 w-auto cursor-pointer" />
+            <img src={logoHorizontalPath} alt="ProForma MVP Marketing" className="h-12 w-auto cursor-pointer" style={{ filter: "brightness(0) invert(1)" }} />
           </Link>
-          <nav className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Home</Link>
-            <Link href="/#services" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Services</Link>
-            <Link href="/#process" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Process</Link>
-            <Link href="/blog" className="text-sm font-display font-medium text-secondary transition-colors">Blog</Link>
-            <Link href="/#contact" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Contact</Link>
+          <nav className="hidden md:flex items-center gap-10">
+            <Link href="/" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Home</Link>
+            <Link href="/#services" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Services</Link>
+            <Link href="/#process" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Process</Link>
+            <Link href="/blog" className="text-sm font-display font-medium text-white hover:text-white transition-colors border-b border-secondary pb-0.5">Blog</Link>
+            <Link href="/testimonials" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</Link>
+            <Link href="/#contact" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Contact</Link>
           </nav>
-          <Link href="/#contact" className="hidden md:inline-flex h-10 items-center justify-center rounded-md bg-secondary px-6 text-sm font-display font-medium text-white shadow transition-colors hover:bg-secondary/90">
+          <Link href="/#contact" className="hidden md:inline-flex h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90">
             Start a Project
           </Link>
         </div>
       </header>
 
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-24">
         {/* Hero */}
         <div className="w-full aspect-[21/6] md:aspect-[21/5] bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center overflow-hidden">
           {post.image ? (
