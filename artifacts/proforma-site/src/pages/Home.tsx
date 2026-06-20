@@ -42,7 +42,7 @@ export default function Home() {
 
       <main className="flex-grow pt-24">
         {/* Hero Section — Split Layout */}
-        <section className="relative overflow-hidden flex min-h-[75vh]">
+        <section className="relative overflow-hidden flex min-h-[70vh]">
           {/* Left: copy */}
           <div className="flex-1 bg-white flex items-center py-20 px-8 md:px-16 lg:px-24">
             <motion.div
