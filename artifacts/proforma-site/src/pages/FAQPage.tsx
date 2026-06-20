@@ -133,7 +133,7 @@ export default function FAQPage() {
           </Link>
           <nav className="hidden md:flex items-center gap-10">
             <Link href="/" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Home</Link>
-            <a href="/#services" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Services</a>
+            <a href="/#services" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Capabilities</a>
             <a href="/#process" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
             <Link href="/blog" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Blog</Link>
             <Link href="/testimonials" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</Link>

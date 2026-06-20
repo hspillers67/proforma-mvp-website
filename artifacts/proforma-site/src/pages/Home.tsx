@@ -45,7 +45,7 @@ export default function Home() {
           </a>
           <nav className="hidden md:flex items-center gap-10">
             <a href="/" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Home</a>
-            <a href="#services" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Services</a>
+            <a href="#services" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Capabilities</a>
             <a href="#process" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
             <a href="/blog" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Blog</a>
             <a href="/testimonials" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</a>
@@ -98,7 +98,7 @@ export default function Home() {
                   href="#services"
                   className="inline-flex h-14 items-center justify-center rounded-md border-2 border-primary bg-white px-8 text-base font-display font-semibold text-primary shadow-sm transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                 >
-                  Explore Services
+                  Explore Capabilities
                 </a>
               </div>
             </motion.div>
@@ -122,7 +122,7 @@ export default function Home() {
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
               <div className="max-w-2xl">
-                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">Services</h2>
+                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">Capabilities</h2>
                 <p className="text-lg text-muted-foreground">
                   From Fortune 500 swag drops to your startup's first major trade show, we handle the logistics, quality control, and execution.
                 </p>
