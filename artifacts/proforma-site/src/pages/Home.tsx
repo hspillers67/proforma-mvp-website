@@ -8,6 +8,7 @@ import logoWhitePath from "@/assets/logo-white.png";
 import companyStoresImg from "@/assets/company-stores.png";
 import recognitionImg from "@/assets/recognition-incentives.png";
 import apparelImg from "@/assets/apparel.png";
+import promoProductsImg from "@/assets/promo-products.png";
 
 export default function Home() {
   return (
@@ -111,7 +112,7 @@ export default function Home() {
                 {
                   icon: <Gift className="w-5 h-5" />,
                   title: "Promotional Products",
-                  image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80",
+                  image: promoProductsImg,
                   description: "",
                   bullets: ["Giveaways that get noticed", "Event swag that stands out", "Eco-friendly & Made in USA options", "Employee & client gifts that connect"],
                 },
