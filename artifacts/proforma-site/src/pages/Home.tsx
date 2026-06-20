@@ -12,6 +12,7 @@ import promoProductsImg from "@/assets/promo-products.png";
 import printSignageImg from "@/assets/print-signage.jpg";
 import tradeshowsImg from "@/assets/tradeshows-events.png";
 import heroSwatchesImg from "@/assets/hero-swatches.png";
+import ourAdvantageImg from "@/assets/our-advantage.jpg";
 
 export default function Home() {
   return (
@@ -327,7 +328,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-bold text-primary mb-1">Built on Real Experience</h4>
-                      <p className="text-muted-foreground leading-relaxed">As a former marketing director, our founder understands deadlines, brand standards, and the pressure to make the right choice the first time. We are proudly based in Katy and serve clients all across the Greater Houston area.</p>
+                      <p className="text-muted-foreground leading-relaxed">As a former marketing director, our founder understands deadlines, brand standards, and the pressure to make the right choice the first time. We are proudly based in Katy and serve clients all across the Greater Houston area, Texas, and beyond.</p>
                     </div>
                   </div>
                 </div>
@@ -347,17 +348,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]"
+                className="rounded-2xl overflow-hidden shadow-2xl"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80"
-                  alt="Houston area marketing team collaborating"
-                  className="w-full h-full object-cover"
+                  src={ourAdvantageImg}
+                  alt="Proforma branded promotional products on the beach"
+                  className="w-full h-auto block"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-white font-display font-semibold text-lg leading-snug">Proudly based in Katy, TX — serving the Greater Houston area.</p>
-                </div>
               </motion.div>
             </div>
           </div>
