@@ -141,6 +141,7 @@ export default function Home() {
                   image: recognitionImg,
                   description: "",
                   bullets: ["Engraved glass & crystal awards", "Employee anniversary gifts", "Premium corporate plaques", "Luxury custom gifts"],
+                  largeHover: true,
                 },
               ].map((service) => (
                 <motion.div
@@ -168,10 +169,10 @@ export default function Home() {
                       className="absolute inset-0 flex flex-col justify-center px-6 py-6 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
                       style={{ background: "rgba(0,20,40,0.88)" }}
                     >
-                      <h3 className="text-white font-bold text-lg mb-4">{service.title}</h3>
-                      <ul className="space-y-2.5">
+                      <h3 className={`text-white font-bold mb-4 ${service.largeHover ? "text-2xl" : "text-lg"}`}>{service.title}</h3>
+                      <ul className="space-y-3">
                         {service.bullets.map((b) => (
-                          <li key={b} className="flex items-start gap-2.5 text-white text-sm">
+                          <li key={b} className={`flex items-start gap-2.5 text-white ${service.largeHover ? "text-base" : "text-sm"}`}>
                             <span className="text-secondary font-bold mt-0.5">▸</span>
                             {b}
                           </li>
