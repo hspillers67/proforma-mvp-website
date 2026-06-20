@@ -6,88 +6,74 @@ import logoHorizontalPath from "@/assets/logo-horizontal.png";
 
 const testimonials = [
   {
+    name: "Arin Ennis",
+    quote:
+      "Just placed my second bulk order with Proforma for my small business. Holly has been so lovely and so helpful to work with. I've been incredibly pleased with the customer service, prompt response time, and level of care during the ordering process. The products have been exactly as pictured and I look forward to more orders in the future!",
+  },
+  {
     name: "Mariya Richardson",
     quote:
       "Holly at Proforma MVP Marketing was fantastic to work with. I ordered logo'd bags for a trade show, and they were a huge hit with everyone who stopped by our booth. Holly was communicative, professional, and made the entire process easy from start to finish.",
-    timeAgo: "2 months ago",
   },
   {
     name: "Denise Copeland",
     quote:
       "Holly/Proforma MVP Marketing are incredible! I placed a last-minute order of monogrammed golf gloves, and they were able to process and get the gloves to me way ahead of schedule. They never cease to amaze me, and the quality is always first class!",
-    timeAgo: "3 months ago",
   },
   {
     name: "Lexi Terrault",
     quote:
       "I can't say enough great things about this team! They're an absolute pleasure to work with — professional, responsive, and always deliver top-quality products. Even with rush jobs and tight deadlines, they consistently come through.",
-    timeAgo: "7 months ago",
   },
   {
     name: "Julio Fuentes",
     quote:
       "Holly and her team are fantastic to work with. They are prompt, fast at communicating with you, and have a staff that works hard to make your vision become a reality.",
-    timeAgo: "1 year ago",
   },
   {
     name: "Donna Struchen",
     quote:
       "I have been dealing with Proforma MVP Marketing for 3 years and have found their service and cooperation above and beyond my expectations. Their service representative is more than willing to go the extra mile to satisfy the customer.",
-    timeAgo: "6 years ago",
   },
   {
     name: "Amanda Garza",
     quote:
       "Highly efficient group of people. This company is very reliable and all of their employees are super friendly as well. Above all, great prices! Highly recommend to everyone!",
-    timeAgo: "6 years ago",
-  },
-  {
-    name: "Arin Ennis",
-    quote:
-      "Just placed my second bulk order with Proforma for my small business. Holly has been so lovely and so helpful to work with. I've been incredibly pleased with the customer service, prompt response time, and level of care during the ordering process. The products have been exactly as pictured and I look forward to more orders in the future!",
-    timeAgo: "Yesterday",
   },
   {
     name: "Marie Pham",
     quote:
       "I have been doing business with this company for a few years now. They are professional, punctual and have exactly what we are looking for, for our company uniforms. Thank you for the excellent service!",
-    timeAgo: "21 weeks ago",
   },
   {
     name: "David Hoke",
     quote:
       "Proforma's customer service is second to none!! Their account managers are very knowledgeable, and they deliver a great product at a fair price. I would highly recommend contacting Proforma for any of your marketing needs.",
-    timeAgo: "Aug 1, 2019",
   },
   {
     name: "Holly Buckels",
     quote:
       "Proforma always offers creative options. I love working with them. All of our orders have been fulfilled and delivered exactly as planned.",
-    timeAgo: "Jul 30, 2019",
   },
   {
     name: "John & Susan Leonard",
     quote:
       "I've used them personally and for business. They are great for anything from promotional items for work, chocolates for holidays for clients, to wedding giveaways, etc. They are easy to work with, ship quickly and always have wonderful customer service. I will always use Proforma for all of my marketing and gift needs!",
-    timeAgo: "Jul 25, 2019",
   },
   {
     name: "Roland",
     quote:
       "Always enjoy working with Keith Leonard and everyone at Proforma. They have a huge selection of promotional products with great prices and very fast delivery.",
-    timeAgo: "Jul 23, 2019",
   },
   {
     name: "Cathy Rath",
     quote:
       "The service I received was excellent, and the product I ordered — blue pens — with my business information were high quality and a very good price. I recommend Proforma MVP Marketing to any business owner who wants to get noticed.",
-    timeAgo: "Jul 22, 2019",
   },
   {
     name: "ARP Materials",
     quote:
       "We've been working with Proforma for about a year. Great products and wonderful customer service. Very thorough! Thank you for the service.",
-    timeAgo: "Jul 18, 2019",
   },
 ];
 
@@ -195,7 +181,6 @@ export default function TestimonialsPage() {
                   <div className="pt-2 border-t border-border/60 flex items-center justify-between">
                     <div>
                       <p className="font-display font-semibold text-primary text-sm">{t.name}</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">{t.timeAgo}</p>
                     </div>
                     <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" aria-label="Google">
                       <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
