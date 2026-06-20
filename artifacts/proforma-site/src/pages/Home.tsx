@@ -144,17 +144,29 @@ export default function Home() {
                 <motion.div
                   key={service.title}
                   whileHover={{ y: -4 }}
-                  className="group rounded-2xl bg-card border border-border shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  className="group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
                 >
-                  {/* Image with hover overlay (desktop) */}
+                  {/* Image + overlays */}
                   <div className="relative w-full aspect-[4/3] overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    {/* Desktop hover overlay */}
-                    <div className="absolute inset-0 bg-primary/90 flex flex-col justify-center px-6 py-5 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                    {/* Permanent bottom text — always visible, fades out on hover (desktop) */}
+                    <div
+                      className="absolute inset-x-0 bottom-0 px-6 py-5 transition-opacity duration-300 md:group-hover:opacity-0"
+                      style={{ background: "linear-gradient(to top, rgba(0,20,40,0.92) 60%, transparent)" }}
+                    >
+                      <h3 className="text-white font-bold text-lg leading-snug mb-1">{service.title}</h3>
+                      <p className="text-white/80 text-sm leading-relaxed">{service.description}</p>
+                    </div>
+                    {/* Desktop hover overlay — bullets */}
+                    <div
+                      className="absolute inset-0 flex flex-col justify-center px-6 py-6 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ background: "rgba(0,20,40,0.88)" }}
+                    >
+                      <h3 className="text-white font-bold text-lg mb-4">{service.title}</h3>
                       <ul className="space-y-2.5">
                         {service.bullets.map((b) => (
                           <li key={b} className="flex items-start gap-2.5 text-white text-sm">
@@ -165,17 +177,11 @@ export default function Home() {
                       </ul>
                     </div>
                   </div>
-                  {/* Card body */}
-                  <div className="p-6">
-                    <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-4">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-secondary transition-colors">{service.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
-                    {/* Mobile-only bullets — always visible */}
-                    <ul className="mt-4 space-y-1.5 md:hidden">
+                  {/* Mobile bullets — always visible below image */}
+                  <div className="md:hidden px-6 py-4" style={{ background: "rgba(0,20,40,0.95)" }}>
+                    <ul className="space-y-2">
                       {service.bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <li key={b} className="flex items-start gap-2 text-sm text-white/85">
                           <span className="text-secondary font-bold mt-0.5">▸</span>
                           {b}
                         </li>
