@@ -6,6 +6,7 @@ import { posts } from "@/data/posts";
 import logoPath from "@/assets/logo.png";
 import logoWhitePath from "@/assets/logo-white.png";
 import companyStoresImg from "@/assets/company-stores.png";
+import recognitionImg from "@/assets/recognition-incentives.png";
 
 export default function Home() {
   return (
@@ -137,8 +138,8 @@ export default function Home() {
                 {
                   icon: <Award className="w-5 h-5" />,
                   title: "Recognition & Incentives",
-                  image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&q=80",
-                  description: "Recognition and awards your team deserves.",
+                  image: recognitionImg,
+                  description: "",
                   bullets: ["Engraved glass & crystal awards", "Employee anniversary gifts", "Premium corporate plaques", "Luxury custom gifts"],
                 },
               ].map((service) => (
