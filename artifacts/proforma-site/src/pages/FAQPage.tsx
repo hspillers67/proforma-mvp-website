@@ -122,7 +122,7 @@ export default function FAQPage() {
     <div className="min-h-screen flex flex-col bg-background">
       {/* Nav */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-white/10">
-        <div className="mx-auto px-8 h-24 flex items-center justify-between max-w-screen-2xl">
+        <div className="mx-auto px-8 h-28 flex items-center justify-between max-w-screen-2xl">
           <Link href="/">
             <img
               src={logoHorizontalPath}
@@ -132,14 +132,14 @@ export default function FAQPage() {
             />
           </Link>
           <nav className="hidden md:flex items-center gap-10">
-            <Link href="/" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Home</Link>
-            <a href="/#services" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Services</a>
-            <a href="/#process" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
-            <Link href="/blog" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Blog</Link>
-            <Link href="/testimonials" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</Link>
-            <Link href="/faq" className="text-sm font-display font-medium text-white hover:text-white transition-colors border-b border-secondary pb-0.5">FAQ</Link>
-            <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Browse Products</a>
-            <a href="/#contact" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
+            <Link href="/" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Home</Link>
+            <a href="/#services" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Services</a>
+            <a href="/#process" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
+            <Link href="/blog" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Blog</Link>
+            <Link href="/testimonials" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</Link>
+            <Link href="/faq" className="text-base font-display font-medium text-white hover:text-white transition-colors border-b border-secondary pb-0.5">FAQ</Link>
+            <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Browse Products</a>
+            <a href="/#contact" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
           </nav>
           <a
             href="/#contact"
@@ -150,7 +150,7 @@ export default function FAQPage() {
         </div>
       </header>
 
-      <main className="flex-grow pt-24">
+      <main className="flex-grow pt-28">
         {/* Page Header */}
         <section className="bg-primary text-primary-foreground py-20 md:py-28">
           <div className="container mx-auto px-6">

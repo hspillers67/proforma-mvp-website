@@ -39,19 +39,19 @@ export default function Home() {
     <div className="min-h-screen flex flex-col w-full bg-background selection:bg-secondary selection:text-white">
       {/* Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-white/10">
-        <div className="mx-auto px-8 h-24 flex items-center justify-between max-w-screen-2xl">
+        <div className="mx-auto px-8 h-28 flex items-center justify-between max-w-screen-2xl">
           <a href="#" className="flex items-center">
             <img src={logoHorizontalPath} alt="ProForma MVP Marketing" className="h-12 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
           </a>
           <nav className="hidden md:flex items-center gap-10">
-            <a href="/" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Home</a>
-            <a href="#services" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Services</a>
-            <a href="#process" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
-            <a href="/blog" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Blog</a>
-            <a href="/testimonials" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</a>
-            <a href="/faq" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">FAQ</a>
-            <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Browse Products</a>
-            <a href="#contact" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
+            <a href="/" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Home</a>
+            <a href="#services" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Services</a>
+            <a href="#process" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
+            <a href="/blog" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Blog</a>
+            <a href="/testimonials" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</a>
+            <a href="/faq" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">FAQ</a>
+            <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Browse Products</a>
+            <a href="#contact" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
           </nav>
           <a
             href="#contact"
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex-grow pt-24">
+      <main className="flex-grow pt-28">
         {/* Hero Section — Split Layout */}
         <section className="relative overflow-hidden flex min-h-[70vh]">
           {/* Left: copy */}
