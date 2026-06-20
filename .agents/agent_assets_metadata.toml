@@ -30,3 +30,9 @@ id = "amg7uc_ZONCVBSeHFfIpy"
 uri = "file://artifacts/proforma-site/src/assets/hero.png"
 type = "image"
 title = "abstract modern hero background"
+
+[[generated]]
+id = "_WEVpSftwI0Ui_c3Qcc-1"
+uri = "file://artifacts/proforma-site/src/assets/tradeshows-events.png"
+type = "image"
+title = "tradeshow exhibition floor"

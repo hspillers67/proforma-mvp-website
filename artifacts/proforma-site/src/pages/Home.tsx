@@ -10,6 +10,7 @@ import recognitionImg from "@/assets/recognition-incentives.png";
 import apparelImg from "@/assets/apparel.png";
 import promoProductsImg from "@/assets/promo-products.png";
 import printSignageImg from "@/assets/print-signage.jpg";
+import tradeshowsImg from "@/assets/tradeshows-events.png";
 
 export default function Home() {
   return (
@@ -127,7 +128,7 @@ export default function Home() {
                 {
                   icon: <MapPin className="w-5 h-5" />,
                   title: "Tradeshows & Events",
-                  image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+                  image: tradeshowsImg,
                   description: "",
                   bullets: ["Retractable banner stands", "Custom table throws", "Event booth backdrops", "Popular attendee giveaways"],
                 },
