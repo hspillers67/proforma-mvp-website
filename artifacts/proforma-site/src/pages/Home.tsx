@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, PenTool, Box, Printer } from "lucide-react";
+import { ArrowRight, MapPin, Printer, Monitor, Gift, Shirt, Award } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
 import { posts } from "@/data/posts";
@@ -82,85 +82,58 @@ export default function Home() {
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
               <div className="max-w-2xl">
-                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">Capabilities</h2>
+                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">Services</h2>
                 <p className="text-lg text-muted-foreground">
                   From Fortune 500 swag drops to your startup's first major trade show, we handle the logistics, quality control, and execution.
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="group relative overflow-hidden rounded-2xl bg-card border border-border shadow-sm transition-all hover:shadow-xl"
-              >
-                <div className="aspect-[4/3] w-full overflow-hidden">
-                  <img src="/src/assets/apparel.png" alt="Premium Branded Apparel" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                </div>
-                <div className="p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: <Monitor className="w-6 h-6" />,
+                  title: "Company Stores",
+                  description: "Online ordering platforms custom-built for multi-location businesses.",
+                },
+                {
+                  icon: <Gift className="w-6 h-6" />,
+                  title: "Promotional Products",
+                  description: "Unique merchandise that keeps your company brand in front of customers.",
+                },
+                {
+                  icon: <Shirt className="w-6 h-6" />,
+                  title: "Uniforms & Branded Apparel",
+                  description: "High-quality corporate clothing and team wear.",
+                },
+                {
+                  icon: <MapPin className="w-6 h-6" />,
+                  title: "Tradeshows & Events",
+                  description: "Attention-grabbing displays and giveaways to make your booth stand out.",
+                },
+                {
+                  icon: <Printer className="w-6 h-6" />,
+                  title: "Print & Signage",
+                  description: "Professional banners, brochures, business cards, and print marketing pieces.",
+                },
+                {
+                  icon: <Award className="w-6 h-6" />,
+                  title: "Recognition & Incentives",
+                  description: "Premium corporate rewards to celebrate your team's hard work.",
+                },
+              ].map((service) => (
+                <motion.div
+                  key={service.title}
+                  whileHover={{ y: -4 }}
+                  className="group rounded-2xl bg-card border border-border shadow-sm hover:shadow-lg transition-all duration-300 p-8"
+                >
                   <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-6">
-                    <PenTool className="w-6 h-6" />
+                    {service.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-3">Branded Apparel</h3>
-                  <p className="text-muted-foreground">
-                    High-end retail brands, custom cut-and-sew, and premium decoration techniques that your team will actually want to wear.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="group relative overflow-hidden rounded-2xl bg-card border border-border shadow-sm transition-all hover:shadow-xl"
-              >
-                <div className="aspect-[4/3] w-full overflow-hidden">
-                  <img src="/src/assets/tradeshow.png" alt="Tradeshow Giveaways" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                </div>
-                <div className="p-8">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-6">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-primary mb-3">Tradeshow Experiences</h3>
-                  <p className="text-muted-foreground">
-                    From memorable booth giveaways to complete environmental design and display hardware. Stand out on the floor.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="group relative overflow-hidden rounded-2xl bg-card border border-border shadow-sm transition-all hover:shadow-xl"
-              >
-                <div className="aspect-[4/3] w-full overflow-hidden">
-                  <img src="/src/assets/kits.png" alt="Kits and Packages" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                </div>
-                <div className="p-8">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-6">
-                    <Box className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-primary mb-3">Kitting & Fulfillment</h3>
-                  <p className="text-muted-foreground">
-                    New hire onboarding kits, VIP client gifts, and complex multi-touch direct mail campaigns assembled and shipped globally.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="group relative overflow-hidden rounded-2xl bg-card border border-border shadow-sm transition-all hover:shadow-xl"
-              >
-                <div className="aspect-[4/3] w-full overflow-hidden">
-                  <img src="/src/assets/signage.png" alt="Signage and Print" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                </div>
-                <div className="p-8">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-6">
-                    <Printer className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-primary mb-3">Print & Signage</h3>
-                  <p className="text-muted-foreground">
-                    Corporate collateral, large format graphics, packaging design, and high-volume commercial print execution.
-                  </p>
-                </div>
-              </motion.div>
+                  <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>

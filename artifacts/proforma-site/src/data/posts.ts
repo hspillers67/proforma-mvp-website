@@ -49,7 +49,7 @@ export const posts: Post[] = [
       { type: "paragraph", text: "Custom logo apparel is one of the most powerful tools for building brand recognition in competitive markets like Houston and Katy. It's wearable marketing that doesn't feel like marketing. Each time someone wears your branded t-shirt, cap, or hoodie to a coffee shop in Sugar Land or a festival in The Heights, they're promoting your company to hundreds of new eyes organically." },
       { type: "heading", level: 3, text: "The Emotional Connection" },
       { type: "paragraph", text: "High-quality apparel builds loyalty. People love gear that feels good, fits well, and looks sharp. It's one reason Houston companies — from engineering firms in Energy Corridor to local schools and nonprofits — keep branded apparel on repeat order." },
-      { type: "heading", level: 3, text: "Top Apparel Giveaways That Actually Get Worn" },
+      { type: "heading", level: 3, text: "Top Apparel Giveaways That Get Worn" },
       { type: "list", items: [
         "Ultra-soft logo tees",
         "Lightweight zip-up hoodies",
