@@ -9,6 +9,7 @@ import companyStoresImg from "@/assets/company-stores.png";
 import recognitionImg from "@/assets/recognition-incentives.png";
 import apparelImg from "@/assets/apparel.png";
 import promoProductsImg from "@/assets/promo-products.png";
+import printSignageImg from "@/assets/print-signage.jpg";
 
 export default function Home() {
   return (
@@ -133,7 +134,7 @@ export default function Home() {
                 {
                   icon: <Printer className="w-5 h-5" />,
                   title: "Print & Signage",
-                  image: "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=600&q=80",
+                  image: printSignageImg,
                   description: "",
                   bullets: ["Business cards & stationery", "Marketing brochures & flyers", "Large-format window graphics", "Outdoor & indoor event signs"],
                 },
