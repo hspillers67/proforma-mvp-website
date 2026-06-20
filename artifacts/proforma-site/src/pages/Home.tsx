@@ -11,81 +11,84 @@ import apparelImg from "@/assets/apparel.png";
 import promoProductsImg from "@/assets/promo-products.png";
 import printSignageImg from "@/assets/print-signage.jpg";
 import tradeshowsImg from "@/assets/tradeshows-events.png";
+import heroSwatchesImg from "@/assets/hero-swatches.png";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col w-full bg-background selection:bg-secondary selection:text-white">
       {/* Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border/50">
-        <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-white/10">
+        <div className="mx-auto px-8 h-24 flex items-center justify-between max-w-screen-2xl">
           <a href="#" className="flex items-center">
-            <img src={logoPath} alt="ProForma MVP Marketing" className="h-12 w-auto" />
+            <img src={logoWhitePath} alt="ProForma MVP Marketing" className="h-16 w-auto" />
           </a>
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="/" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Home</a>
-            <a href="#services" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Services</a>
-            <a href="#process" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Process</a>
-            <a href="/blog" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Blog</a>
-            <a href="#contact" className="text-sm font-display font-medium text-muted-foreground hover:text-secondary transition-colors">Contact</a>
+          <nav className="hidden md:flex items-center gap-10">
+            <a href="/" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Home</a>
+            <a href="#services" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Services</a>
+            <a href="#process" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
+            <a href="/blog" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Blog</a>
+            <a href="#contact" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
           </nav>
           <a
             href="#contact"
-            className="hidden md:inline-flex h-10 items-center justify-center rounded-md bg-secondary px-6 text-sm font-display font-medium text-white shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            className="hidden md:inline-flex h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           >
             Start a Project
           </a>
         </div>
       </header>
 
-      <main className="flex-grow pt-20">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden pt-24 pb-32 md:pt-32 md:pb-40">
-          <div className="absolute inset-0 z-0">
-            <img
-              src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1920&q=80"
-              alt="Creative branding workspace"
-              className="w-full h-full object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-white/80" />
+      <main className="flex-grow pt-24">
+        {/* Hero Section — Split Layout */}
+        <section className="relative overflow-hidden flex min-h-[88vh]">
+          {/* Left: copy */}
+          <div className="flex-1 bg-white flex items-center py-20 px-8 md:px-16 lg:px-24">
+            <motion.div
+              className="max-w-xl"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55 }}
+            >
+              <span className="inline-block py-1.5 px-4 rounded-full bg-secondary text-white text-sm font-display font-bold tracking-wider uppercase mb-8 shadow-sm">
+                Strategic Brand Partners
+              </span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase">
+                <span className="text-primary">YOUR </span>
+                <span className="text-secondary">BRAND</span>
+                <span className="text-primary">.</span>
+                <br />
+                <span className="text-primary">EVERYWHERE.</span>
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
+                The go-to Houston-area partner for businesses who need fast, professional promotional products, branded apparel, and custom printing without the usual headache.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#contact"
+                  className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  Let's Talk Project
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+                <a
+                  href="#services"
+                  className="inline-flex h-14 items-center justify-center rounded-md border-2 border-primary bg-white px-8 text-base font-display font-semibold text-primary shadow-sm transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                >
+                  Explore Services
+                </a>
+              </div>
+            </motion.div>
           </div>
 
-          <div className="container relative z-10 mx-auto px-6">
-            <div className="max-w-4xl">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <span className="inline-block py-1.5 px-4 rounded-full bg-secondary text-white text-sm font-display font-bold tracking-wider uppercase mb-6 shadow-sm">
-                  Strategic Brand Partners
-                </span>
-                <p className="text-sm font-display font-semibold text-primary/60 tracking-widest uppercase mb-3">
-                  Proforma MVP Marketing
-                </p>
-                <h1 className="text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] tracking-tight mb-8">
-                  Branded merchandise <br />
-                  <span className="text-secondary">done right.</span>
-                </h1>
-                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
-                  We are the go-to Houston-area partner for businesses who need fast, professional promotional products, branded apparel, and custom printing without the usual headache.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="#contact"
-                    className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                  >
-                    Let's Talk Project
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </a>
-                  <a
-                    href="#services"
-                    className="inline-flex h-14 items-center justify-center rounded-md border-2 border-primary bg-white px-8 text-base font-display font-semibold text-primary shadow-sm transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                  >
-                    Explore Services
-                  </a>
-                </div>
-              </motion.div>
-            </div>
+          {/* Right: photo */}
+          <div className="hidden md:block w-5/12 lg:w-1/2 relative overflow-hidden">
+            <img
+              src={heroSwatchesImg}
+              alt="Color branding swatches"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            {/* Subtle left fade so copy side blends cleanly */}
+            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent" />
           </div>
         </section>
 
