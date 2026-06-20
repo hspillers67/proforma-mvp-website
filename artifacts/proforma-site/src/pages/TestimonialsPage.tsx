@@ -114,6 +114,7 @@ export default function TestimonialsPage() {
             <a href="/#process" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
             <Link href="/blog" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Blog</Link>
             <Link href="/testimonials" className="text-sm font-display font-medium text-white hover:text-white transition-colors border-b border-secondary pb-0.5">Testimonials</Link>
+            <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Browse Products</a>
             <a href="/#contact" className="text-sm font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
           </nav>
           <a
