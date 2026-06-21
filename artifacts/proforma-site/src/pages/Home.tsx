@@ -380,13 +380,15 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="rounded-2xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,27,80,0.25),0_8px_24px_-6px_rgba(0,27,80,0.15)]"
+                className="rounded-2xl overflow-hidden ring-2 ring-secondary/30 shadow-[0_0_0_6px_rgba(156,0,87,0.08),0_12px_40px_rgba(156,0,87,0.30),0_24px_64px_rgba(156,0,87,0.18)]"
               >
-                <img
-                  src={ourAdvantageImg}
-                  alt="Proforma branded promotional products on the beach"
-                  className="w-full h-auto block"
-                />
+                <div className="aspect-[4/3] w-full overflow-hidden">
+                  <img
+                    src={ourAdvantageImg}
+                    alt="Proforma branded promotional products on the beach"
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
               </motion.div>
             </div>
           </div>
