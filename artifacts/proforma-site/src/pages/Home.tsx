@@ -396,8 +396,8 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="py-24 md:py-32 bg-background relative">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto bg-card border border-border shadow-2xl rounded-3xl overflow-hidden flex flex-col md:flex-row">
+          <div className="max-w-screen-2xl mx-auto px-8">
+            <div className="bg-card border border-border shadow-2xl rounded-3xl overflow-hidden flex flex-col md:flex-row">
               <div className="w-full md:w-5/12 bg-primary p-10 md:p-12 flex flex-col justify-between">
                 <div>
                   <img src={logoWhitePath} alt="ProForma MVP Marketing" className="h-14 w-auto mb-8" />
@@ -435,7 +435,7 @@ export default function Home() {
                       </div>
                       <div>
                         <p className="font-display font-medium text-white">Phone</p>
-                        <a href="tel:2818313527" className="text-sm hover:text-white transition-colors">281.831.3527</a>
+                        <a href="tel:2818491508" className="text-sm hover:text-white transition-colors">281.849.1508</a>
                       </div>
                     </div>
                   </div>
