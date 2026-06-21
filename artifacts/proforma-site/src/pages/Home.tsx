@@ -323,8 +323,8 @@ export default function Home() {
               </div>
               <div className="relative">
                 <div className="text-secondary font-display font-bold text-6xl mb-4 opacity-60">03</div>
-                <h4 className="text-xl font-bold mb-3">Predictable Delivery</h4>
-                <p className="text-primary-foreground/70">We manage the timelines aggressively. If an event is on Thursday, your materials are there on Tuesday. No exceptions, no excuses.</p>
+                <h4 className="text-xl font-bold mb-3">Proactive Timeline Management</h4>
+                <p className="text-primary-foreground/70">We plan ahead, track every milestone, and keep you informed from order to delivery. If a deadline isn't realistic, we'll tell you upfront and help determine the best path forward.</p>
               </div>
             </div>
           </div>
