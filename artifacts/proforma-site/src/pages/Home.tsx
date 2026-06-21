@@ -129,18 +129,18 @@ export default function Home() {
 
 
         {/* Services Section */}
-        <section id="services" className="pt-12 pb-24 md:pt-14 md:pb-32 bg-muted/30">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+        <section id="services" className="pt-20 pb-32 md:pt-24 md:pb-40 bg-muted/30">
+          <div className="max-w-screen-2xl mx-auto px-8">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div className="max-w-2xl">
-                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">Capabilities</h2>
-                <p className="text-lg text-muted-foreground">
-                  From Fortune 500 swag drops to your startup's first major trade show, we handle the logistics, quality control, and execution.
+                <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6">Capabilities</h2>
+                <p className="text-xl text-muted-foreground">
+                  From company-wide swag drops to your first trade show, we manage every detail from start to finish.
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: <Monitor className="w-5 h-5" />,
@@ -191,7 +191,7 @@ export default function Home() {
                   className="group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
                 >
                   {/* Image + overlays */}
-                  <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <div className="relative w-full aspect-[3/2] overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
