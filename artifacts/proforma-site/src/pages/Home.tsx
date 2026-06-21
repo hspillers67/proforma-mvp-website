@@ -332,8 +332,8 @@ export default function Home() {
 
         {/* Why Work With Us Section */}
         <section className="py-24 md:py-32 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+          <div className="max-w-screen-2xl mx-auto px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -380,7 +380,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="rounded-2xl overflow-hidden shadow-2xl"
+                className="rounded-2xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,27,80,0.25),0_8px_24px_-6px_rgba(0,27,80,0.15)]"
               >
                 <img
                   src={ourAdvantageImg}
