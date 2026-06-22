@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "LGzqXAnVJzvZ0tocKcacW"
@@ -36,3 +35,9 @@ id = "_WEVpSftwI0Ui_c3Qcc-1"
 uri = "file://artifacts/proforma-site/src/assets/tradeshows-events.png"
 type = "image"
 title = "tradeshow exhibition floor"
+
+[[outputs]]
+id = "PvL7BsHmXA03mf_WmnZJM"
+uri = "file://artifacts/proforma-site/public/og-image.png"
+type = "image"
+title = "OG / Social Share Image (1200×627)"
