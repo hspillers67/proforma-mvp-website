@@ -63,69 +63,56 @@ export default function Home() {
       </header>
 
       <main className="flex-grow pt-28">
-        {/* Hero Section — Split Layout */}
-        <section className="relative overflow-hidden bg-white min-h-[78vh] flex items-stretch">
-          <div className="max-w-screen-2xl mx-auto w-full flex flex-col md:flex-row items-stretch">
+        {/* Hero Section — Full-bleed overlay */}
+        <section className="relative overflow-hidden min-h-[82vh] flex items-center">
+          {/* Background image */}
+          <img
+            src={heroSwatchesImg}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          {/* Dark overlay — navy gradient for brand alignment */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/85 pointer-events-none" />
+          {/* Subtle vignette at edges */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 pointer-events-none" />
 
-            {/* Left: copy — nudged right with generous left padding */}
-            <div className="flex-1 flex items-center py-20 pl-16 pr-8 md:pl-24 lg:pl-32 xl:pl-40">
-              <motion.div
-                className="max-w-lg"
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55 }}
-              >
-                <span className="inline-block py-1.5 px-4 rounded-full bg-secondary text-white text-sm font-display font-bold tracking-wider uppercase mb-8 shadow-sm">
-                  Strategic Brand Partners
-                </span>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase">
-                  <span className="text-primary">YOUR </span>
-                  <span className="text-secondary">BRAND</span>
-                  <span className="text-primary">.</span>
-                  <br />
-                  <span className="text-primary">EVERYWHERE.</span>
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
-                  From branded merch and apparel to print and signage, we make it easy to get your brand out there—and handle every detail as if it were our own.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="#contact"
-                    className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                  >
-                    Let's Talk Project
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </a>
-                  <a
-                    href="#services"
-                    className="inline-flex h-14 items-center justify-center rounded-md border-2 border-primary bg-white px-8 text-base font-display font-semibold text-primary shadow-sm transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                  >
-                    Explore Capabilities
-                  </a>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Right: photo — smaller card, shifted left inside wider column */}
-            <div className="hidden md:flex w-5/12 lg:w-[45%] items-center justify-start py-10 pl-8 pr-16 lg:pr-20">
-              <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-xl">
-                <img
-                  src={heroSwatchesImg}
-                  alt="Color branding swatches"
-                  className="w-full h-full object-cover object-center"
-                  style={{ aspectRatio: "4/3" }}
-                />
-                {/* Left fade */}
-                <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white/50 to-transparent pointer-events-none" />
-                {/* Top fade */}
-                <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/35 to-transparent pointer-events-none" />
-                {/* Bottom fade */}
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/35 to-transparent pointer-events-none" />
-                {/* Softening veil */}
-                <div className="absolute inset-0 bg-white/8 pointer-events-none" />
+          {/* Copy — centered over image */}
+          <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-8 flex justify-center">
+            <motion.div
+              className="max-w-3xl text-center"
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-white/15 border border-white/30 backdrop-blur-sm text-white text-sm font-display font-semibold tracking-widest uppercase mb-8 shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-secondary inline-block" />
+                Strategic Brand Partners
+              </span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-white">
+                YOUR <span className="text-secondary">BRAND</span>.
+                <br />
+                EVERYWHERE.
+              </h1>
+              <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
+                From branded merch and apparel to print and signage, we make it easy to get your brand out there—and handle every detail as if it were our own.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="#contact"
+                  className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  Let's Talk Project
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+                <a
+                  href="#services"
+                  className="inline-flex h-14 items-center justify-center rounded-md border-2 border-white/70 bg-white/10 backdrop-blur-sm px-8 text-base font-display font-semibold text-white shadow-sm transition-colors hover:bg-white hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                >
+                  Explore Capabilities
+                </a>
               </div>
-            </div>
-
+            </motion.div>
           </div>
         </section>
 
