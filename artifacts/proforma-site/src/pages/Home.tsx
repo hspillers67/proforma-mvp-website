@@ -64,66 +64,68 @@ export default function Home() {
 
       <main className="flex-grow pt-28">
         {/* Hero Section — Split Layout */}
-        <section className="relative overflow-hidden flex min-h-[70vh]">
-          {/* Left: copy */}
-          <div className="flex-1 bg-white flex items-center py-20 px-8 md:px-16 lg:px-24">
-            <motion.div
-              className="max-w-xl"
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55 }}
-            >
-              <span className="inline-block py-1.5 px-4 rounded-full bg-secondary text-white text-sm font-display font-bold tracking-wider uppercase mb-8 shadow-sm">
-                Strategic Brand Partners
-              </span>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase">
-                <span className="text-primary">YOUR </span>
-                <span className="text-secondary">BRAND</span>
-                <span className="text-primary">.</span>
-                <br />
-                <span className="text-primary">EVERYWHERE.</span>
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
-                From branded merch and apparel to print and signage, we make it easy to get your brand out there—and handle every detail as if it were our own.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="#contact"
-                  className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                >
-                  Let's Talk Project
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-                <a
-                  href="#services"
-                  className="inline-flex h-14 items-center justify-center rounded-md border-2 border-primary bg-white px-8 text-base font-display font-semibold text-primary shadow-sm transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                >
-                  Explore Capabilities
-                </a>
-              </div>
-            </motion.div>
-          </div>
+        <section className="relative overflow-hidden bg-white min-h-[78vh] flex items-stretch">
+          <div className="max-w-screen-2xl mx-auto w-full flex flex-col md:flex-row items-stretch">
 
-          {/* Right: photo */}
-          <div className="hidden md:flex w-5/12 lg:w-1/2 items-center justify-center py-8 pr-8 pl-4 relative bg-white">
-            {/* Rounded card with soft shadow */}
-            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={heroSwatchesImg}
-                alt="Color branding swatches"
-                className="w-full h-full object-cover object-center"
-              />
-              {/* Left fade — blends into white copy area */}
-              <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white/60 to-transparent pointer-events-none" />
-              {/* Top fade */}
-              <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
-              {/* Bottom fade */}
-              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white/40 to-transparent pointer-events-none" />
-              {/* Very subtle overall softening veil */}
-              <div className="absolute inset-0 bg-white/10 pointer-events-none" />
+            {/* Left: copy — nudged right with generous left padding */}
+            <div className="flex-1 flex items-center py-20 pl-16 pr-8 md:pl-24 lg:pl-32 xl:pl-40">
+              <motion.div
+                className="max-w-lg"
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55 }}
+              >
+                <span className="inline-block py-1.5 px-4 rounded-full bg-secondary text-white text-sm font-display font-bold tracking-wider uppercase mb-8 shadow-sm">
+                  Strategic Brand Partners
+                </span>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase">
+                  <span className="text-primary">YOUR </span>
+                  <span className="text-secondary">BRAND</span>
+                  <span className="text-primary">.</span>
+                  <br />
+                  <span className="text-primary">EVERYWHERE.</span>
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
+                  From branded merch and apparel to print and signage, we make it easy to get your brand out there—and handle every detail as if it were our own.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="#contact"
+                    className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  >
+                    Let's Talk Project
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
+                  <a
+                    href="#services"
+                    className="inline-flex h-14 items-center justify-center rounded-md border-2 border-primary bg-white px-8 text-base font-display font-semibold text-primary shadow-sm transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  >
+                    Explore Capabilities
+                  </a>
+                </div>
+              </motion.div>
             </div>
-            {/* Outer left fade so card blends into the copy column */}
-            <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent pointer-events-none" />
+
+            {/* Right: photo — smaller card, shifted left inside wider column */}
+            <div className="hidden md:flex w-5/12 lg:w-[45%] items-center justify-start py-10 pl-8 pr-16 lg:pr-20">
+              <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={heroSwatchesImg}
+                  alt="Color branding swatches"
+                  className="w-full h-full object-cover object-center"
+                  style={{ aspectRatio: "4/3" }}
+                />
+                {/* Left fade */}
+                <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white/50 to-transparent pointer-events-none" />
+                {/* Top fade */}
+                <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/35 to-transparent pointer-events-none" />
+                {/* Bottom fade */}
+                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/35 to-transparent pointer-events-none" />
+                {/* Softening veil */}
+                <div className="absolute inset-0 bg-white/8 pointer-events-none" />
+              </div>
+            </div>
+
           </div>
         </section>
 
