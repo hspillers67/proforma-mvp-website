@@ -122,7 +122,7 @@ export default function TestimonialsPage() {
             href="/#contact"
             className="hidden md:inline-flex h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90"
           >
-            Start a Project
+            Let's Talk
           </a>
         </div>
       </header>

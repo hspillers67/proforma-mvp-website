@@ -57,7 +57,7 @@ export default function Home() {
             href="#contact"
             className="hidden md:inline-flex h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           >
-            Start a Project
+            Let's Talk
           </a>
         </div>
       </header>
@@ -102,7 +102,7 @@ export default function Home() {
                   href="#contact"
                   className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
-                  Let's Talk Project
+                  Let's Talk
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
                 <a
@@ -358,7 +358,7 @@ export default function Home() {
                     href="#contact"
                     className="inline-flex h-12 items-center justify-center rounded-md bg-secondary px-8 text-sm font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90"
                   >
-                    Get a Free Quote
+                    Let's Talk
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </a>
                 </div>

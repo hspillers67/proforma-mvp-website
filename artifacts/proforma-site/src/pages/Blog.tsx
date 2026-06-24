@@ -70,7 +70,7 @@ export default function Blog() {
             <a href="/#contact" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
           </nav>
           <a href="/#contact" className="hidden md:inline-flex h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90">
-            Start a Project
+            Let's Talk
           </a>
         </div>
       </header>
