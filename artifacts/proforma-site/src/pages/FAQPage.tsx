@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
@@ -59,7 +59,7 @@ const faqs = [
   {
     question: "How do I get started?",
     answer:
-      "Easy. Just contact us with your project details—budget, audience, event date. We'll create a tailored proposal with ideas that fit your goals. Email us at info.mvp@proforma.com or call 281.831.3527.",
+      "Easy. Just contact us with your project details—budget, audience, event date. We'll create a tailored proposal with ideas that fit your goals. Email us at info.mvp@proforma.com or call 281.849.1508.",
   },
 ];
 
@@ -86,33 +86,29 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
         />
       </button>
 
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            key="content"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden"
-          >
-            <div className="px-6 pb-6 pt-2 bg-white border-t border-border/50 text-muted-foreground leading-relaxed space-y-3">
-              {faq.prefix && <p>{faq.prefix}</p>}
-              {faq.bullets && (
-                <ul className="space-y-2 pl-1">
-                  {faq.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-              )}
-              {faq.answer && <p>{faq.answer}</p>}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Always rendered for SEO crawlability — height animates open/closed */}
+      <motion.div
+        initial={false}
+        animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+        transition={{ duration: 0.2 }}
+        className="overflow-hidden"
+        aria-hidden={!open}
+      >
+        <div className="px-6 pb-6 pt-2 bg-white border-t border-border/50 text-muted-foreground leading-relaxed space-y-3">
+          {faq.prefix && <p>{faq.prefix}</p>}
+          {faq.bullets && (
+            <ul className="space-y-2 pl-1">
+              {faq.bullets.map((b) => (
+                <li key={b} className="flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
+                  {b}
+                </li>
+              ))}
+            </ul>
+          )}
+          {faq.answer && <p>{faq.answer}</p>}
+        </div>
+      </motion.div>
     </motion.div>
   );
 }

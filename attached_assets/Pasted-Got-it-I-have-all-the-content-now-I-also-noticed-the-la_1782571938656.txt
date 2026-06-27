@@ -1,0 +1,45 @@
+Got it — I have all the content now. I also noticed the last FAQ shows `281.831.3527` which needs to change to `281.849.1508`.
+
+Here's your Replit prompt:
+
+---
+
+*"On the FAQ page, I need the answers to be visible in the initial HTML so search engine crawlers can read them — right now they're hidden until a user clicks to expand. Please keep the accordion/dropdown functionality for users, but make sure the answer text is present in the rendered HTML on page load (not hidden via JavaScript). Do not change any of the question or answer content except for one correction: in the last FAQ 'How do I get started?', change the phone number from 281.831.3527 to 281.849.1508.*
+
+*The FAQ content to preserve exactly is:*
+
+*Q: What types of products do you offer?*
+*A: We provide promotional products, branded apparel, and printing solutions like banners, signage, and brochures. If it can carry your logo or your message, we'll find it—and make sure it looks good.*
+
+*Q: Who do you typically work with?*
+*A: Our clients are usually marketing managers, HR teams, and purchasing departments in industries like manufacturing, oil & gas, engineering, construction, healthcare, and education. But honestly, any business that wants to strengthen connections with employees, customers, or prospects is a fit.*
+
+*Q: What makes you different from other promotional product companies?*
+*A: We don't just sell swag—we help you create a strategy. That means: Products that serve your actual goals (not just fill a swag drawer). A clear, consultative process that saves you time. Company stores that simplify ordering and eliminate errors. Decades of experience + Proforma's $650M buying power.*
+
+*Q: Do you offer company stores for employees, clients, events, and retail?*
+*A: Yes! Our ProStores™ make it easy to manage apparel, printed products, and branded merch for retail, employees, contractors, or events—all without the spreadsheet circus.*
+
+*Q: Can you help with design?*
+*A: Absolutely. Whether it's making your logo print-ready or brainstorming creative product ideas, our design team has you covered.*
+
+*Q: What's your turnaround time?*
+*A: It depends on the product, but most standard orders are delivered in 7–14 business days after artwork approval. Rush options are available.*
+
+*Q: Is there a minimum order size?*
+*A: Most products do have a minimum (usually 12–50 pieces), but it varies. We'll always let you know up front so there are no surprises.*
+
+*Q: Do you offer eco-friendly or sustainable products?*
+*A: Absolutely. From recycled and organic materials to reusable essentials, we've got plenty of ways to keep your brand green.*
+
+*Q: Where are you located?*
+*A: We're based in Katy, Texas, serving greater Houston and beyond. But we work with clients nationwide.*
+
+*Q: How do I get started?*
+*A: Easy. Just contact us with your project details—budget, audience, event date. We'll create a tailored proposal with ideas that fit your goals. Email us at info.mvp@proforma.com or call 281.849.1508.*
+
+*Show me how you've implemented the crawlable answer text before deploying."*
+
+---
+
+This is a slightly more technical ask so review what Replit shows you carefully before confirming. Come back and share what it gives you.
