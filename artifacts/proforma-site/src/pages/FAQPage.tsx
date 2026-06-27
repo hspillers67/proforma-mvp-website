@@ -1,7 +1,5 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
 
 const faqs = [
@@ -17,14 +15,13 @@ const faqs = [
   },
   {
     question: "What makes you different from other promotional product companies?",
-    answer: null,
+    prefix: "We don't just sell swag—we help you create a strategy. That means:",
     bullets: [
       "Products that serve your actual goals (not just fill a swag drawer).",
       "A clear, consultative process that saves you time.",
       "Company stores that simplify ordering and eliminate errors.",
       "Decades of experience + Proforma's $650M buying power.",
     ],
-    prefix: "We don't just sell swag—we help you create a strategy. That means:",
   },
   {
     question: "Do you offer company stores for employees, clients, events, and retail?",
@@ -62,56 +59,6 @@ const faqs = [
       "Easy. Just contact us with your project details—budget, audience, event date. We'll create a tailored proposal with ideas that fit your goals. Email us at info.mvp@proforma.com or call 281.849.1508.",
   },
 ];
-
-function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35, delay: index * 0.05 }}
-      className="border border-border rounded-xl overflow-hidden"
-    >
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left bg-white hover:bg-muted/30 transition-colors"
-        aria-expanded={open}
-      >
-        <span className="font-display font-semibold text-primary text-base leading-snug">
-          {faq.question}
-        </span>
-        <ChevronDown
-          className={`w-5 h-5 text-secondary shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-        />
-      </button>
-
-      {/* Always rendered for SEO crawlability — height animates open/closed */}
-      <motion.div
-        initial={false}
-        animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
-        transition={{ duration: 0.2 }}
-        className="overflow-hidden"
-        aria-hidden={!open}
-      >
-        <div className="px-6 pb-6 pt-2 bg-white border-t border-border/50 text-muted-foreground leading-relaxed space-y-3">
-          {faq.prefix && <p>{faq.prefix}</p>}
-          {faq.bullets && (
-            <ul className="space-y-2 pl-1">
-              {faq.bullets.map((b) => (
-                <li key={b} className="flex items-start gap-2">
-                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
-                  {b}
-                </li>
-              ))}
-            </ul>
-          )}
-          {faq.answer && <p>{faq.answer}</p>}
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}
 
 export default function FAQPage() {
   return (
@@ -151,32 +98,43 @@ export default function FAQPage() {
         <section className="bg-primary text-primary-foreground py-20 md:py-28">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl">
-              <motion.h1
-                className="text-4xl md:text-6xl font-extrabold leading-tight mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
+              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
                 Frequently Asked Questions
-              </motion.h1>
-              <motion.p
-                className="text-lg md:text-xl text-primary-foreground/70 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
+              </h1>
+              <p className="text-lg md:text-xl text-primary-foreground/70 leading-relaxed">
                 Everything you need to know about working with Proforma MVP Marketing.
-              </motion.p>
+              </p>
             </div>
           </div>
         </section>
 
-        {/* FAQ Accordion */}
+        {/* FAQ List */}
         <section className="py-20 md:py-28 bg-muted/30">
           <div className="container mx-auto px-6 max-w-3xl">
-            <div className="space-y-3">
-              {faqs.map((faq, i) => (
-                <FAQItem key={faq.question} faq={faq} index={i} />
+            <div className="space-y-10">
+              {faqs.map((faq) => (
+                <div
+                  key={faq.question}
+                  className="bg-white border border-border rounded-xl px-8 py-7"
+                >
+                  <h2 className="font-display font-semibold text-primary text-lg leading-snug mb-3">
+                    {faq.question}
+                  </h2>
+                  <div className="text-muted-foreground leading-relaxed space-y-3">
+                    {faq.prefix && <p>{faq.prefix}</p>}
+                    {faq.bullets && (
+                      <ul className="space-y-2 pl-1">
+                        {faq.bullets.map((b) => (
+                          <li key={b} className="flex items-start gap-2">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
+                            {b}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {faq.answer && <p>{faq.answer}</p>}
+                  </div>
+                </div>
               ))}
             </div>
 
