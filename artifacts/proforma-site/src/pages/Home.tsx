@@ -85,15 +85,18 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-white/15 border border-white/30 backdrop-blur-sm text-white text-sm font-display font-semibold tracking-widest uppercase mb-8 shadow-sm">
+              <span className="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-white/15 border border-white/30 backdrop-blur-sm text-white text-sm font-display font-semibold tracking-widest uppercase mb-6 shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-secondary inline-block" />
                 Strategic Brand Partners
               </span>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-white">
+              <h1 className="text-base md:text-lg font-display font-semibold text-white/70 tracking-wide mb-4">
+                Promotional Products, Branded Apparel &amp; Printing for Houston Businesses
+              </h1>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-white">
                 YOUR <span className="text-secondary">BRAND</span>.
                 <br />
                 EVERYWHERE.
-              </h1>
+              </h2>
               <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
                 From branded merch and apparel to print and signage, we make it easy to get your brand out there—and handle every detail as if it were our own.
               </p>
