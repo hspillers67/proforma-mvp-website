@@ -8,6 +8,12 @@
   PORT = "3000"
 
 [[redirects]]
+  from = "http://proformamvpmarketing.com/*"
+  to = "https://www.proformamvpmarketing.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://proformamvpmarketing.com/*"
   to = "https://www.proformamvpmarketing.com/:splat"
   status = 301
