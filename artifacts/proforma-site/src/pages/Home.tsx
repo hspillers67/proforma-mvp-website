@@ -90,7 +90,7 @@ export default function Home() {
                 Strategic Brand Partners
               </span>
               <h1 className="text-base md:text-lg font-display font-semibold text-white/70 tracking-wide mb-4">
-                Promotional Products, Branded Apparel &amp; Printing for Houston Businesses
+                Promotional Products, Branded Apparel &amp; Printing for Houston Area Businesses
               </h1>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-white">
                 YOUR <span className="text-secondary">BRAND</span>.
