@@ -1,0 +1,27 @@
+Here's your full Replit prompt:
+
+"Please create a new page at /branded-apparel. It should use the same layout, fonts, colors, header and footer as the rest of the site, and the same light gray hero section style we used on the promotional products and company stores pages (light gray background, dark navy H1, pink/magenta accent, reduced section spacing).
+I am uploading an image called Topic1_Vertical__17_.png to the assets folder. Please use it as the hero image on this page. Display it in the hero section alongside the H1.
+Page title (for the browser tab and SEO): Branded Apparel & Uniforms for Houston Area Businesses | Proforma MVP Marketing
+Meta description: Proforma MVP Marketing sources branded apparel, uniforms, and workwear for Houston-area businesses — from corporate polos to job site gear, decorated and delivered.
+H1: Branded Apparel & Uniforms for Houston Area Businesses
+Then this body copy:
+What your team wears says something about your company before anyone opens their mouth. Whether it's a polo at a client meeting, a uniform on the job site, or a branded jacket at a trade show — the right apparel builds credibility and pulls a team together.
+We source branded apparel and uniforms for businesses of every size, from single-location companies to multi-site operations. Whatever your team needs to look sharp and feel good wearing it, we can find it.
+H2: What We Source
+Display these six items as a clean card grid:
+
+Corporate apparel — Polos, button-downs, jackets, and outerwear for client-facing teams.
+Uniforms — Consistent, on-brand workwear for frontline and operational staff.
+Safety & workwear — Hi-vis, flame-resistant, and industry-specific gear with your logo.
+Trade show apparel — Dress your team to stand out on the floor.
+Team & event apparel — T-shirts, hoodies, and hats for company events, runs, and outings.
+Retail-inspired styles — Premium brands your employees will wear off the clock too.
+
+H2: Brand Consistency Across Every Location
+If you manage apparel for multiple locations or departments, we can set up a company store so everyone orders from the same approved catalog — no rogue logos, no off-brand colors, no size chaos. Link the words 'company store' to /company-stores.
+H2: How It Works
+Tell us who's wearing it, where they're wearing it, and what impression you want to make. We'll handle the rest — from decoration method to sizing to delivery.
+H2: Ready to Outfit Your Team?
+Let's talk about what branded apparel could look like for your business.
+Two buttons side by side: 'Let's Talk' linking to /contact, and 'Browse Products' linking to /products.
