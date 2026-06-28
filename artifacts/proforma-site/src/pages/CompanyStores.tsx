@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
-import companyStoresImg from "@/assets/company-stores.png";
+import companyStoresImg from "@/assets/company-stores-hero.png";
 
 const useCases = [
   {
