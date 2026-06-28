@@ -104,7 +104,7 @@ export default function PrintingPackaging() {
 
         {/* Intro copy */}
         <section className="py-8 md:py-10 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               Print isn't dead. It's just easier to do wrong. A flimsy brochure, a pixelated banner, a business card that feels cheap — these things leave an impression, just not the right one.
             </p>
@@ -119,7 +119,7 @@ export default function PrintingPackaging() {
         {/* What We Produce */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-3xl mx-auto">What We Produce</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-4xl mx-auto">What We Produce</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {whatWeProduce.map((item) => (
                 <div
@@ -136,7 +136,7 @@ export default function PrintingPackaging() {
 
         {/* Cohesive Across Every Touchpoint */}
         <section className="py-8 md:py-12 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Cohesive Across Every Touchpoint</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               The best print programs tie everything together — your colors, your fonts, your message — so every piece looks like it belongs to the same brand. We help you build that consistency, whether you need one item or a full suite of materials.
@@ -146,7 +146,7 @@ export default function PrintingPackaging() {
 
         {/* How It Works */}
         <section className="py-8 md:py-12 bg-white">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Share your artwork, your deadline, and your distribution plan. We'll handle production and delivery. If you need design help getting files print-ready, we can handle that too.

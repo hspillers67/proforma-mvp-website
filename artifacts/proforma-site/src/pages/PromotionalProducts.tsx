@@ -87,32 +87,30 @@ export default function PromotionalProducts() {
         {/* Page Header */}
         <section style={{ backgroundColor: "#F5F5F5" }} className="py-10 md:py-14">
           <div className="container mx-auto px-6">
-            <div className="max-w-[600px]">
-              <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-primary">
-                Promotional Products for Houston Area Businesses
-              </h1>
-              <div className="w-14 h-1 mt-5 mb-5" style={{ backgroundColor: "#9C0057" }} />
-              <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#444444" }}>
-                The right branded merchandise for every occasion — sourced, managed, and delivered by people who get marketing.
-              </p>
+            <div className="flex flex-col lg:flex-row lg:items-center gap-10">
+              <div className="max-w-[600px]">
+                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-primary">
+                  Promotional Products for Houston Area Businesses
+                </h1>
+                <div className="w-14 h-1 mt-5 mb-5" style={{ backgroundColor: "#9C0057" }} />
+                <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#444444" }}>
+                  The right branded merchandise for every occasion — sourced, managed, and delivered by people who get marketing.
+                </p>
+              </div>
+              <div className="lg:flex-1 max-w-xl w-full">
+                <img
+                  src={promoCollageImg}
+                  alt="Promotional products — drinkware, bags, headwear, apparel and more"
+                  className="w-full rounded-2xl shadow-lg"
+                />
+              </div>
             </div>
-          </div>
-        </section>
-
-        {/* Collage image */}
-        <section className="bg-white">
-          <div className="container mx-auto px-6 max-w-5xl py-6">
-            <img
-              src={promoCollageImg}
-              alt="Promotional products — drinkware, bags, headwear, apparel and more"
-              className="w-full rounded-2xl shadow-lg"
-            />
           </div>
         </section>
 
         {/* Intro copy */}
         <section className="py-8 md:py-10 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               You already know branded merchandise works. The question is whether you're getting products that actually fit your goals — or just filling a swag drawer.
             </p>
@@ -127,7 +125,7 @@ export default function PromotionalProducts() {
         {/* What We Help You With */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-3xl mx-auto">What We Help You With</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-4xl mx-auto">What We Help You With</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {useCases.map((item) => (
                 <div
@@ -152,7 +150,7 @@ export default function PromotionalProducts() {
 
         {/* How It Works */}
         <section className="py-8 md:py-12 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               You don't need to spend hours browsing a catalog. Tell us your budget, your audience, and your timeline — we'll bring you curated options that make sense. We handle everything from artwork approval through delivery.
@@ -165,7 +163,7 @@ export default function PromotionalProducts() {
 
         {/* Why Work With Us */}
         <section className="py-8 md:py-12 bg-white">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why Work With Us</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               You get a real person — someone with 15+ years of client-side marketing experience — who understands how branded products fit into a larger marketing strategy. We're not an online order form. We listen, we consult, and we make sure every product decision serves a purpose.

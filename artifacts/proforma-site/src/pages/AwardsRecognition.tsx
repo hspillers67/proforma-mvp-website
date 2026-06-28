@@ -104,7 +104,7 @@ export default function AwardsRecognition() {
 
         {/* Intro copy */}
         <section className="py-8 md:py-10 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               People remember how you made them feel. A generic gift card says "we had to do something." A thoughtfully chosen, well-branded award says "we noticed."
             </p>
@@ -117,7 +117,7 @@ export default function AwardsRecognition() {
         {/* What We Source */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-3xl mx-auto">What We Source</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-4xl mx-auto">What We Source</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {whatWeSource.map((item) => (
                 <div
@@ -134,7 +134,7 @@ export default function AwardsRecognition() {
 
         {/* Programs That Scale */}
         <section className="py-8 md:py-12 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Programs That Scale</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Recognition shouldn't fall through the cracks because HR is busy or a manager forgot. We can help you build a program — including a{" "}
@@ -146,7 +146,7 @@ export default function AwardsRecognition() {
 
         {/* How It Works */}
         <section className="py-8 md:py-12 bg-white">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Tell us the occasion, your budget, and who you're recognizing. We'll bring you curated options that fit the moment. For ongoing programs, we'll set up a system that runs without you having to think about it.

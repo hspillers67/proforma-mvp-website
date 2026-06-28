@@ -104,7 +104,7 @@ export default function CompanyStores() {
 
         {/* Intro copy */}
         <section className="py-8 md:py-10 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               If you've ever managed branded apparel or merchandise for a team, you know the drill. Emails back and forth. Size confusion. Orders placed too late. Products that don't match. It's a lot of work for something that should be simple.
             </p>
@@ -122,7 +122,7 @@ export default function CompanyStores() {
         {/* Who Uses Company Stores */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-3xl mx-auto">Who Uses Company Stores</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-4xl mx-auto">Who Uses Company Stores</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {useCases.map((item) => (
                 <div
@@ -139,7 +139,7 @@ export default function CompanyStores() {
 
         {/* How It Works */}
         <section className="py-8 md:py-12 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               We set up your store, load your approved products, and configure it to match your brand. Your team gets a link. They order what they need. You get reporting, not chaos.

@@ -104,7 +104,7 @@ export default function BrandedApparel() {
 
         {/* Intro copy */}
         <section className="py-8 md:py-10 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               What your team wears says something about your company before anyone opens their mouth. Whether it's a polo at a client meeting, a uniform on the job site, or a branded jacket at a trade show — the right apparel builds credibility and pulls a team together.
             </p>
@@ -117,7 +117,7 @@ export default function BrandedApparel() {
         {/* What We Source */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-3xl mx-auto">What We Source</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-4xl mx-auto">What We Source</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {whatWeSource.map((item) => (
                 <div
@@ -134,7 +134,7 @@ export default function BrandedApparel() {
 
         {/* Brand Consistency */}
         <section className="py-8 md:py-12 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Brand Consistency Across Every Location</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               If you manage apparel for multiple locations or departments, we can set up a{" "}
@@ -146,7 +146,7 @@ export default function BrandedApparel() {
 
         {/* How It Works */}
         <section className="py-8 md:py-12 bg-white">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Tell us who's wearing it, where they're wearing it, and what impression you want to make. We'll handle the rest — from decoration method to sizing to delivery.

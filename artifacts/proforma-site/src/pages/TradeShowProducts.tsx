@@ -106,7 +106,7 @@ export default function TradeShowProducts() {
 
         {/* Intro copy */}
         <section className="py-8 md:py-10 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               Trade shows are expensive. The booth fee, the travel, the time away from the office — it adds up fast. The last thing you want is to show up with forgettable giveaways and a table that blends into the background.
             </p>
@@ -119,7 +119,7 @@ export default function TradeShowProducts() {
         {/* What We Help You With */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-3xl mx-auto">What We Help You With</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-4xl mx-auto">What We Help You With</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {whatWeHelpWith.map((item) => (
                 <div
@@ -144,7 +144,7 @@ export default function TradeShowProducts() {
 
         {/* For Any Type of Event */}
         <section className="py-8 md:py-12 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">For Any Type of Event</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Trade shows. Conferences. Sponsorships. Internal company events. Product launches. Community outreach. Whatever the occasion, we source and coordinate everything so you can focus on the conversations that matter.
@@ -154,7 +154,7 @@ export default function TradeShowProducts() {
 
         {/* How It Works */}
         <section className="py-8 md:py-12 bg-white">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Tell us your event date, your budget, and your goals. We'll put together a curated recommendation — products, displays, and print — that work together as a cohesive package.
