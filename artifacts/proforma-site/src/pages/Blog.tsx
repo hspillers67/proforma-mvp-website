@@ -88,7 +88,7 @@ export default function Blog() {
                 Blog & Insights
               </h1>
               <p className="text-lg text-white/70">
-                Practical guides, industry trends, and strategies to help your brand stand out — from the team at Proforma MVP Marketing.
+                Practical guides, industry trends, and strategies to help your brand stand out.
               </p>
             </div>
           </div>
