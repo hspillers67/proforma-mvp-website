@@ -154,8 +154,22 @@ export default function BlogPost() {
             ))}
           </div>
 
+          {/* Author Bio */}
+          <div className="mt-14 flex gap-5 items-start p-6 md:p-8 bg-white border border-border rounded-2xl">
+            <div className="shrink-0 w-14 h-14 rounded-full bg-primary flex items-center justify-center text-white text-xl font-bold font-display select-none">
+              HS
+            </div>
+            <div>
+              <p className="font-display font-bold text-primary text-base leading-tight">Holly Spillers</p>
+              <p className="text-xs font-display font-semibold text-secondary uppercase tracking-wide mt-0.5 mb-2">Owner, Proforma MVP Marketing</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Holly Spillers is the owner of Proforma MVP Marketing, a Katy-based promotional products and branded merchandise agency serving Houston-area businesses. With 15+ years of client-side marketing experience, she helps B2B companies use branded products strategically.
+              </p>
+            </div>
+          </div>
+
           {/* CTA */}
-          <div className="mt-16 p-8 md:p-10 bg-primary rounded-2xl text-white text-center">
+          <div className="mt-10 p-8 md:p-10 bg-primary rounded-2xl text-white text-center">
             <h3 className="text-2xl font-bold mb-3">Ready to get started?</h3>
             <p className="text-white/70 mb-6">
               At Proforma MVP Marketing, we help companies across the Greater Houston area design promotional campaigns that make your brand impossible to ignore.
