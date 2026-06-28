@@ -13,6 +13,7 @@ import FAQPage from "@/pages/FAQPage";
 import PromotionalProducts from "@/pages/PromotionalProducts";
 import CompanyStores from "@/pages/CompanyStores";
 import BrandedApparel from "@/pages/BrandedApparel";
+import TradeShowProducts from "@/pages/TradeShowProducts";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ function Router() {
       <Route path="/promotional-products" component={PromotionalProducts} />
       <Route path="/company-stores" component={CompanyStores} />
       <Route path="/branded-apparel" component={BrandedApparel} />
+      <Route path="/trade-show-products" component={TradeShowProducts} />
       <Route path="/admin" component={Admin} />
       <Route path="/thank-you" component={ThankYou} />
       <Route component={NotFound} />

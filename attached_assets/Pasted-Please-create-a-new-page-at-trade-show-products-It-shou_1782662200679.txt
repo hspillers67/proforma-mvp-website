@@ -1,0 +1,26 @@
+Please create a new page at /trade-show-products. It should use the same layout, fonts, colors, header and footer as the rest of the site, and the same light gray hero section style we used on the previous service pages (light gray background, dark navy H1, pink/magenta accent, reduced section spacing).
+I have uploaded an image called signage to the assets folder. Please use it as the hero image on this page, displayed in the hero section alongside the H1.
+Page title (for the browser tab and SEO): Trade Show & Event Products for Houston Area Businesses | Proforma MVP Marketing
+Meta description: Proforma MVP Marketing helps Houston-area businesses show up ready for trade shows and events — giveaways, displays, apparel, signage, and more.
+H1: Trade Show & Event Products for Houston Area Businesses
+Then this body copy:
+Trade shows are expensive. The booth fee, the travel, the time away from the office — it adds up fast. The last thing you want is to show up with forgettable giveaways and a table that blends into the background.
+We help you show up ready. From the display behind you to the item someone takes home in their bag, every touchpoint is an opportunity to make your brand stick.
+H2: What We Help You With
+Display these six items as a clean card grid:
+
+Retractable banner stands — Professional, portable, and easy to set up in minutes.
+Custom table throws — Branded table covers that make your booth look intentional.
+Event booth backdrops — Full-size displays that stop traffic and frame your space.
+Attendee giveaways — Products people keep, use, and remember you by.
+Event apparel — Outfit your team so they're easy to spot and look the part.
+Signage & print — Banners, posters, and printed materials that carry your message.
+
+H2: For Any Type of Event
+Trade shows. Conferences. Sponsorships. Internal company events. Product launches. Community outreach. Whatever the occasion, we source and coordinate everything so you can focus on the conversations that matter.
+H2: How It Works
+Tell us your event date, your budget, and your goals. We'll put together a curated recommendation — products, displays, and print — that work together as a cohesive package.
+H2: Ready to Make Your Next Event Count?
+Let's talk about what your booth or event needs to stand out.
+Two buttons side by side: 'Let's Talk' linking to /contact, and 'Browse Products' linking to /products.
+Internal links: link 'event apparel' to /branded-apparel and 'signage & print' to /printing-signage wherever they appear in the copy.
