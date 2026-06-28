@@ -1,0 +1,31 @@
+Perfect — Replit already uploaded it and gave us exactly what we need. Now paste the full prompt:
+
+"Please create a new page at /promotional-products. It should use the same layout, fonts, colors, header and footer as the rest of the site.
+Import the collage image at the top of the component like this:
+import promoCollageImg from "@/assets/promo-products-collage.png";
+Page title (for the browser tab and SEO): Promotional Products for Houston Area Businesses | Proforma MVP Marketing
+Meta description: Proforma MVP Marketing helps Houston-area businesses find the right promotional products for every occasion — trade shows, client gifts, employee recognition, and more.
+H1: Promotional Products for Houston Area Businesses
+Directly below the H1, display the collage image at full width with alt text 'Promotional products — drinkware, bags, headwear, apparel and more'.
+Then this body copy:
+You already know branded merchandise works. The question is whether you're getting products that actually fit your goals — or just filling a swag drawer.
+At Proforma MVP Marketing, we help Houston-area businesses find the right products for the right moment. Trade show giveaways. Client gifts. Employee appreciation. Onboarding kits. New location openings. Whatever the occasion, we make sure your brand shows up looking sharp.
+H2: What We Help You With
+Display these six items as a clean card grid:
+
+Trade show giveaways — Products people actually keep, not toss in a hotel trash can.
+Client gifts — Thoughtful, on-brand items that strengthen relationships.
+Employee recognition — From service awards to milestone gifts, we make it easy.
+Onboarding kits — Give new hires something that makes them proud to be on the team.
+Event merchandise — Branded items that extend the life of your event beyond the day itself.
+Company stores — Simplify ordering for teams, locations, and ongoing programs.
+
+H2: How It Works
+You don't need to spend hours browsing a catalog. Tell us your budget, your audience, and your timeline — we'll bring you curated options that make sense. We handle everything from artwork approval through delivery.
+Most standard orders ship in 7–14 business days. Rush options are available. Minimums vary by product, typically 12–50 pieces. We'll always tell you upfront.
+H2: Why Work With Us
+You get a real person — someone with 15+ years of client-side marketing experience — who understands how branded products fit into a larger marketing strategy. Backed by Proforma's $650M in buying power, we can source virtually anything at competitive pricing.
+H2: Ready to Get Started?
+Tell us about your project and we'll put together a tailored recommendation — no obligation.
+Two buttons side by side: 'Let's Talk' linking to /contact, and 'Browse Products' linking to /products.
+Internal links: link the words 'company stores' to /company-stores and 'trade show giveaways' to /trade-show-products wherever they appear in the copy.
