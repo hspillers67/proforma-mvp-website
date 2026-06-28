@@ -85,13 +85,14 @@ export default function PromotionalProducts() {
 
       <main className="flex-grow pt-28">
         {/* Page Header */}
-        <section className="bg-primary text-primary-foreground py-20 md:py-28">
+        <section style={{ backgroundColor: "#F5F5F5" }} className="py-10 md:py-14">
           <div className="container mx-auto px-6">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+            <div className="max-w-[600px]">
+              <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-primary">
                 Promotional Products for Houston Area Businesses
               </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/70 leading-relaxed">
+              <div className="w-14 h-1 mt-5 mb-5" style={{ backgroundColor: "#9C0057" }} />
+              <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#444444" }}>
                 The right branded merchandise for every occasion — sourced, managed, and delivered by people who get marketing.
               </p>
             </div>
@@ -100,7 +101,7 @@ export default function PromotionalProducts() {
 
         {/* Collage image */}
         <section className="bg-white">
-          <div className="container mx-auto px-6 max-w-5xl py-12">
+          <div className="container mx-auto px-6 max-w-5xl py-6">
             <img
               src={promoCollageImg}
               alt="Promotional products — drinkware, bags, headwear, apparel and more"
@@ -110,7 +111,7 @@ export default function PromotionalProducts() {
         </section>
 
         {/* Intro copy */}
-        <section className="py-16 md:py-20 bg-muted/30">
+        <section className="py-8 md:py-10 bg-muted/30">
           <div className="container mx-auto px-6 max-w-3xl">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
               You already know branded merchandise works. The question is whether you're getting products that actually fit your goals — or just filling a swag drawer.
@@ -124,9 +125,9 @@ export default function PromotionalProducts() {
         </section>
 
         {/* What We Help You With */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 max-w-3xl mx-auto">What We Help You With</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-3xl mx-auto">What We Help You With</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {useCases.map((item) => (
                 <div
@@ -150,7 +151,7 @@ export default function PromotionalProducts() {
         </section>
 
         {/* How It Works */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-8 md:py-12 bg-muted/30">
           <div className="container mx-auto px-6 max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -163,7 +164,7 @@ export default function PromotionalProducts() {
         </section>
 
         {/* Why Work With Us */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6 max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why Work With Us</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -179,7 +180,7 @@ export default function PromotionalProducts() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 md:py-28 bg-primary text-primary-foreground">
+        <section className="py-10 md:py-14 bg-primary text-primary-foreground">
           <div className="container mx-auto px-6 text-center max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10">
