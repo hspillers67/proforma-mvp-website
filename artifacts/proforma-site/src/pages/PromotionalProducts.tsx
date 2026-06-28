@@ -166,8 +166,14 @@ export default function PromotionalProducts() {
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-6 max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why Work With Us</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              You get a real person — someone with 15+ years of client-side marketing experience — who understands how branded products fit into a larger marketing strategy. We're not an online order form. We listen, we consult, and we make sure every product decision serves a purpose.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Backed by Proforma's $650M in buying power and deep supplier relationships, we can source virtually anything — and get it right the first time.
+            </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              You get a real person — someone with 15+ years of client-side marketing experience — who understands how branded products fit into a larger marketing strategy. Backed by Proforma's $650M in buying power, we can source virtually anything at competitive pricing.
+              Based in Katy, Texas — serving Houston-area businesses and clients nationwide.
             </p>
           </div>
         </section>
