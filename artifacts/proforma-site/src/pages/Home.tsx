@@ -12,7 +12,7 @@ import apparelImg from "@/assets/apparel.png";
 import promoProductsImg from "@/assets/promo-products.png";
 import printSignageImg from "@/assets/print-signage.jpg";
 import tradeshowsImg from "@/assets/tradeshows-events.png";
-import heroSwatchesImg from "@/assets/hero-swatches.png";
+import heroSwatchesImg from "@assets/cover_1782665562519.png";
 import ourAdvantageImg from "@/assets/our-advantage.jpg";
 
 export default function Home() {
@@ -78,7 +78,7 @@ export default function Home() {
 
       <main className="flex-grow pt-28">
         {/* Hero Section — Full-bleed overlay */}
-        <section className="relative overflow-hidden min-h-[82vh] flex items-center">
+        <section className="relative overflow-hidden min-h-[68vh] flex items-center">
           {/* Background image */}
           <img
             src={heroSwatchesImg}
