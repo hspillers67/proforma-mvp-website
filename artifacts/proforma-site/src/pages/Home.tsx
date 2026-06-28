@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Printer, Monitor, Gift, Shirt, Award } from "lucide-react";
+import { ArrowRight, MapPin, Printer, Monitor, Gift, Shirt, Award, ChevronDown } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import { posts } from "@/data/posts";
 import logoPath from "@/assets/logo.png";
@@ -45,7 +45,21 @@ export default function Home() {
           </a>
           <nav className="hidden md:flex items-center gap-10">
             <a href="/" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Home</a>
-            <a href="#services" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Capabilities</a>
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-base font-display font-medium text-white/75 hover:text-white transition-colors">
+                Capabilities <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" />
+              </button>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200 z-50">
+                <div className="bg-white rounded-xl shadow-xl border border-border py-1.5 min-w-[230px]">
+                  <a href="/promotional-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Promotional Products</a>
+                  <a href="/branded-apparel" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Uniforms &amp; Branded Apparel</a>
+                  <a href="/company-stores" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Company Stores</a>
+                  <a href="/trade-show-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Tradeshows &amp; Events</a>
+                  <a href="/printing-signage" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Print &amp; Signage</a>
+                  <a href="/employee-gifts-recognition" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Recognition &amp; Incentives</a>
+                </div>
+              </div>
+            </div>
             <a href="#process" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
             <a href="/blog" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Blog</a>
             <a href="/testimonials" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</a>
@@ -137,6 +151,7 @@ export default function Home() {
                 {
                   icon: <Monitor className="w-5 h-5" />,
                   title: "Company Stores",
+                  href: "/company-stores",
                   image: companyStoresImg,
                   description: "",
                   bullets: ["Custom company web stores", "Multi-location ordering", "Uniform program management", "On-demand fulfillment"],
@@ -144,6 +159,7 @@ export default function Home() {
                 {
                   icon: <Gift className="w-5 h-5" />,
                   title: "Promotional Products",
+                  href: "/promotional-products",
                   image: promoProductsImg,
                   description: "",
                   bullets: ["Giveaways that get noticed", "Event swag that stands out", "Eco-friendly & Made in USA options", "Employee & client gifts that connect"],
@@ -151,6 +167,7 @@ export default function Home() {
                 {
                   icon: <Shirt className="w-5 h-5" />,
                   title: "Uniforms & Branded Apparel",
+                  href: "/branded-apparel",
                   image: apparelImg,
                   description: "",
                   bullets: ["Corporate polos & button-downs", "Branded hoodies & jackets", "Custom headwear & caps", "High-quality safety apparel"],
@@ -158,6 +175,7 @@ export default function Home() {
                 {
                   icon: <MapPin className="w-5 h-5" />,
                   title: "Tradeshows & Events",
+                  href: "/trade-show-products",
                   image: tradeshowsImg,
                   description: "",
                   bullets: ["Retractable banner stands", "Custom table throws", "Event booth backdrops", "Popular attendee giveaways"],
@@ -165,6 +183,7 @@ export default function Home() {
                 {
                   icon: <Printer className="w-5 h-5" />,
                   title: "Print & Signage",
+                  href: "/printing-signage",
                   image: printSignageImg,
                   description: "",
                   bullets: ["Business cards & stationery", "Marketing brochures & flyers", "Large-format window graphics", "Outdoor & indoor event signs"],
@@ -172,15 +191,17 @@ export default function Home() {
                 {
                   icon: <Award className="w-5 h-5" />,
                   title: "Recognition & Incentives",
+                  href: "/employee-gifts-recognition",
                   image: recognitionImg,
                   description: "",
                   bullets: ["Engraved glass & crystal awards", "Employee anniversary gifts", "Premium corporate plaques", "Luxury custom gifts"],
                 },
               ].map((service) => (
-                <motion.div
+                <motion.a
                   key={service.title}
+                  href={service.href}
                   whileHover={{ y: -4 }}
-                  className="group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  className="group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
                 >
                   {/* Image + overlays */}
                   <div className="relative w-full aspect-[3/2] overflow-hidden">
@@ -224,7 +245,7 @@ export default function Home() {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </motion.a>
               ))}
             </div>
           </div>
