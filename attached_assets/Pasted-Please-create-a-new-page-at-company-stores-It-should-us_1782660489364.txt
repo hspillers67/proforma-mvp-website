@@ -1,0 +1,26 @@
+Please create a new page at /company-stores. It should use the same layout, fonts, colors, header and footer as the rest of the site, and the same light gray hero section style we used on the promotional products page (light gray background, dark navy H1, pink/magenta accent, reduced section spacing).
+For the hero image, use the existing Company Stores image that is already used in the Capabilities grid on the homepage. Please find that image asset and reuse it on this page — display it in the hero section alongside the H1, similar to how the collage image appears on the promotional products page.
+Page title (for the browser tab and SEO): Company Stores & Online Merch Programs for Houston Businesses | Proforma MVP Marketing
+Meta description: Proforma MVP Marketing builds custom company stores that let your team order branded apparel, uniforms, and merchandise on their own — no spreadsheets, no chaos.
+H1: Company Stores That Run Themselves
+Then this body copy:
+If you've ever managed branded apparel or merchandise for a team, you know the drill. Emails back and forth. Size confusion. Orders placed too late. Products that don't match. It's a lot of work for something that should be simple.
+A company store fixes that.
+We build custom online stores — powered by Proforma's ProStores™ platform — where your employees, clients, or team members can order branded products on their own, on their schedule. You set the rules. We handle the rest.
+H2: Who Uses Company Stores
+Display these six items as a clean card grid:
+
+Employee apparel programs — New hires order their own gear. No more size spreadsheets.
+Recognition & rewards — Give employees points or allowances to redeem for branded gifts.
+Uniform management — One place for all locations to order approved, on-brand uniforms.
+Holiday gifting — Let employees choose their own gift from a curated selection.
+Event & seasonal stores — Open a store for a specific campaign, then close it when it's done.
+Client & partner stores — Give your clients or dealers access to co-branded merchandise.
+
+H2: How It Works
+We set up your store, load your approved products, and configure it to match your brand. Your team gets a link. They order what they need. You get reporting, not chaos.
+Stores can be open 24/7 or run as a limited-time pop-up. We handle fulfillment, inventory, and customer support so you don't have to.
+H2: Ready to Simplify Your Merch Program?
+Let's talk about what a company store could look like for your business.
+Two buttons side by side: 'Let's Talk' linking to /contact, and 'Browse Products' linking to /products.
+Also add an internal link: anywhere 'promotional products' appears in the copy, link it to /promotional-products.
