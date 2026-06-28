@@ -172,7 +172,7 @@ export default function BlogPost() {
           <div className="mt-10 p-8 md:p-10 bg-primary rounded-2xl text-white text-center">
             <h3 className="text-2xl font-bold mb-3">Ready to get started?</h3>
             <p className="text-white/70 mb-6">
-              At Proforma MVP Marketing, we help companies across the Greater Houston area design promotional campaigns that make your brand impossible to ignore.
+              Proforma MVP Marketing helps companies across Greater Houston create promotional campaigns that make their brands impossible to ignore.
             </p>
             <a
               href="/#contact"
