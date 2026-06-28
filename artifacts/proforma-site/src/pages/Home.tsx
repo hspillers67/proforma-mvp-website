@@ -86,10 +86,8 @@ export default function Home() {
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          {/* Dark overlay — navy gradient for brand alignment */}
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/85 pointer-events-none" />
-          {/* Subtle vignette at edges */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 pointer-events-none" />
+          {/* Light overlay — keeps text readable while letting image brightness through */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-white/10 pointer-events-none" />
 
           {/* Copy — centered over image */}
           <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-8 flex justify-center">
@@ -99,19 +97,19 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-white/15 border border-white/30 backdrop-blur-sm text-white text-sm font-display font-semibold tracking-widest uppercase mb-6 shadow-sm">
+              <span className="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-display font-semibold tracking-widest uppercase mb-6 shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-secondary inline-block" />
                 Strategic Brand Partners
               </span>
-              <h1 className="text-base md:text-lg font-display font-semibold text-white/70 tracking-wide mb-4">
+              <h1 className="text-base md:text-lg font-display font-semibold text-primary/60 tracking-wide mb-4">
                 Promotional Products, Branded Apparel &amp; Printing for Houston Area Businesses
               </h1>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-white">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-primary">
                 YOUR <span className="text-secondary">BRAND</span>.
                 <br />
                 EVERYWHERE.
               </h2>
-              <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-primary/70 leading-relaxed mb-10 max-w-2xl mx-auto">
                 From branded merch and apparel to print and signage, we make it easy to get your brand out there—and handle every detail as if it were our own.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -124,7 +122,7 @@ export default function Home() {
                 </a>
                 <a
                   href="#services"
-                  className="inline-flex h-14 items-center justify-center rounded-md border-2 border-white/70 bg-white/10 backdrop-blur-sm px-8 text-base font-display font-semibold text-white shadow-sm transition-colors hover:bg-white hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  className="inline-flex h-14 items-center justify-center rounded-md border-2 border-primary/50 bg-white/60 backdrop-blur-sm px-8 text-base font-display font-semibold text-primary shadow-sm transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                 >
                   Explore Capabilities
                 </a>
