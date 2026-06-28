@@ -56,7 +56,7 @@ export default function Home() {
                   <a href="/branded-apparel" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Uniforms &amp; Branded Apparel</a>
                   <a href="/trade-show-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Tradeshows &amp; Events</a>
                   <a href="/printing-packaging" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Print &amp; Packaging</a>
-                  <a href="/employee-gifts-recognition" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Recognition &amp; Incentives</a>
+                  <a href="/awards-recognition" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Awards &amp; Recognition</a>
                 </div>
               </div>
             </div>
@@ -190,8 +190,8 @@ export default function Home() {
                 },
                 {
                   icon: <Award className="w-5 h-5" />,
-                  title: "Recognition & Incentives",
-                  href: "/employee-gifts-recognition",
+                  title: "Awards & Recognition",
+                  href: "/awards-recognition",
                   image: recognitionImg,
                   description: "",
                   bullets: ["Engraved glass & crystal awards", "Employee anniversary gifts", "Premium corporate plaques", "Luxury custom gifts"],

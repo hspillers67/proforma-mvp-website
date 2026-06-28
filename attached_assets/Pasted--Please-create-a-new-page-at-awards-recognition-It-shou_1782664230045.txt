@@ -1,0 +1,35 @@
+
+"Please create a new page at /awards-recognition. It should use the same layout, fonts, colors, header and footer as the rest of the site, and the same light gray hero section style we used on the previous service pages (light gray background, dark navy H1, pink/magenta accent, reduced section spacing).
+I have uploaded an image called award to the assets folder. Please use it as the hero image on this page, displayed in the hero section alongside the H1.
+Page title (for the browser tab and SEO): Employee Recognition & Awards for Houston Area Businesses | Proforma MVP Marketing
+Meta description: Proforma MVP Marketing helps Houston-area businesses recognize employees and clients with custom awards, engraved gifts, plaques, and ongoing recognition programs.
+H1: Employee Recognition & Awards for Houston Area Businesses
+Then this body copy:
+People remember how you made them feel. A generic gift card says "we had to do something." A thoughtfully chosen, well-branded award says "we noticed."
+Whether you're marking a work anniversary, welcoming a new hire, closing a big deal, or saying thank you to a client — the right recognition makes the moment land.
+H2: What We Source
+Display these six items as a clean card grid:
+
+Engraved glass & crystal awards — Timeless pieces that look at home on any desk.
+Employee anniversary gifts — Mark milestones in a way that feels personal, not obligatory.
+Premium corporate plaques — Recognize achievement with something built to last.
+Luxury custom gifts — For the moments that deserve something exceptional.
+Onboarding & welcome kits — Start the relationship right with a curated first impression.
+Client appreciation gifts — Strengthen relationships with something thoughtful and on-brand.
+
+H2: Programs That Scale
+Recognition shouldn't fall through the cracks because HR is busy or a manager forgot. We can help you build a program — including a company store — so the right gift goes to the right person at the right time, every time. Link 'company store' to /company-stores.
+H2: How It Works
+Tell us the occasion, your budget, and who you're recognizing. We'll bring you curated options that fit the moment. For ongoing programs, we'll set up a system that runs without you having to think about it.
+H2: Ready to Make Recognition Mean Something?
+Let's talk about what a recognition program could look like for your team.
+Two buttons side by side: 'Let's Talk' linking to /contact, and 'Browse Products' linking to /products.
+Also please make these four changes across the entire site:
+
+1. In the nav dropdown under Capabilities, change 'Recognition & Incentives' to 'Awards & Recognition' and update the link to /awards-recognition
+
+2. In the Capabilities grid on the homepage, change the tile label from 'Recognition & Incentives' to 'Awards & Recognition' and update its link to /awards-recognition
+
+3. Update any existing internal links pointing to /employee-gifts-recognition to point to /awards-recognition instead
+
+4. If a /employee-gifts-recognition route exists, redirect it to /awards-recognition

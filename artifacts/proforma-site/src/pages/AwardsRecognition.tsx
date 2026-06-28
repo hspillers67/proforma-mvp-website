@@ -1,36 +1,36 @@
 import { Link } from "wouter";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
-import brandedApparelHeroImg from "@/assets/branded-apparel-hero.png";
+import awardsHeroImg from "@/assets/awards-recognition-hero.jpg";
 
 const whatWeSource = [
   {
-    title: "Corporate apparel",
-    description: "Polos, button-downs, jackets, and outerwear for client-facing teams.",
+    title: "Engraved glass & crystal awards",
+    description: "Timeless pieces that look at home on any desk.",
   },
   {
-    title: "Uniforms",
-    description: "Consistent, on-brand workwear for frontline and operational staff.",
+    title: "Employee anniversary gifts",
+    description: "Mark milestones in a way that feels personal, not obligatory.",
   },
   {
-    title: "Safety & workwear",
-    description: "Hi-vis, flame-resistant, and industry-specific gear with your logo.",
+    title: "Premium corporate plaques",
+    description: "Recognize achievement with something built to last.",
   },
   {
-    title: "Trade show apparel",
-    description: "Dress your team to stand out on the floor.",
+    title: "Luxury custom gifts",
+    description: "For the moments that deserve something exceptional.",
   },
   {
-    title: "Team & event apparel",
-    description: "T-shirts, hoodies, and hats for company events, runs, and outings.",
+    title: "Onboarding & welcome kits",
+    description: "Start the relationship right with a curated first impression.",
   },
   {
-    title: "Retail-inspired styles",
-    description: "Premium brands your employees will wear off the clock too.",
+    title: "Client appreciation gifts",
+    description: "Strengthen relationships with something thoughtful and on-brand.",
   },
 ];
 
-export default function BrandedApparel() {
+export default function AwardsRecognition() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Nav */}
@@ -54,10 +54,10 @@ export default function BrandedApparel() {
                 <div className="bg-white rounded-xl shadow-xl border border-border py-1.5 min-w-[230px]">
                   <a href="/company-stores" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Company Stores</a>
                   <a href="/promotional-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Promotional Products</a>
-                  <a href="/branded-apparel" className="block px-5 py-2.5 text-sm font-display font-semibold text-secondary hover:bg-muted/50 transition-colors">Uniforms &amp; Branded Apparel</a>
+                  <a href="/branded-apparel" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Uniforms &amp; Branded Apparel</a>
                   <a href="/trade-show-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Tradeshows &amp; Events</a>
                   <a href="/printing-packaging" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Print &amp; Packaging</a>
-                  <a href="/awards-recognition" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Awards &amp; Recognition</a>
+                  <a href="/awards-recognition" className="block px-5 py-2.5 text-sm font-display font-semibold text-secondary hover:bg-muted/50 transition-colors">Awards &amp; Recognition</a>
                 </div>
               </div>
             </div>
@@ -84,17 +84,17 @@ export default function BrandedApparel() {
             <div className="flex flex-col lg:flex-row lg:items-center gap-10">
               <div className="max-w-[600px]">
                 <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-primary">
-                  Branded Apparel &amp; Uniforms for Houston Area Businesses
+                  Employee Recognition &amp; Awards for Houston Area Businesses
                 </h1>
                 <div className="w-14 h-1 mt-5 mb-5" style={{ backgroundColor: "#9C0057" }} />
                 <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#444444" }}>
-                  From corporate polos to job site gear — decorated and delivered for teams of every size.
+                  Custom awards, engraved gifts, plaques, and recognition programs that make the moment land.
                 </p>
               </div>
               <div className="lg:flex-1 max-w-xl w-full">
                 <img
-                  src={brandedApparelHeroImg}
-                  alt="Branded apparel — vests, hoodies, quarter-zips, polos, and hats with custom logos"
+                  src={awardsHeroImg}
+                  alt="Custom crystal award engraved for Master Machinery Inc. — employee recognition"
                   className="w-full rounded-2xl shadow-lg"
                 />
               </div>
@@ -106,10 +106,10 @@ export default function BrandedApparel() {
         <section className="py-8 md:py-10 bg-muted/30">
           <div className="container mx-auto px-6 max-w-3xl">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-              What your team wears says something about your company before anyone opens their mouth. Whether it's a polo at a client meeting, a uniform on the job site, or a branded jacket at a trade show — the right apparel builds credibility and pulls a team together.
+              People remember how you made them feel. A generic gift card says "we had to do something." A thoughtfully chosen, well-branded award says "we noticed."
             </p>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              We source branded apparel and uniforms for businesses of every size, from single-location companies to multi-site operations. Whatever your team needs to look sharp and feel good wearing it, we can find it.
+              Whether you're marking a work anniversary, welcoming a new hire, closing a big deal, or saying thank you to a client — the right recognition makes the moment land.
             </p>
           </div>
         </section>
@@ -132,14 +132,14 @@ export default function BrandedApparel() {
           </div>
         </section>
 
-        {/* Brand Consistency */}
+        {/* Programs That Scale */}
         <section className="py-8 md:py-12 bg-muted/30">
           <div className="container mx-auto px-6 max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Brand Consistency Across Every Location</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Programs That Scale</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              If you manage apparel for multiple locations or departments, we can set up a{" "}
+              Recognition shouldn't fall through the cracks because HR is busy or a manager forgot. We can help you build a program — including a{" "}
               <a href="/company-stores" className="text-secondary font-semibold hover:underline">company store</a>{" "}
-              so everyone orders from the same approved catalog — no rogue logos, no off-brand colors, no size chaos.
+              — so the right gift goes to the right person at the right time, every time.
             </p>
           </div>
         </section>
@@ -149,7 +149,7 @@ export default function BrandedApparel() {
           <div className="container mx-auto px-6 max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Tell us who's wearing it, where they're wearing it, and what impression you want to make. We'll handle the rest — from decoration method to sizing to delivery.
+              Tell us the occasion, your budget, and who you're recognizing. We'll bring you curated options that fit the moment. For ongoing programs, we'll set up a system that runs without you having to think about it.
             </p>
           </div>
         </section>
@@ -157,9 +157,9 @@ export default function BrandedApparel() {
         {/* CTA */}
         <section className="py-10 md:py-14 bg-primary text-primary-foreground">
           <div className="container mx-auto px-6 text-center max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Outfit Your Team?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make Recognition Mean Something?</h2>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10">
-              Let's talk about what branded apparel could look like for your business.
+              Let's talk about what a recognition program could look like for your team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
