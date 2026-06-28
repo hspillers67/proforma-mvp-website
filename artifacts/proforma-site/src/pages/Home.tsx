@@ -55,7 +55,7 @@ export default function Home() {
                   <a href="/promotional-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Promotional Products</a>
                   <a href="/branded-apparel" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Uniforms &amp; Branded Apparel</a>
                   <a href="/trade-show-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Tradeshows &amp; Events</a>
-                  <a href="/printing-signage" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Print &amp; Signage</a>
+                  <a href="/printing-packaging" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Print &amp; Packaging</a>
                   <a href="/employee-gifts-recognition" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Recognition &amp; Incentives</a>
                 </div>
               </div>
@@ -182,8 +182,8 @@ export default function Home() {
                 },
                 {
                   icon: <Printer className="w-5 h-5" />,
-                  title: "Print & Signage",
-                  href: "/printing-signage",
+                  title: "Print & Packaging",
+                  href: "/printing-packaging",
                   image: printSignageImg,
                   description: "",
                   bullets: ["Business cards & stationery", "Marketing brochures & flyers", "Large-format window graphics", "Outdoor & indoor event signs"],

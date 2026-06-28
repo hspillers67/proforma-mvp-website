@@ -1,36 +1,36 @@
 import { Link } from "wouter";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
-import brandedApparelHeroImg from "@/assets/branded-apparel-hero.png";
+import printHeroImg from "@/assets/print-packaging-hero.png";
 
-const whatWeSource = [
+const whatWeProduce = [
   {
-    title: "Corporate apparel",
-    description: "Polos, button-downs, jackets, and outerwear for client-facing teams.",
+    title: "Business cards & stationery",
+    description: "First impressions start here. Make them count.",
   },
   {
-    title: "Uniforms",
-    description: "Consistent, on-brand workwear for frontline and operational staff.",
+    title: "Marketing brochures & flyers",
+    description: "Leave-behinds that actually get kept.",
   },
   {
-    title: "Safety & workwear",
-    description: "Hi-vis, flame-resistant, and industry-specific gear with your logo.",
+    title: "Large-format window graphics",
+    description: "Turn your space into a brand statement.",
   },
   {
-    title: "Trade show apparel",
-    description: "Dress your team to stand out on the floor.",
+    title: "Outdoor & indoor event signs",
+    description: "Directional, promotional, and everything in between.",
   },
   {
-    title: "Team & event apparel",
-    description: "T-shirts, hoodies, and hats for company events, runs, and outings.",
+    title: "Custom packaging",
+    description: "Boxes, bags, and wrapping that make your product feel premium.",
   },
   {
-    title: "Retail-inspired styles",
-    description: "Premium brands your employees will wear off the clock too.",
+    title: "Banners & displays",
+    description: "Portable, professional, and built for repeat use.",
   },
 ];
 
-export default function BrandedApparel() {
+export default function PrintingPackaging() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Nav */}
@@ -54,9 +54,9 @@ export default function BrandedApparel() {
                 <div className="bg-white rounded-xl shadow-xl border border-border py-1.5 min-w-[230px]">
                   <a href="/company-stores" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Company Stores</a>
                   <a href="/promotional-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Promotional Products</a>
-                  <a href="/branded-apparel" className="block px-5 py-2.5 text-sm font-display font-semibold text-secondary hover:bg-muted/50 transition-colors">Uniforms &amp; Branded Apparel</a>
+                  <a href="/branded-apparel" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Uniforms &amp; Branded Apparel</a>
                   <a href="/trade-show-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Tradeshows &amp; Events</a>
-                  <a href="/printing-packaging" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Print &amp; Packaging</a>
+                  <a href="/printing-packaging" className="block px-5 py-2.5 text-sm font-display font-semibold text-secondary hover:bg-muted/50 transition-colors">Print &amp; Packaging</a>
                   <a href="/employee-gifts-recognition" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Recognition &amp; Incentives</a>
                 </div>
               </div>
@@ -84,17 +84,17 @@ export default function BrandedApparel() {
             <div className="flex flex-col lg:flex-row lg:items-center gap-10">
               <div className="max-w-[600px]">
                 <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-primary">
-                  Branded Apparel &amp; Uniforms for Houston Area Businesses
+                  Print, Signage &amp; Packaging for Houston Area Businesses
                 </h1>
                 <div className="w-14 h-1 mt-5 mb-5" style={{ backgroundColor: "#9C0057" }} />
                 <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#444444" }}>
-                  From corporate polos to job site gear — decorated and delivered for teams of every size.
+                  Every printed piece should look like you mean business — from the card you hand to a new contact to the backdrop at your booth.
                 </p>
               </div>
               <div className="lg:flex-1 max-w-xl w-full">
                 <img
-                  src={brandedApparelHeroImg}
-                  alt="Branded apparel — vests, hoodies, quarter-zips, polos, and hats with custom logos"
+                  src={printHeroImg}
+                  alt="Custom business cards and print materials for Houston area businesses"
                   className="w-full rounded-2xl shadow-lg"
                 />
               </div>
@@ -106,20 +106,22 @@ export default function BrandedApparel() {
         <section className="py-8 md:py-10 bg-muted/30">
           <div className="container mx-auto px-6 max-w-3xl">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-              What your team wears says something about your company before anyone opens their mouth. Whether it's a polo at a client meeting, a uniform on the job site, or a branded jacket at a trade show — the right apparel builds credibility and pulls a team together.
+              Print isn't dead. It's just easier to do wrong. A flimsy brochure, a pixelated banner, a business card that feels cheap — these things leave an impression, just not the right one.
             </p>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              We source branded apparel and uniforms for businesses of every size, from single-location companies to multi-site operations. Whatever your team needs to look sharp and feel good wearing it, we can find it.
+              We help Houston-area businesses get print right. From the business card you hand to a new contact to the backdrop behind your{" "}
+              <a href="/trade-show-products" className="text-secondary font-semibold hover:underline">trade show booth</a>,
+              {" "}every printed piece should look like you mean business.
             </p>
           </div>
         </section>
 
-        {/* What We Source */}
+        {/* What We Produce */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-3xl mx-auto">What We Source</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-3xl mx-auto">What We Produce</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {whatWeSource.map((item) => (
+              {whatWeProduce.map((item) => (
                 <div
                   key={item.title}
                   className="bg-muted/30 border border-border rounded-xl px-7 py-6 hover:shadow-md transition-shadow"
@@ -132,14 +134,12 @@ export default function BrandedApparel() {
           </div>
         </section>
 
-        {/* Brand Consistency */}
+        {/* Cohesive Across Every Touchpoint */}
         <section className="py-8 md:py-12 bg-muted/30">
           <div className="container mx-auto px-6 max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Brand Consistency Across Every Location</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Cohesive Across Every Touchpoint</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              If you manage apparel for multiple locations or departments, we can set up a{" "}
-              <a href="/company-stores" className="text-secondary font-semibold hover:underline">company store</a>{" "}
-              so everyone orders from the same approved catalog — no rogue logos, no off-brand colors, no size chaos.
+              The best print programs tie everything together — your colors, your fonts, your message — so every piece looks like it belongs to the same brand. We help you build that consistency, whether you need one item or a full suite of materials.
             </p>
           </div>
         </section>
@@ -149,7 +149,7 @@ export default function BrandedApparel() {
           <div className="container mx-auto px-6 max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Tell us who's wearing it, where they're wearing it, and what impression you want to make. We'll handle the rest — from decoration method to sizing to delivery.
+              Share your artwork, your deadline, and your distribution plan. We'll handle production and delivery. If you need design help getting files print-ready, we can handle that too.
             </p>
           </div>
         </section>
@@ -157,9 +157,9 @@ export default function BrandedApparel() {
         {/* CTA */}
         <section className="py-10 md:py-14 bg-primary text-primary-foreground">
           <div className="container mx-auto px-6 text-center max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Outfit Your Team?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make Print Work Harder for Your Brand?</h2>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10">
-              Let's talk about what branded apparel could look like for your business.
+              Let's talk about what you need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

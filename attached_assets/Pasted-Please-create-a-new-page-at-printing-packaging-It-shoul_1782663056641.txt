@@ -1,0 +1,35 @@
+Please create a new page at /printing-packaging. It should use the same layout, fonts, colors, header and footer as the rest of the site, and the same light gray hero section style we used on the previous service pages (light gray background, dark navy H1, pink/magenta accent, reduced section spacing).
+I have uploaded an image called cards to the assets folder. Please use it as the hero image on this page, displayed in the hero section alongside the H1.
+Page title (for the browser tab and SEO): Print, Signage & Packaging for Houston Area Businesses | Proforma MVP Marketing
+Meta description: Proforma MVP Marketing produces business cards, brochures, banners, signage, and custom packaging for Houston-area businesses — print that makes your brand look like it means business.
+H1: Print, Signage & Packaging for Houston Area Businesses
+Then this body copy:
+Print isn't dead. It's just easier to do wrong. A flimsy brochure, a pixelated banner, a business card that feels cheap — these things leave an impression, just not the right one.
+We help Houston-area businesses get print right. From the business card you hand to a new contact to the backdrop behind your trade show booth, every printed piece should look like you mean business.
+H2: What We Produce
+Display these six items as a clean card grid:
+
+Business cards & stationery — First impressions start here. Make them count.
+Marketing brochures & flyers — Leave-behinds that actually get kept.
+Large-format window graphics — Turn your space into a brand statement.
+Outdoor & indoor event signs — Directional, promotional, and everything in between.
+Custom packaging — Boxes, bags, and wrapping that make your product feel premium.
+Banners & displays — Portable, professional, and built for repeat use.
+
+H2: Cohesive Across Every Touchpoint
+The best print programs tie everything together — your colors, your fonts, your message — so every piece looks like it belongs to the same brand. We help you build that consistency, whether you need one item or a full suite of materials.
+H2: How It Works
+Share your artwork, your deadline, and your distribution plan. We'll handle production and delivery. If you need design help getting files print-ready, we can handle that too.
+H2: Ready to Make Print Work Harder for Your Brand?
+Let's talk about what you need.
+Two buttons side by side: 'Let's Talk' linking to /contact, and 'Browse Products' linking to /products.
+Internal links: link 'trade show booth' to /trade-show-products wherever it appears in the copy.
+Also please make these four changes across the entire site:
+
+1. In the nav dropdown under Capabilities, change 'Print & Signage' to 'Print & Packaging' and update the link to /printing-packaging
+
+2. In the Capabilities grid on the homepage, change the tile label from 'Print & Signage' to 'Print & Packaging' and update its link to /printing-packaging
+
+3. Update any existing internal links pointing to /printing-signage to point to /printing-packaging instead
+
+4. If a /printing-signage route exists, redirect it to /printing-packaging
