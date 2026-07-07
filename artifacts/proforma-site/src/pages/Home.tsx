@@ -446,7 +446,7 @@ export default function Home() {
                       </div>
                       <div>
                         <p className="font-display font-medium text-white">Phone</p>
-                        <a href="tel:2818491508" className="text-sm hover:text-white transition-colors">281.849.1508</a>
+                        <a href="tel:2818313527" className="text-sm hover:text-white transition-colors">281.831.3527</a>
                       </div>
                     </div>
                   </div>

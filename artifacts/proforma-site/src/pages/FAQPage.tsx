@@ -56,7 +56,7 @@ const faqs = [
   {
     question: "How do I get started?",
     answer:
-      "Easy. Just contact us with your project details—budget, audience, event date. We'll create a tailored proposal with ideas that fit your goals. Email us at info.mvp@proforma.com or call 281.849.1508.",
+      "Easy. Just contact us with your project details—budget, audience, event date. We'll create a tailored proposal with ideas that fit your goals. Email us at info.mvp@proforma.com or call 281.831.3527.",
   },
 ];
 
