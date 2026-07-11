@@ -119,17 +119,8 @@ export default function TrendingPost() {
       </header>
 
       <main className="flex-grow pt-28">
-        {/* Featured image */}
-        <div className="w-full max-h-[480px] bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center overflow-hidden">
-          <img
-            src={post.image}
-            alt={post.imageAlt}
-            className="w-full h-full object-cover"
-          />
-        </div>
-
         {/* Article */}
-        <div className="container mx-auto px-6 py-14 max-w-3xl">
+        <div className="container mx-auto px-6 py-14 max-w-4xl">
           {/* Back */}
           <Link
             href="/trending"
@@ -138,35 +129,50 @@ export default function TrendingPost() {
             <ArrowLeft className="w-4 h-4" /> Back to Trending
           </Link>
 
-          {/* Tags + date */}
-          <div className="flex flex-wrap items-center gap-2 mb-6">
-            {post.tags.map((tag) => {
-              const colors = TAG_COLORS[tag] ?? "bg-muted text-muted-foreground border-border";
-              return (
-                <Link key={tag} href="/trending">
-                  <span
-                    className={`inline-flex items-center gap-1.5 text-xs font-display font-semibold px-3 py-1 rounded-full border cursor-pointer hover:opacity-80 transition-opacity ${colors}`}
-                  >
-                    <Tag className="w-3 h-3" /> {tag}
-                  </span>
-                </Link>
-              );
-            })}
-            <span className="text-xs text-muted-foreground ml-1">{post.date}</span>
+          {/* Two-column intro: copy left, image right */}
+          <div className="flex flex-col md:flex-row gap-10 md:gap-14 mb-10">
+            {/* Left: meta + headline + subhead */}
+            <div className="flex-1 min-w-0">
+              {/* Tags + date */}
+              <div className="flex flex-wrap items-center gap-2 mb-5">
+                {post.tags.map((tag) => {
+                  const colors = TAG_COLORS[tag] ?? "bg-muted text-muted-foreground border-border";
+                  return (
+                    <Link key={tag} href="/trending">
+                      <span
+                        className={`inline-flex items-center gap-1.5 text-xs font-display font-semibold px-3 py-1 rounded-full border cursor-pointer hover:opacity-80 transition-opacity ${colors}`}
+                      >
+                        <Tag className="w-3 h-3" /> {tag}
+                      </span>
+                    </Link>
+                  );
+                })}
+                <span className="text-xs text-muted-foreground ml-1">{post.date}</span>
+              </div>
+
+              {/* Headline + subhead */}
+              <h1 className="text-3xl md:text-4xl font-bold text-primary leading-tight mb-4">
+                {post.title}
+              </h1>
+              {post.subhead && (
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {post.subhead}
+                </p>
+              )}
+            </div>
+
+            {/* Right: featured image */}
+            <div className="w-full md:w-[380px] shrink-0 rounded-2xl overflow-hidden shadow-lg bg-primary/5">
+              <img
+                src={post.image}
+                alt={post.imageAlt}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
-          {/* Headline + subhead */}
-          <h1 className="text-3xl md:text-4xl font-bold text-primary leading-tight mb-4">
-            {post.title}
-          </h1>
-          {post.subhead && (
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              {post.subhead}
-            </p>
-          )}
-
           {/* Body */}
-          <div className="space-y-5">
+          <div className="space-y-5 max-w-3xl">
             {post.content.map((block, i) => (
               <Block key={i} block={block} />
             ))}
