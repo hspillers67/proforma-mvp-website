@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import { trendingPosts, PRODUCT_TAGS, INDUSTRY_TAGS, TAG_COLORS } from "@/data/trending";
+import { trendingPosts, PRODUCT_TAGS, TAG_COLORS } from "@/data/trending";
 import logoWhitePath from "@/assets/logo-white.png";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
 
-const ALL_TAGS = [...PRODUCT_TAGS, ...INDUSTRY_TAGS];
+const ALL_TAGS = [...PRODUCT_TAGS];
 
 function TagPill({
   tag,

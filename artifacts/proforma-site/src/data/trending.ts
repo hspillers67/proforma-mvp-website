@@ -18,7 +18,6 @@ export interface TrendingPost {
 }
 
 export const PRODUCT_TAGS = ["Limited Edition", "Seasonal", "New Arrival"] as const;
-export const INDUSTRY_TAGS = ["Oil & Gas", "Manufacturing", "Education"] as const;
 
 export const TAG_COLORS: Record<string, string> = {
   "Limited Edition": "bg-secondary/10 text-secondary border-secondary/20",
