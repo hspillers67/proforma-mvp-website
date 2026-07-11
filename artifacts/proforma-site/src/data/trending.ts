@@ -17,15 +17,12 @@ export interface TrendingPost {
   content: ContentBlock[];
 }
 
-export const PRODUCT_TAGS = ["Limited Edition", "Seasonal", "New Arrival"] as const;
+export const PRODUCT_TAGS = ["Limited Edition", "Seasonal", "New Arrivals"] as const;
 
 export const TAG_COLORS: Record<string, string> = {
   "Limited Edition": "bg-secondary/10 text-secondary border-secondary/20",
   "Seasonal": "bg-amber-50 text-amber-700 border-amber-200",
-  "New Arrival": "bg-emerald-50 text-emerald-700 border-emerald-200",
-  "Oil & Gas": "bg-blue-50 text-blue-700 border-blue-200",
-  "Manufacturing": "bg-slate-100 text-slate-700 border-slate-200",
-  "Education": "bg-violet-50 text-violet-700 border-violet-200",
+  "New Arrivals": "bg-emerald-50 text-emerald-700 border-emerald-200",
 };
 
 export const trendingPosts: TrendingPost[] = [
@@ -43,11 +40,12 @@ export const trendingPosts: TrendingPost[] = [
     footnote: "YETI® is limited to US customers only. YETI products purchased must be resold only with embellishment.",
     ctaUrl: "https://www.proformamvpmarketing.com/#contact",
     content: [
-      { type: "paragraph", text: "YETI's seasonal color releases are some of the most anticipated moments in the branded drinkware calendar — and Pace Purple and Royal Blue are no exception." },
-      { type: "paragraph", text: "These two limited-edition colorways are available now for custom laser engraving. Because they're seasonal, they won't be around forever. When the run sells out, it's gone." },
-      { type: "paragraph", text: "Both colors are available across multiple YETI vessel sizes and styles, giving you a full lineup to choose from for client gifts, employee recognition, event giveaways, or company stores." },
+      { type: "paragraph", text: "Every time YETI drops a seasonal color, people pay attention. And these two? They're going to disappear fast." },
+      { type: "paragraph", text: "Pace Purple and Royal Blue are now available for custom laser engraving, making them an easy upgrade for companies that want branded drinkware people will keep." },
+      { type: "paragraph", text: "Here's the catch: they're limited edition. Once these seasonal colors sell out, that's it. No restocks. No \"maybe next month.\"" },
+      { type: "paragraph", text: "Both colors are available across multiple YETI styles and sizes, whether you're putting together client gifts, employee appreciation kits, event giveaways, or stocking a company store." },
       { type: "heading", level: 2, text: "Pace Purple" },
-      { type: "paragraph", text: "Pace Purple is a rich, confident color — bold enough to stand out but refined enough to work across professional settings. It's a strong choice for brands that want something memorable without going overly casual." },
+      { type: "paragraph", text: "Pace Purple is confident without trying too hard. It's bold enough to stand out but polished enough that it still feels right in a boardroom, on a job site, or anywhere in between." },
       { type: "paragraph", text: "Available Pace Purple styles:" },
       { type: "list", items: [
         "18 oz Water Bottle",
@@ -56,7 +54,8 @@ export const trendingPosts: TrendingPost[] = [
         "20 oz Stackable Pint",
       ]},
       { type: "heading", level: 2, text: "Royal Blue" },
-      { type: "paragraph", text: "Royal Blue is energetic, clean, and immediately recognizable. It photographs well, pairs with a wide range of brand color palettes, and has broad appeal across industries and age groups." },
+      { type: "paragraph", text: "Royal Blue is one of those colors that just works. It's clean, vibrant, easy to pair with almost any brand color, and looks great in photos — which matters more than most people think." },
+      { type: "paragraph", text: "It's also a crowd-pleaser, whether you're ordering for employees, customers, or event attendees." },
       { type: "paragraph", text: "Available Royal Blue styles:" },
       { type: "list", items: [
         "Can Coolers",
@@ -67,12 +66,13 @@ export const trendingPosts: TrendingPost[] = [
         "Chug-Cap Water Bottles",
       ]},
       { type: "heading", level: 2, text: "Why YETI Works for Corporate Gifting" },
-      { type: "paragraph", text: "YETI has earned a level of brand equity that most promotional product manufacturers don't reach. Recipients recognize it. They keep it. They use it daily." },
-      { type: "paragraph", text: "For Houston-area businesses in oil and gas, manufacturing, construction, healthcare, and professional services, YETI drinkware is one of the most reliable ways to give a premium gift that actually gets used — whether it's going on a job site, into a truck, or onto a conference room table." },
-      { type: "paragraph", text: "Custom laser engraving gives the vessel a clean, permanent mark that looks intentional and high-end. No ink, no peeling, no looking like a standard promo item." },
-      { type: "heading", level: 2, text: "Limited Availability — Order Early" },
-      { type: "paragraph", text: "Seasonal YETI colorways sell through quickly. Once inventory is gone, it doesn't come back. If Pace Purple or Royal Blue fits an upcoming event, gift program, or company store, the best time to move on it is now." },
-      { type: "paragraph", text: "We'll help you figure out the right style, quantity, and engraving approach for your audience and budget." },
+      { type: "paragraph", text: "People recognize the brand immediately. They use it every day. And instead of ending up in the junk drawer, it ends up in the truck, on the job site, at the gym, or sitting on someone's desk for years." },
+      { type: "paragraph", text: "That's exactly why YETI drinkware continues to be one of the smartest choices for corporate gifting, especially for Houston businesses in oil and gas, manufacturing, construction, healthcare, and professional services." },
+      { type: "paragraph", text: "Add custom laser engraving, and you get a permanent, premium finish that looks intentional — not like someone slapped a logo on a giveaway. No peeling. No fading. No cheap promo-product vibes." },
+      { type: "heading", level: 2, text: "Limited Availability" },
+      { type: "paragraph", text: "Seasonal YETI colors have one thing in common: they don't stick around." },
+      { type: "paragraph", text: "If Pace Purple or Royal Blue fits an upcoming event, holiday gifting program, employee recognition initiative, or company store, now's the time to grab them before they're gone." },
+      { type: "paragraph", text: "Need help choosing the right style, quantity, or engraving option? We'll make the process easy and help you find the best fit for your audience and your budget." },
     ],
   },
 ];
