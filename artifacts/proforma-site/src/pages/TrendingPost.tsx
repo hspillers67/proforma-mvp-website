@@ -129,53 +129,51 @@ export default function TrendingPost() {
             <ArrowLeft className="w-4 h-4" /> Back to Trending
           </Link>
 
-          {/* Two-column intro: copy left, image right */}
-          <div className="flex flex-col md:flex-row gap-10 md:gap-14 mb-10">
-            {/* Left: meta + headline + subhead */}
-            <div className="flex-1 min-w-0">
-              {/* Tags + date */}
-              <div className="flex flex-wrap items-center gap-2 mb-5">
-                {post.tags.map((tag) => {
-                  const colors = TAG_COLORS[tag] ?? "bg-muted text-muted-foreground border-border";
-                  return (
-                    <Link key={tag} href="/trending">
-                      <span
-                        className={`inline-flex items-center gap-1.5 text-xs font-display font-semibold px-3 py-1 rounded-full border cursor-pointer hover:opacity-80 transition-opacity ${colors}`}
-                      >
-                        <Tag className="w-3 h-3" /> {tag}
-                      </span>
-                    </Link>
-                  );
-                })}
-                <span className="text-xs text-muted-foreground ml-1">{post.date}</span>
-              </div>
-
-              {/* Headline + subhead */}
-              <h1 className="text-3xl md:text-4xl font-bold text-primary leading-tight mb-4">
-                {post.title}
-              </h1>
-              {post.subhead && (
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {post.subhead}
-                </p>
-              )}
-            </div>
-
-            {/* Right: featured image */}
-            <div className={`w-full md:w-[380px] shrink-0 rounded-2xl overflow-hidden shadow-lg ${post.imageBgClass ?? "bg-primary/5"}`}>
+          {/* Article body — image floats right so copy wraps naturally */}
+          <div className="max-w-3xl">
+            {/* Floating image */}
+            <div className={`float-none w-full mb-8 md:float-right md:w-[360px] md:ml-10 md:mb-6 rounded-2xl overflow-hidden shadow-lg ${post.imageBgClass ?? "bg-primary/5"}`}>
               <img
                 src={post.image}
                 alt={post.imageAlt}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
-          </div>
 
-          {/* Body */}
-          <div className="space-y-5 max-w-3xl">
-            {post.content.map((block, i) => (
-              <Block key={i} block={block} />
-            ))}
+            {/* Tags + date */}
+            <div className="flex flex-wrap items-center gap-2 mb-5">
+              {post.tags.map((tag) => {
+                const colors = TAG_COLORS[tag] ?? "bg-muted text-muted-foreground border-border";
+                return (
+                  <Link key={tag} href="/trending">
+                    <span
+                      className={`inline-flex items-center gap-1.5 text-xs font-display font-semibold px-3 py-1 rounded-full border cursor-pointer hover:opacity-80 transition-opacity ${colors}`}
+                    >
+                      <Tag className="w-3 h-3" /> {tag}
+                    </span>
+                  </Link>
+                );
+              })}
+              <span className="text-xs text-muted-foreground ml-1">{post.date}</span>
+            </div>
+
+            {/* Headline + subhead */}
+            <h1 className="text-3xl md:text-4xl font-bold text-primary leading-tight mb-3">
+              {post.title}
+            </h1>
+            {post.subhead && (
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                {post.subhead}
+              </p>
+            )}
+
+            {/* Body */}
+            <div className="space-y-5">
+              {post.content.map((block, i) => (
+                <Block key={i} block={block} />
+              ))}
+            </div>
+            <div className="clear-both" />
           </div>
 
           {/* CTA */}
