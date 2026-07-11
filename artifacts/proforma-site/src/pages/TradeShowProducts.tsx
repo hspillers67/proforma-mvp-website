@@ -65,6 +65,7 @@ export default function TradeShowProducts() {
             </div>
             <a href="/#process" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
             <Link href="/blog" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Blog</Link>
+            <Link href="/trending" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Trending</Link>
             <Link href="/testimonials" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</Link>
             <Link href="/faq" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">FAQ</Link>
             <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Browse Products</a>

@@ -16,6 +16,8 @@ import BrandedApparel from "@/pages/BrandedApparel";
 import TradeShowProducts from "@/pages/TradeShowProducts";
 import PrintingPackaging from "@/pages/PrintingPackaging";
 import AwardsRecognition from "@/pages/AwardsRecognition";
+import Trending from "@/pages/Trending";
+import TrendingPost from "@/pages/TrendingPost";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +37,8 @@ function Router() {
       <Route path="/printing-signage">{() => { window.location.replace("/printing-packaging"); return null; }}</Route>
       <Route path="/awards-recognition" component={AwardsRecognition} />
       <Route path="/employee-gifts-recognition">{() => { window.location.replace("/awards-recognition"); return null; }}</Route>
+      <Route path="/trending" component={Trending} />
+      <Route path="/trending/:slug" component={TrendingPost} />
       <Route path="/admin" component={Admin} />
       <Route path="/thank-you" component={ThankYou} />
       <Route component={NotFound} />

@@ -59,7 +59,7 @@ const faqs = [
   {
     question: "How do I get started?",
     answer:
-      "Easy. Just contact us with your project details—budget, audience, event date. We'll create a tailored proposal with ideas that fit your goals. Email us at info.mvp@proforma.com or call 281.849.1508.",
+      "Easy. Just contact us with your project details—budget, audience, event date. We'll create a tailored proposal with ideas that fit your goals. Email us at info.mvp@proforma.com or call 281.831.3527.",
   },
 ];
 
@@ -112,3 +112,58 @@ const faqHtml = baseHtml
 mkdirSync(join(distDir, "faq"), { recursive: true });
 writeFileSync(join(distDir, "faq", "index.html"), faqHtml);
 console.log("Pre-rendered /faq → dist/public/faq/index.html");
+
+// ── Sitemap ──────────────────────────────────────────────────────────────────
+const BASE_URL = "https://www.proformamvpmarketing.com";
+
+const staticRoutes = [
+  "/",
+  "/blog",
+  "/trending",
+  "/testimonials",
+  "/faq",
+  "/company-stores",
+  "/promotional-products",
+  "/branded-apparel",
+  "/trade-show-products",
+  "/printing-packaging",
+  "/awards-recognition",
+];
+
+const blogSlugs = [
+  "smarter-promotional-products-houston",
+  "branded-apparel-houston-teams-will-want-to-wear",
+  "branded-apparel-vs-tech-gadgets",
+  "real-cost-of-promotional-products",
+  "make-onboarding-unforgettable",
+  "planning-your-2026-promotional-marketing-spend",
+];
+
+const trendingSlugs = [
+  "yeti-pace-purple-royal-blue",
+];
+
+const allUrls = [
+  ...staticRoutes,
+  ...blogSlugs.map((s) => `/blog/${s}`),
+  ...trendingSlugs.map((s) => `/trending/${s}`),
+];
+
+const today = new Date().toISOString().split("T")[0];
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${allUrls
+  .map(
+    (url) => `  <url>
+    <loc>${BASE_URL}${url}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${url === "/" ? "weekly" : "monthly"}</changefreq>
+    <priority>${url === "/" ? "1.0" : url.startsWith("/trending/") || url.startsWith("/blog/") ? "0.8" : "0.7"}</priority>
+  </url>`
+  )
+  .join("\n")}
+</urlset>`;
+
+writeFileSync(join(distDir, "sitemap.xml"), sitemap);
+console.log(`Sitemap → dist/public/sitemap.xml (${allUrls.length} URLs)`);

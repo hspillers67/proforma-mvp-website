@@ -62,6 +62,7 @@ export default function Home() {
             </div>
             <a href="#process" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
             <a href="/blog" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Blog</a>
+            <a href="/trending" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Trending</a>
             <a href="/testimonials" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</a>
             <a href="/faq" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">FAQ</a>
             <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Browse Products</a>
