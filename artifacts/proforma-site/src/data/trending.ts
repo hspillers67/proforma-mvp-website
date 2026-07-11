@@ -1,5 +1,6 @@
 import { type ContentBlock } from "@/data/posts";
 import imgYeti from "@/assets/trending/yeti-pace-purple-royal-blue.png";
+import imgDumpling from "@/assets/trending/squishy-dumpling-stress-toy.png";
 
 export interface TrendingPost {
   slug: string;
@@ -10,6 +11,7 @@ export interface TrendingPost {
   date: string;
   image: string;
   imageAlt: string;
+  imageBgClass?: string;
   pageTitle: string;
   metaDescription: string;
   footnote?: string;
@@ -26,6 +28,52 @@ export const TAG_COLORS: Record<string, string> = {
 };
 
 export const trendingPosts: TrendingPost[] = [
+  {
+    slug: "squishy-dumpling-stress-toy",
+    title: "Squishy Dumpling Stress Toy",
+    subhead: "The branded giveaway people can't resist picking up.",
+    excerpt: "Some promotional products get a quick glance. The Squishy Dumpling Stress Toy gets picked up, squeezed, passed around, and somehow always ends up in someone's desk drawer.",
+    tags: ["New Arrivals"],
+    date: "July 11, 2026",
+    image: imgDumpling,
+    imageAlt: "Squishy Dumpling Stress Toy in steamer basket packaging, shown in multiple colors including cream, green, pink, blue, purple, and red",
+    imageBgClass: "bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50",
+    pageTitle: "Squishy Dumpling Stress Toy — Custom Branded Giveaway | ProForma MVP Marketing",
+    metaDescription: "The Squishy Dumpling Stress Toy is a slow-rising TPE stress reliever packaged in a recycled ABS steamer basket. Available in 7 colors with custom logo imprint — perfect for trade shows, recruiting events, and employee wellness programs.",
+    ctaUrl: "https://www.proformamvpmarketing.com/#contact",
+    content: [
+      { type: "paragraph", text: "Some promotional products get a quick glance." },
+      { type: "paragraph", text: "The Squishy Dumpling Stress Toy gets picked up, squeezed, passed around the office, and somehow always disappears into someone's desk drawer. (In other words, people keep it.)" },
+      { type: "paragraph", text: "Made from soft, flexible, stretchy TPE, this slow-rising stress toy bounces back to its original shape after every squeeze. It's oddly satisfying, encourages focus, and offers a calming sensory experience that's perfect for busy workdays." },
+      { type: "paragraph", text: "Even better? It's available with your custom logo, making it a memorable branded giveaway for trade shows, recruiting events, employee wellness programs, healthcare organizations, schools, and company swag kits." },
+      { type: "heading", level: 2, text: "Why people love it" },
+      { type: "list", items: [
+        "Soft, slow-rising texture that's hard to put down",
+        "Stretch, squeeze, and knead away everyday stress",
+        "Encourages focus and provides a calming sensory experience",
+        "Returns to its original shape after squeezing",
+        "Packaged in a recycled ABS steamer basket for an extra dose of personality",
+        "Fun for all ages 3+",
+      ]},
+      { type: "heading", level: 2, text: "Available Colors" },
+      { type: "paragraph", text: "Choose from:" },
+      { type: "list", items: [
+        "Blue",
+        "Cream",
+        "Light Blue",
+        "Lime Green",
+        "Pink",
+        "Purple",
+        "Red",
+      ]},
+      { type: "paragraph", text: "Each color comes with a natural-colored steamer basket that makes the whole thing even more fun to hand out." },
+      { type: "heading", level: 2, text: "A promotional product people remember" },
+      { type: "paragraph", text: "The best branded merchandise creates a moment." },
+      { type: "paragraph", text: "It usually starts with, \"Wait...is that a dumpling?\"" },
+      { type: "paragraph", text: "It's unexpected, interactive, and surprisingly difficult to put down — which means your brand stays on someone's desk instead of disappearing into a drawer after the event." },
+      { type: "paragraph", text: "Whether you're putting together trade show giveaways, employee gifts, recruiting swag, or company store merchandise, the Squishy Dumpling Stress Toy is one of those new arrivals people won't forget." },
+    ],
+  },
   {
     slug: "yeti-pace-purple-royal-blue",
     title: "Limited Edition Seasonal Colors: YETI Pace Purple & Royal Blue",

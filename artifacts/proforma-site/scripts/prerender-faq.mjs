@@ -140,6 +140,7 @@ const blogSlugs = [
 ];
 
 const trendingSlugs = [
+  "squishy-dumpling-stress-toy",
   "yeti-pace-purple-royal-blue",
 ];
 

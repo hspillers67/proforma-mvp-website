@@ -162,7 +162,7 @@ export default function TrendingPost() {
             </div>
 
             {/* Right: featured image */}
-            <div className="w-full md:w-[380px] shrink-0 rounded-2xl overflow-hidden shadow-lg bg-primary/5">
+            <div className={`w-full md:w-[380px] shrink-0 rounded-2xl overflow-hidden shadow-lg ${post.imageBgClass ?? "bg-primary/5"}`}>
               <img
                 src={post.image}
                 alt={post.imageAlt}
