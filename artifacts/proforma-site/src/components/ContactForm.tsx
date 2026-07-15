@@ -86,13 +86,24 @@ export default function ContactForm() {
 
   return (
     <Form {...form}>
-      <form
-        name="contact"
-        data-netlify="true"
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6"
+        <form
+          name="contact"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-6"
       >
         <input type="hidden" name="form-name" value="contact" />
+
+          <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+            <label>
+              Don't fill this out if you're human: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+            </label>
+          </div>
+
+
+          
+          
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormField

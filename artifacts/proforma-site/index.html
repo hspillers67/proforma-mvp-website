@@ -82,7 +82,7 @@
   </head>
   <body>
     <!-- Hidden form for Netlify's build-time crawler to detect -->
-    <form name="contact" data-netlify="true" hidden>
+    <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
       <input type="hidden" name="form-name" value="contact" />
       <input name="name" />
       <input name="email" />
@@ -90,6 +90,7 @@
       <input name="phone" />
       <input name="projectType" />
       <textarea name="message"></textarea>
+      <input name="bot-field" />
     </form>
 
     <div id="root"></div>
