@@ -1,42 +1,36 @@
 import { Link } from "wouter";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
-import promoCollageImg from "@/assets/promo-products-collage.png";
+import giftingHeroImg from "@/assets/corporate-gifting-hero.jpg";
 
-const useCases = [
+const whatWeBuildFor = [
   {
-    title: "Trade show giveaways",
-    href: "/trade-show-products",
-    description: "Products people actually keep, not toss in a hotel trash can.",
+    title: "Prospecting gifts",
+    description: "Get the cold call answered — a personalized gift that gets attention and gets you the meeting.",
   },
   {
-    title: "Client gifts",
-    href: null,
-    description: "Thoughtful, on-brand items that strengthen relationships.",
+    title: "Thank-you & closed-deal gifts",
+    description: "Mark the moment a deal closes with something that feels as good as the win.",
   },
   {
-    title: "Employee recognition",
-    href: null,
-    description: "From service awards to milestone gifts, we make it easy.",
+    title: "Event invitations & follow-ups",
+    description: "Trade show and conference gifts that keep your brand in the room long after the event ends.",
   },
   {
-    title: "Onboarding kits",
-    href: null,
-    description: "Give new hires something that makes them proud to be on the team.",
+    title: "Year-end & holiday client gifts",
+    description: "Close out the year with something clients actually want to open.",
   },
   {
-    title: "Event merchandise",
-    href: null,
-    description: "Branded items that extend the life of your event beyond the day itself.",
+    title: "Internal & team recognition",
+    description: "Safety milestones, tenure, busy-season kits — recognition that reflects your culture.",
   },
   {
-    title: "Company stores",
-    href: "/company-stores",
-    description: "Simplify ordering for teams, locations, and ongoing programs.",
+    title: "Personalized, not generic",
+    description: "Every gift is built around the recipient — not picked off a shelf.",
   },
 ];
 
-export default function PromotionalProducts() {
+export default function CorporateGifting() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Nav */}
@@ -59,7 +53,7 @@ export default function PromotionalProducts() {
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200 z-50">
                 <div className="bg-white rounded-xl shadow-xl border border-border py-1.5 min-w-[230px]">
                   <a href="/company-stores" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Company Stores</a>
-                  <a href="/promotional-products" className="block px-5 py-2.5 text-sm font-display font-medium text-secondary font-semibold hover:bg-muted/50 transition-colors">Promotional Products</a>
+                  <a href="/promotional-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Promotional Products</a>
                   <a href="/branded-apparel" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Uniforms &amp; Branded Apparel</a>
                   <a href="/trade-show-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Tradeshows &amp; Events</a>
                   <a href="/printing-packaging" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Print &amp; Packaging</a>
@@ -92,17 +86,17 @@ export default function PromotionalProducts() {
             <div className="flex flex-col lg:flex-row lg:items-center gap-10">
               <div className="max-w-[600px]">
                 <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-primary">
-                  Promotional Products for Houston Area Businesses
+                  Corporate Gifting That Gets a Response, Not Just a Thank-You
                 </h1>
                 <div className="w-14 h-1 mt-5 mb-5" style={{ backgroundColor: "#9C0057" }} />
                 <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#444444" }}>
-                  The right branded merchandise for every occasion — sourced, managed, and delivered by people who get marketing.
+                  Generic branded swag gets ignored. A gift that shows you actually know the person gets a reply, a meeting, and remembered.
                 </p>
               </div>
               <div className="lg:flex-1 max-w-xl w-full">
                 <img
-                  src={promoCollageImg}
-                  alt="Promotional products — drinkware, bags, headwear, apparel and more"
+                  src={giftingHeroImg}
+                  alt="Personalized corporate gift box, curated and branded for a client campaign"
                   className="w-full rounded-2xl shadow-lg"
                 />
               </div>
@@ -114,35 +108,25 @@ export default function PromotionalProducts() {
         <section className="py-8 md:py-10 bg-muted/30">
           <div className="container mx-auto px-6 max-w-4xl">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-              You already know branded merchandise works. The question is whether you're getting products that actually fit your goals — or just filling a swag drawer.
+              Decision-makers are hammered with generic gifts every day — the same tumbler, the same logo pen, the same anonymous box. It doesn't stand out, and it doesn't get a response.
             </p>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              At Proforma MVP Marketing, we help Houston-area businesses find the right products for the right moment.{" "}
-              <a href="/trade-show-products" className="text-secondary font-semibold hover:underline">Trade show giveaways</a>.
-              {" "}Client gifts. Employee appreciation. Onboarding kits. New location openings. Whatever the occasion, we make sure your brand shows up looking sharp.
+              The gifts that work are the ones that show real thought — something tied to who the recipient is, not a template. We handle the research, sourcing, and fulfillment so your gifting gets attention instead of getting tossed.
             </p>
           </div>
         </section>
 
-        {/* What We Help You With */}
+        {/* What We Build Gifts For */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-4xl mx-auto">What We Help You With</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-4xl mx-auto">What We Build Gifts For</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {useCases.map((item) => (
+              {whatWeBuildFor.map((item) => (
                 <div
                   key={item.title}
                   className="bg-muted/30 border border-border rounded-xl px-7 py-6 hover:shadow-md transition-shadow"
                 >
-                  <h3 className="font-display font-semibold text-primary text-lg mb-2">
-                    {item.href ? (
-                      <a href={item.href} className="hover:text-secondary transition-colors">
-                        {item.title}
-                      </a>
-                    ) : (
-                      item.title
-                    )}
-                  </h3>
+                  <h3 className="font-display font-semibold text-primary text-lg mb-2">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                 </div>
               ))}
@@ -150,31 +134,22 @@ export default function PromotionalProducts() {
           </div>
         </section>
 
-        {/* How It Works */}
+        {/* Do the Math */}
         <section className="py-8 md:py-12 bg-muted/30">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">How It Works</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              You don't need to spend hours browsing a catalog. Tell us your budget, your audience, and your timeline — we'll bring you curated options that make sense. We handle everything from artwork approval through delivery.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Do the Math</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Most standard orders ship in 7–14 business days. Rush options are available. Minimums vary by product, typically 12–50 pieces. We'll always tell you upfront.
+              If a rep spends a few hours sourcing, packing, and shipping their own gifts, that's real payroll cost — often more than a fully fulfilled, personalized gift from us would cost outright. Outsourcing isn't an added expense. For most teams, it's the cheaper option once you count the time.
             </p>
           </div>
         </section>
 
-        {/* Why Work With Us */}
+        {/* How It Works */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why Work With Us</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              You get a real person — someone with 15+ years of client-side marketing experience — who understands how branded products fit into a larger marketing strategy. We're not an online order form. We listen, we consult, and we make sure every product decision serves a purpose.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Backed by Proforma's $650M in buying power and deep supplier relationships, we can source virtually anything — and get it right the first time.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Based in Katy, Texas — serving Houston-area businesses and clients nationwide.
+              Send a single gift or a batch — priced per gift, built around the recipient. A rep needs 10 boxes for a target list, or a company needs 25 year-end client gifts — no subscription, no long-term commitment. Tell us the occasion and who you're reaching, and we'll bring you curated options that fit.
             </p>
           </div>
         </section>
@@ -182,9 +157,9 @@ export default function PromotionalProducts() {
         {/* CTA */}
         <section className="py-10 md:py-14 bg-primary text-primary-foreground">
           <div className="container mx-auto px-6 text-center max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Send Gifting That Gets a Response?</h2>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10">
-              Tell us about your project and we'll put together a tailored recommendation — no obligation.
+              Let's talk about what a gifting campaign could look like for your team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

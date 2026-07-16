@@ -16,6 +16,7 @@ import BrandedApparel from "@/pages/BrandedApparel";
 import TradeShowProducts from "@/pages/TradeShowProducts";
 import PrintingPackaging from "@/pages/PrintingPackaging";
 import AwardsRecognition from "@/pages/AwardsRecognition";
+import CorporateGifting from "@/pages/CorporateGifting";
 import Trending from "@/pages/Trending";
 import TrendingPost from "@/pages/TrendingPost";
 
@@ -36,6 +37,7 @@ function Router() {
       <Route path="/printing-packaging" component={PrintingPackaging} />
       <Route path="/printing-signage">{() => { window.location.replace("/printing-packaging"); return null; }}</Route>
       <Route path="/awards-recognition" component={AwardsRecognition} />
+      <Route path="/corporate-gifting" component={CorporateGifting} />
       <Route path="/employee-gifts-recognition">{() => { window.location.replace("/awards-recognition"); return null; }}</Route>
       <Route path="/trending" component={Trending} />
       <Route path="/trending/:slug" component={TrendingPost} />
