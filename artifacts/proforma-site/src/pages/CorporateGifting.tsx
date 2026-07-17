@@ -142,7 +142,7 @@ export default function CorporateGifting() {
         </section>
 
         {/* How It Works */}
-        <section className="py-8 md:py-12 bg-white">
+        <section className="pt-5 pb-8 md:pt-6 md:pb-12 bg-white">
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How It Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
