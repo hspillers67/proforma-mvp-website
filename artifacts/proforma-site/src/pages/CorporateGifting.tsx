@@ -110,18 +110,6 @@ export default function CorporateGifting() {
           </div>
         </section>
 
-        {/* Intro copy */}
-        <section className="py-8 md:py-10 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-              Decision-makers are hammered with generic gifts every day — the same tumbler, the same logo pen, the same anonymous box. It doesn't stand out, and it doesn't get a response.
-            </p>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              The gifts that work are the ones that show real thought — something tied to who the recipient is, not a template. We handle the research, sourcing, and fulfillment so your gifting gets attention instead of getting tossed.
-            </p>
-          </div>
-        </section>
-
         {/* What We Build Gifts For */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6">
