@@ -89,8 +89,14 @@ export default function CorporateGifting() {
                   Corporate Gifting That Gets a Response, Not Just a Thank-You
                 </h1>
                 <div className="w-14 h-1 mt-5 mb-5" style={{ backgroundColor: "#9C0057" }} />
-                <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#444444" }}>
-                  Generic branded swag gets ignored. A gift that shows you actually know the person gets a reply, a meeting, and remembered.
+                <p className="text-xl md:text-2xl font-semibold leading-snug mb-4" style={{ color: "#222222" }}>
+                  Generic gifts blend in. Relevant gifts get remembered.
+                </p>
+                <p className="text-lg leading-relaxed mb-3" style={{ color: "#444444" }}>
+                  The best corporate gifts aren't the most expensive. They're the most relevant.
+                </p>
+                <p className="text-lg leading-relaxed" style={{ color: "#444444" }}>
+                  From real estate closings and client appreciation to executive prospecting and employee recognition, we curate gift bundles that fit the audience and the occasion. Then we handle the sourcing, branding, packaging, and fulfillment, so you get memorable gifts without adding another task to your team's to-do list.
                 </p>
               </div>
               <div className="lg:flex-1 max-w-xl w-full">
