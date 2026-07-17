@@ -176,11 +176,13 @@ export default function ContactForm() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="Branded Apparel">Branded Apparel</SelectItem>
-                  <SelectItem value="Tradeshow Giveaways">Tradeshow Giveaways</SelectItem>
-                  <SelectItem value="Signage & Banners">Signage & Banners</SelectItem>
-                  <SelectItem value="Print">Print</SelectItem>
-                  <SelectItem value="Kits & Packages">Kits & Packages</SelectItem>
+                  <SelectItem value="Awards & Recognition">Awards &amp; Recognition</SelectItem>
+                  <SelectItem value="Company Stores">Company Stores</SelectItem>
+                  <SelectItem value="Corporate Gifting">Corporate Gifting</SelectItem>
+                  <SelectItem value="Print & Packaging">Print &amp; Packaging</SelectItem>
+                  <SelectItem value="Promotional Products">Promotional Products</SelectItem>
+                  <SelectItem value="Tradeshows & Events">Tradeshows &amp; Events</SelectItem>
+                  <SelectItem value="Uniforms & Branded Apparel">Uniforms &amp; Branded Apparel</SelectItem>
                   <SelectItem value="Other">Other</SelectItem>
                 </SelectContent>
               </Select>
