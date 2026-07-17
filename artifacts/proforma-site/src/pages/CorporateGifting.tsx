@@ -128,29 +128,91 @@ export default function CorporateGifting() {
           </div>
         </section>
 
-        {/* Do the Math */}
+        {/* Perfect For */}
         <section className="py-8 md:py-12 bg-muted/30">
           <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Perfect For</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-2">
+              {[
+                "Realtors",
+                "Mortgage professionals",
+                "Law firms",
+                "Financial advisors",
+                "Insurance agencies",
+                "Marketing agencies",
+                "Construction & home services",
+                "Healthcare practices",
+                "HR teams",
+                "Executive assistants",
+                "And more!",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-lg text-muted-foreground">
+                  <span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Do the Math */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Do the Math</h2>
+            <p className="text-xl font-semibold text-primary mb-4">
+              Your sales team shouldn't be shopping for ribbon.
+            </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Every hour your sales team spends shopping, packing, and shipping gifts is an hour they're not building relationships or closing business.
+              Every hour spent comparing products, packing boxes, printing labels, and standing in line at UPS is time that isn't spent prospecting, serving clients, or closing business.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We take care of the sourcing, branding, packaging, and fulfillment so your team can stay focused on what they do best. Once you factor in payroll and lost selling time, outsourcing your gifting often costs less than doing it yourself.
+              We take gifting off your plate—from sourcing and branding to packaging and fulfillment—so your team stays focused on revenue-generating work.
             </p>
           </div>
         </section>
 
         {/* How It Works */}
-        <section className="pt-5 pb-8 md:pt-6 md:pb-12 bg-white">
+        <section className="py-8 md:py-12 bg-muted/30">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How It Works</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Let's Build Something They'll Actually Remember</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Whether you need one gift or one hundred, we'll help you find the right fit for your audience and your budget.
+              Whether you're sending one thoughtful thank-you gift or launching a nationwide client appreciation campaign, we'll help you create gifts people genuinely enjoy receiving.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Tell us who you're gifting, your budget, and the occasion. We'll recommend curated options, handle the sourcing, branding, packaging, and shipping, and deliver gifts that are ready to impress.
+              Tell us who you're gifting, your budget, and your timeline—we'll take care of the rest.
             </p>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Frequently Asked Questions</h2>
+            <div className="space-y-8">
+              {[
+                {
+                  q: "Can I order just one gift?",
+                  a: "Yes. Whether you need a single executive gift or hundreds for a client campaign, we'll curate a solution that fits your needs.",
+                },
+                {
+                  q: "Can gifts include our logo?",
+                  a: "Absolutely. We offer branded packaging, custom inserts, promotional products, and personalized touches that reflect your brand without feeling overly promotional.",
+                },
+                {
+                  q: "Do you ship nationwide?",
+                  a: "Yes. We can ship directly to individual recipients or to your office for hand delivery.",
+                },
+                {
+                  q: "What's the typical turnaround time?",
+                  a: "Most projects are completed within two to three weeks depending on customization and quantity. If you're working on a tight deadline, let us know and we'll recommend options that fit your timeline.",
+                },
+              ].map(({ q, a }) => (
+                <div key={q} className="border-b border-border pb-8 last:border-0 last:pb-0">
+                  <h3 className="text-lg font-semibold text-primary mb-2">{q}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -166,7 +228,7 @@ export default function CorporateGifting() {
                 href="/#contact"
                 className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-10 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90"
               >
-                Let's Talk
+                Get a Quote
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
