@@ -5,28 +5,28 @@ import giftingHeroImg from "@/assets/corporate-gifting-hero.jpg";
 
 const whatWeBuildFor = [
   {
-    title: "Prospecting gifts",
-    description: "Get the cold call answered — a personalized gift that gets attention and gets you the meeting.",
+    title: "Prospecting Gifts",
+    description: "Stand out with curated gifts that start conversations and open doors.",
   },
   {
-    title: "Thank-you & closed-deal gifts",
-    description: "Mark the moment a deal closes with something that feels as good as the win.",
+    title: "Thank-You & Closed-Deal Gifts",
+    description: "Celebrate a new partnership with a gift that keeps the relationship moving forward.",
   },
   {
-    title: "Event invitations & follow-ups",
-    description: "Trade show and conference gifts that keep your brand in the room long after the event ends.",
+    title: "Event Invitations & Follow-Ups",
+    description: "Keep your brand top of mind before and after trade shows, conferences, and client events.",
   },
   {
-    title: "Year-end & holiday client gifts",
-    description: "Close out the year with something clients actually want to open.",
+    title: "Year-End & Holiday Client Gifts",
+    description: "Close out the year with gifts clients look forward to opening.",
   },
   {
-    title: "Internal & team recognition",
-    description: "Safety milestones, tenure, busy-season kits — recognition that reflects your culture.",
+    title: "Internal & Team Recognition",
+    description: "Celebrate milestones, welcome new hires, recognize achievements, and thank your team with gifts that reflect your culture.",
   },
   {
-    title: "Personalized, not generic",
-    description: "Every gift is built around the recipient — not picked off a shelf.",
+    title: "Curated, Not One-Size-Fits-All",
+    description: "We don't believe in one-size-fits-all gifting. Every gift is curated around the recipient's role, industry, or occasion, so it feels relevant from the moment it's opened.",
   },
 ];
 
@@ -132,8 +132,11 @@ export default function CorporateGifting() {
         <section className="py-8 md:py-12 bg-muted/30">
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Do the Math</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              Every hour your sales team spends shopping, packing, and shipping gifts is an hour they're not building relationships or closing business.
+            </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              If a rep spends a few hours sourcing, packing, and shipping their own gifts, that's real payroll cost — often more than a fully fulfilled, personalized gift from us would cost outright. Outsourcing isn't an added expense. For most teams, it's the cheaper option once you count the time.
+              We take care of the sourcing, branding, packaging, and fulfillment so your team can stay focused on what they do best. Once you factor in payroll and lost selling time, outsourcing your gifting often costs less than doing it yourself.
             </p>
           </div>
         </section>
@@ -142,8 +145,11 @@ export default function CorporateGifting() {
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How It Works</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              Whether you need one gift or one hundred, we'll help you find the right fit for your audience and your budget.
+            </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Send a single gift or a batch — priced per gift, built around the recipient. A rep needs 10 boxes for a target list, or a company needs 25 year-end client gifts — no subscription, no long-term commitment. Tell us the occasion and who you're reaching, and we'll bring you curated options that fit.
+              Tell us who you're gifting, your budget, and the occasion. We'll recommend curated options, handle the sourcing, branding, packaging, and shipping, and deliver gifts that are ready to impress.
             </p>
           </div>
         </section>
