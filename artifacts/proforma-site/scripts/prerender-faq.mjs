@@ -1,4 +1,4 @@
-import { readFileSync, mkdirSync, writeFileSync } from "fs";
+import { readFileSync, mkdirSync, writeFileSync, readdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -116,17 +116,58 @@ console.log("Pre-rendered /faq → dist/public/faq/index.html");
 // ── Trending post prerendering ────────────────────────────────────────────────
 const BASE_URL = "https://www.proformamvpmarketing.com";
 
-// Read Vite manifest to resolve hashed asset filenames for og:image
+// Read Vite manifest to resolve hashed asset filenames for og:image.
+// Manifest is only emitted when build.manifest=true in vite.config.ts.
 let manifest = {};
 try {
   manifest = JSON.parse(readFileSync(join(distDir, ".vite", "manifest.json"), "utf-8"));
+  console.log(`Loaded Vite manifest (${Object.keys(manifest).length} entries)`);
 } catch {
-  console.warn("Could not read Vite manifest — og:image will fall back to site default");
+  console.warn("Vite manifest not found — will rely on asset-scan fallback for og:image");
 }
 
+// Pre-load the dist/public/assets directory listing for fallback resolution.
+let distAssets = [];
+try {
+  distAssets = readdirSync(join(distDir, "assets"));
+} catch {
+  distAssets = [];
+}
+
+/**
+ * Resolve a source-relative image path (e.g. "src/assets/trending/yeti.png")
+ * to a fully-qualified production URL for og:image / twitter:image.
+ *
+ * Strategy (in order):
+ *  1. Vite manifest lookup — key is the path relative to the Vite root.
+ *  2. Asset-directory scan — find a file in dist/public/assets/ whose name
+ *     starts with the original filename stem (Vite preserves the stem before
+ *     the content-hash suffix, e.g. "yeti-pace-purple-royal-blue-BXk3aQ2T.png").
+ *  3. Site-default og-image — logged as a warning so it's never silent.
+ */
 function resolveOgImage(srcPath) {
+  // 1. Manifest lookup
   const entry = manifest[srcPath];
-  return entry ? `${BASE_URL}/${entry.file}` : `${BASE_URL}/og-image.png`;
+  if (entry) {
+    console.log(`  [manifest] ${srcPath} → ${entry.file}`);
+    return `${BASE_URL}/${entry.file}`;
+  }
+
+  // 2. Filename-stem scan of dist/public/assets/
+  const filename = srcPath.split("/").pop();            // "yeti-pace-purple-royal-blue.png"
+  const stem = filename.replace(/\.[^.]+$/, "");        // "yeti-pace-purple-royal-blue"
+  const ext = filename.match(/\.[^.]+$/)?.[0] ?? "";   // ".png"
+  const match = distAssets.find(
+    (f) => f.startsWith(stem) && f.endsWith(ext)
+  );
+  if (match) {
+    console.log(`  [asset-scan] ${srcPath} → assets/${match}`);
+    return `${BASE_URL}/assets/${match}`;
+  }
+
+  // 3. Fallback — always log so this is never silently wrong
+  console.warn(`  [WARN] Could not resolve og:image for "${srcPath}" — using site default`);
+  return `${BASE_URL}/og-image.png`;
 }
 
 function escapeAttr(str) {
