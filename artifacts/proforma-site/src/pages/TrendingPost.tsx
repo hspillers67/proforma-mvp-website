@@ -45,8 +45,8 @@ function Block({ block }: { block: ContentBlock }) {
       return (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-2">
           {block.items.map((img, i) => (
-            <div key={i} className="rounded-xl overflow-hidden shadow-md bg-white">
-              <img src={img.src} alt={img.alt} className="w-full h-auto object-cover" />
+            <div key={i} className="rounded-xl overflow-hidden shadow-md bg-white h-64 sm:h-72">
+              <img src={img.src} alt={img.alt} className="w-full h-full object-contain" />
             </div>
           ))}
         </div>
