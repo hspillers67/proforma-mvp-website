@@ -248,6 +248,85 @@ for (const post of trendingMeta) {
   console.log(`Pre-rendered /trending/${post.slug} → dist/public/trending/${post.slug}/index.html`);
 }
 
+// ── Blog post prerendering ────────────────────────────────────────────────────
+
+const blogMeta = [
+  {
+    slug: "smarter-promotional-products-houston",
+    pageTitle: "Smarter Promotional Products: What Houston Buyers Want Now | ProForma MVP Marketing",
+    metaDescription: "Houston businesses are moving past \"cheapest option wins\" thinking. Here's what smarter promotional product buying looks like in 2026.",
+    imageSrc: "src/assets/blog/smarter-promotional-products-houston.png",
+    imageAlt: "Branded promotional products laid out for a Houston business campaign",
+  },
+  {
+    slug: "branded-apparel-houston-teams-will-want-to-wear",
+    pageTitle: "Branded Apparel Houston Teams Will Want to Wear | ProForma MVP Marketing",
+    metaDescription: "The best branded apparel is more than a shirt with a logo on it. Choose quality, versatile pieces decorated in a way people will genuinely want to wear.",
+    imageSrc: "src/assets/blog/branded-apparel-houston-teams.png",
+    imageAlt: "Custom branded apparel options for Houston teams including polos, hoodies, and performance wear",
+  },
+  {
+    slug: "branded-apparel-vs-tech-gadgets",
+    pageTitle: "Branded Apparel vs. Tech Gadgets: Best Giveaway in Greater Houston | ProForma MVP Marketing",
+    metaDescription: "Both branded apparel and tech gadgets have serious marketing power — but which one is right for your next campaign? The answer might surprise you.",
+    imageSrc: "src/assets/blog/branded-apparel-vs-tech-gadgets.jpg",
+    imageAlt: "Branded apparel and tech gadgets side by side as promotional giveaway options for Houston businesses",
+  },
+  {
+    slug: "real-cost-of-promotional-products",
+    pageTitle: "The Real Cost of Promotional Products (and How to Maximize ROI) | ProForma MVP Marketing",
+    metaDescription: "Promo product costs vary widely — but when done well, branded merchandise outperforms almost every other marketing channel in cost per impression.",
+    imageSrc: "src/assets/blog/real-cost-of-promotional-products.jpg",
+    imageAlt: "Breakdown of promotional product costs and ROI for Houston marketing campaigns",
+  },
+  {
+    slug: "make-onboarding-unforgettable",
+    pageTitle: "Make Onboarding Unforgettable with Personalization & Smart Solutions | ProForma MVP Marketing",
+    metaDescription: "Onboarding is your first big chance to make employees and clients feel seen and appreciated. Here's how personalization and smart tech can transform that first impression.",
+    imageSrc: "src/assets/blog/make-onboarding-unforgettable.jpg",
+    imageAlt: "Personalized employee onboarding kit with branded items including apparel, tumbler, and welcome materials",
+  },
+  {
+    slug: "planning-your-2026-promotional-marketing-spend",
+    pageTitle: "The Ultimate Guide to Planning Your 2026 Promotional Marketing Spend | ProForma MVP Marketing",
+    metaDescription: "Strategic promotional planning separates reactive spending from intentional growth. Here's the framework we use to build campaigns that deliver real ROI.",
+    imageSrc: "src/assets/blog/planning-2026-promotional-marketing.png",
+    imageAlt: "2026 promotional marketing planning guide with budget framework and campaign calendar",
+  },
+];
+
+for (const post of blogMeta) {
+  const canonical = `${BASE_URL}/blog/${post.slug}`;
+  const ogImage = resolveOgImage(post.imageSrc);
+
+  let html = baseHtml
+    .replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(post.pageTitle)}</title>`)
+    .replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escapeAttr(post.metaDescription)}" />`)
+    .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${canonical}" />`)
+    .replace(/<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${escapeAttr(post.pageTitle)}" />`)
+    .replace(/<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${escapeAttr(post.metaDescription)}" />`)
+    .replace(/<meta property="og:url"[^>]*>[\n]?/, "")
+    .replace(/<meta property="og:image"[^>]*>/, `<meta property="og:image" content="${ogImage}" />`)
+    .replace(/<meta property="og:image:alt"[^>]*>/, `<meta property="og:image:alt" content="${escapeAttr(post.imageAlt)}" />`)
+    .replace(/<meta property="og:type"[^>]*>/, `<meta property="og:type" content="article" />`)
+    .replace(/<meta name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${escapeAttr(post.pageTitle)}" />`)
+    .replace(/<meta name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${escapeAttr(post.metaDescription)}" />`)
+    .replace(/<meta name="twitter:image"[^>]*>(?!\:)/, `<meta name="twitter:image" content="${ogImage}" />`)
+    .replace(/<meta name="twitter:image:alt"[^>]*>/, `<meta name="twitter:image:alt" content="${escapeAttr(post.imageAlt)}" />`);
+
+  // Inject og:url after og:type if not already present
+  if (!html.includes('property="og:url"')) {
+    html = html.replace(
+      /<meta property="og:type"[^>]*>/,
+      `<meta property="og:type" content="article" />\n    <meta property="og:url" content="${canonical}" />`
+    );
+  }
+
+  mkdirSync(join(distDir, "blog", post.slug), { recursive: true });
+  writeFileSync(join(distDir, "blog", post.slug, "index.html"), html);
+  console.log(`Pre-rendered /blog/${post.slug} → dist/public/blog/${post.slug}/index.html`);
+}
+
 // ── Sitemap ──────────────────────────────────────────────────────────────────
 
 const staticRoutes = [
