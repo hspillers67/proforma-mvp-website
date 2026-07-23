@@ -87,10 +87,14 @@ export default function Trending() {
     );
   };
 
+  const sorted = [...trendingPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   const filtered =
     activeTags.length === 0
-      ? trendingPosts
-      : trendingPosts.filter((p) => activeTags.some((t) => p.tags.includes(t)));
+      ? sorted
+      : sorted.filter((p) => activeTags.some((t) => p.tags.includes(t)));
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
