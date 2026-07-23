@@ -113,8 +113,101 @@ mkdirSync(join(distDir, "faq"), { recursive: true });
 writeFileSync(join(distDir, "faq", "index.html"), faqHtml);
 console.log("Pre-rendered /faq → dist/public/faq/index.html");
 
-// ── Sitemap ──────────────────────────────────────────────────────────────────
+// ── Trending post prerendering ────────────────────────────────────────────────
 const BASE_URL = "https://www.proformamvpmarketing.com";
+
+// Read Vite manifest to resolve hashed asset filenames for og:image
+let manifest = {};
+try {
+  manifest = JSON.parse(readFileSync(join(distDir, ".vite", "manifest.json"), "utf-8"));
+} catch {
+  console.warn("Could not read Vite manifest — og:image will fall back to site default");
+}
+
+function resolveOgImage(srcPath) {
+  const entry = manifest[srcPath];
+  return entry ? `${BASE_URL}/${entry.file}` : `${BASE_URL}/og-image.png`;
+}
+
+function escapeAttr(str) {
+  return str.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+}
+
+const trendingMeta = [
+  {
+    slug: "yeti-pace-purple-royal-blue",
+    pageTitle: "Limited Edition Seasonal Colors: YETI Pace Purple & Royal Blue | ProForma MVP Marketing",
+    metaDescription: "YETI's limited edition Pace Purple and Royal Blue seasonal colors are available now for custom branding. See the full product lineup and contact ProForma MVP Marketing to order.",
+    imageSrc: "src/assets/trending/yeti-pace-purple-royal-blue.png",
+    imageAlt: "YETI Pace Purple and Royal Blue seasonal drinkware lineup including tumblers, water bottles, and can coolers with custom branding",
+  },
+  {
+    slug: "squishy-dumpling-stress-toy",
+    pageTitle: "Squishy Dumpling Stress Toy — Custom Branded Giveaway | ProForma MVP Marketing",
+    metaDescription: "The Squishy Dumpling Stress Toy is a slow-rising TPE stress reliever packaged in a recycled ABS steamer basket. Available in 7 colors with custom logo imprint.",
+    imageSrc: "src/assets/trending/squishy-dumpling-stress-toy.png",
+    imageAlt: "Squishy Dumpling Stress Toy in steamer basket packaging, shown in multiple colors including cream, green, pink, blue, purple, and red",
+  },
+  {
+    slug: "awesome-mixtape-wireless-speaker",
+    pageTitle: "Custom Cassette Wireless Speaker | Retro Promotional Products | ProForma MVP Marketing",
+    metaDescription: "Branded retro cassette speaker with full-color custom design. A trending promotional product for corporate gifting and event giveaways.",
+    imageSrc: "src/assets/trending/awesome-mixtape-wireless-speaker-case.jpg",
+    imageAlt: "Custom branded cassette case with full-color event artwork",
+  },
+];
+
+for (const post of trendingMeta) {
+  const canonical = `${BASE_URL}/trending/${post.slug}`;
+  const ogImage = resolveOgImage(post.imageSrc);
+
+  const headTags = `
+    <title>${escapeAttr(post.pageTitle)}</title>
+    <meta name="description" content="${escapeAttr(post.metaDescription)}" />
+    <link rel="canonical" href="${canonical}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="${escapeAttr(post.pageTitle)}" />
+    <meta property="og:description" content="${escapeAttr(post.metaDescription)}" />
+    <meta property="og:url" content="${canonical}" />
+    <meta property="og:image" content="${ogImage}" />
+    <meta property="og:image:alt" content="${escapeAttr(post.imageAlt)}" />
+    <meta property="og:site_name" content="ProForma MVP Marketing" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${escapeAttr(post.pageTitle)}" />
+    <meta name="twitter:description" content="${escapeAttr(post.metaDescription)}" />
+    <meta name="twitter:image" content="${ogImage}" />
+    <meta name="twitter:image:alt" content="${escapeAttr(post.imageAlt)}" />`;
+
+  // Replace homepage meta tags with post-specific ones
+  let html = baseHtml
+    .replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(post.pageTitle)}</title>`)
+    .replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escapeAttr(post.metaDescription)}" />`)
+    .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${canonical}" />`)
+    .replace(/<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${escapeAttr(post.pageTitle)}" />`)
+    .replace(/<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${escapeAttr(post.metaDescription)}" />`)
+    .replace(/<meta property="og:url"[^>]*>[\n]?/, "") // remove if present
+    .replace(/<meta property="og:image"[^>]*>/, `<meta property="og:image" content="${ogImage}" />`)
+    .replace(/<meta property="og:image:alt"[^>]*>/, `<meta property="og:image:alt" content="${escapeAttr(post.imageAlt)}" />`)
+    .replace(/<meta property="og:type"[^>]*>/, `<meta property="og:type" content="article" />`)
+    .replace(/<meta name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${escapeAttr(post.pageTitle)}" />`)
+    .replace(/<meta name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${escapeAttr(post.metaDescription)}" />`)
+    .replace(/<meta name="twitter:image"[^>]*>(?!\:)/, `<meta name="twitter:image" content="${ogImage}" />`)
+    .replace(/<meta name="twitter:image:alt"[^>]*>/, `<meta name="twitter:image:alt" content="${escapeAttr(post.imageAlt)}" />`);
+
+  // Also inject a canonical og:url tag after og:type if not already present
+  if (!html.includes('property="og:url"')) {
+    html = html.replace(
+      /<meta property="og:type"[^>]*>/,
+      `<meta property="og:type" content="article" />\n    <meta property="og:url" content="${canonical}" />`
+    );
+  }
+
+  mkdirSync(join(distDir, "trending", post.slug), { recursive: true });
+  writeFileSync(join(distDir, "trending", post.slug, "index.html"), html);
+  console.log(`Pre-rendered /trending/${post.slug} → dist/public/trending/${post.slug}/index.html`);
+}
+
+// ── Sitemap ──────────────────────────────────────────────────────────────────
 
 const staticRoutes = [
   "/",
@@ -123,6 +216,7 @@ const staticRoutes = [
   "/testimonials",
   "/faq",
   "/company-stores",
+  "/corporate-gifting",
   "/promotional-products",
   "/branded-apparel",
   "/trade-show-products",
@@ -140,8 +234,9 @@ const blogSlugs = [
 ];
 
 const trendingSlugs = [
-  "squishy-dumpling-stress-toy",
   "yeti-pace-purple-royal-blue",
+  "squishy-dumpling-stress-toy",
+  "awesome-mixtape-wireless-speaker",
 ];
 
 const allUrls = [

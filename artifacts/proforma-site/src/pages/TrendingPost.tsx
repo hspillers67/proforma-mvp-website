@@ -1,11 +1,13 @@
-import { useEffect } from "react";
 import { Link, useParams } from "wouter";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Tag } from "lucide-react";
 import { getTrendingPost, TAG_COLORS } from "@/data/trending";
 import { type ContentBlock } from "@/data/posts";
 import logoWhitePath from "@/assets/logo-white.png";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
 import { ChevronDown } from "lucide-react";
+
+const SITE_URL = "https://www.proformamvpmarketing.com";
 
 function Block({ block }: { block: ContentBlock }) {
   switch (block.type) {
@@ -61,13 +63,8 @@ export default function TrendingPost() {
   const { slug } = useParams<{ slug: string }>();
   const post = getTrendingPost(slug ?? "");
 
-  useEffect(() => {
-    if (post) {
-      document.title = post.pageTitle;
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute("content", post.metaDescription);
-    }
-  }, [post]);
+  const canonicalUrl = `${SITE_URL}/trending/${post?.slug ?? ""}`;
+  const ogImage = post ? `${SITE_URL}${post.image}` : `${SITE_URL}/og-image.png`;
 
   if (!post) {
     return (
@@ -84,6 +81,23 @@ export default function TrendingPost() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <Helmet>
+        <title>{post.pageTitle}</title>
+        <meta name="description" content={post.metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.pageTitle} />
+        <meta property="og:description" content={post.metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content={post.imageAlt} />
+        <meta property="og:site_name" content="ProForma MVP Marketing" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.pageTitle} />
+        <meta name="twitter:description" content={post.metaDescription} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content={post.imageAlt} />
+      </Helmet>
       {/* Nav */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-white/10">
         <div className="mx-auto px-8 h-28 flex items-center justify-between max-w-screen-2xl">
