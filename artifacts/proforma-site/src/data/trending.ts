@@ -2,6 +2,8 @@ import { type ContentBlock } from "@/data/posts";
 import imgYeti from "@/assets/trending/yeti-pace-purple-royal-blue.png";
 import imgDumpling from "@/assets/trending/squishy-dumpling-stress-toy.png";
 import imgMixtape from "@/assets/trending/awesome-mixtape-wireless-speaker.png";
+import imgMixtapeDock from "@/assets/trending/awesome-mixtape-wireless-speaker-dock.jpg";
+import imgMixtapeCase from "@/assets/trending/awesome-mixtape-wireless-speaker-case.jpg";
 
 export interface TrendingPost {
   slug: string;
@@ -180,6 +182,10 @@ export const trendingPosts: TrendingPost[] = [
         "Approximately 4\" × 2.52\" × 0.48\"",
         "Minimum quantity: 50",
         "Standard production time: approximately 5–7 working days after artwork approval",
+      ]},
+      { type: "images", items: [
+        { src: imgMixtapeDock, alt: "Awesome Mixtape Wireless Speaker shown in its cassette case with USB charging cable" },
+        { src: imgMixtapeCase, alt: "Custom branded cassette case with full-color event artwork — Las Vegas Summit 2023 example" },
       ]},
       { type: "heading", level: 2, text: "Frequently Asked Questions" },
       { type: "paragraph", text: "Can I customize both sides of the cassette speaker? Yes. Both the front and back of the cassette design can be fully customized in full color, along with the case insert — giving you room for a logo, campaign message, custom album art, or a playlist printout." },

@@ -11,7 +11,8 @@ export type ContentBlock =
   | { type: "list"; items: string[] }
   | { type: "table"; headers: string[]; rows: string[][] }
   | { type: "callout"; label: string; text: string }
-  | { type: "divider" };
+  | { type: "divider" }
+  | { type: "images"; items: { src: string; alt: string }[] };
 
 export interface Post {
   slug: string;

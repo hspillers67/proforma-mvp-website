@@ -41,6 +41,17 @@ function Block({ block }: { block: ContentBlock }) {
     case "divider":
       return <hr className="border-border" />;
 
+    case "images":
+      return (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-2">
+          {block.items.map((img, i) => (
+            <div key={i} className="rounded-xl overflow-hidden shadow-md bg-white">
+              <img src={img.src} alt={img.alt} className="w-full h-auto object-cover" />
+            </div>
+          ))}
+        </div>
+      );
+
     default:
       return null;
   }
