@@ -1,0 +1,75 @@
+Add a new entry to the trendingPosts array in the trending products data file, right after the squishy-dumpling-stress-toy entry.
+
+Add this import near the top of the file with the other image imports (use the attached image, save it to the appropriate assets folder):
+
+import imgMixtape from "@/assets/trending/awesome-mixtape-wireless-speaker.png";
+
+Add this new post entry:
+
+javascript
+{
+    slug: "awesome-mixtape-wireless-speaker",
+    title: "Awesome Mixtape Wireless Speaker",
+    subhead: "The retro giveaway everyone will want to get their hands on.",
+    excerpt: "Some promotional products are useful. Others are memorable. The Awesome Mixtape Wireless Speaker manages to be both.",
+    tags: ["Editor's Pick"],
+    date: "July 23, 2026",
+    image: imgMixtape,
+    imageAlt: "Custom branded cassette-shaped wireless speaker with full-color logo printing on sides A and B",
+    imageBgClass: "bg-gradient-to-br from-slate-50 via-orange-50 to-amber-50",
+    pageTitle: "Custom Cassette Wireless Speaker | Retro Promotional Products | ProForma MVP Marketing",
+    metaDescription: "Branded retro cassette speaker with full-color custom design. A trending promotional product for corporate gifting and event giveaways.",
+    ctaUrl: "https://www.proformamvpmarketing.com/#contact",
+    content: [
+      { type: "paragraph", text: "Some promotional products are useful. Others are memorable. The Awesome Mixtape Wireless Speaker manages to be both." },
+      { type: "paragraph", text: "Designed to look like an old-school cassette tape, this pocket-sized wireless speaker brings a little nostalgia to a product people can actually use — at their desk, at home, while traveling, or anywhere they want to take their music." },
+      { type: "paragraph", text: "The cassette's label can be completely customized with a full-color design, giving you far more creative freedom than simply placing a logo on the front." },
+      { type: "list", items: [
+        "Create a custom album cover",
+        "Add a campaign message",
+        "Print a playlist on the packaging",
+        "Include a QR code that leads to a branded Spotify playlist",
+      ]},
+      { type: "paragraph", text: "This is where branded promotional products get fun." },
+      { type: "heading", level: 2, text: "Why Retro Promotional Products Are Trending Right Now" },
+      { type: "paragraph", text: "Searches for retro-themed corporate gifts and 90s-nostalgia branded merchandise have been climbing, but nostalgia alone isn't what makes a giveaway successful." },
+      { type: "paragraph", text: "This product works because it pairs a familiar, feel-good design with technology people already use every day. It feels unexpected when someone receives it, but it keeps a practical purpose long after the initial novelty wears off — which is exactly what separates a trending promotional product from a forgettable one." },
+      { type: "paragraph", text: "It's also built for sharing. People show it to coworkers, snap a photo, and ask where it came from — giving your brand more organic attention than a standard wireless speaker would ever get on its own." },
+      { type: "heading", level: 2, text: "Made for Creative Branded Campaigns" },
+      { type: "paragraph", text: "The custom cassette speaker gives you several areas to customize, including both sides of the cassette and the case insert. That opens the door to campaign ideas such as:" },
+      { type: "list", items: [
+        "A custom company mixtape",
+        "A QR code linked to a branded Spotify playlist",
+        "Employee appreciation gifts",
+        "Client thank-you campaigns",
+        "Conference and event giveaways",
+        "Product launches",
+        "Recruiting gifts",
+        "Anniversary or milestone celebrations",
+        "Music-themed direct mailers",
+        "Throwback or retro event themes",
+      ]},
+      { type: "paragraph", text: "You're not limited to putting your logo on it. The entire design can support the story behind your campaign." },
+      { type: "heading", level: 2, text: "Small Enough to Go Anywhere" },
+      { type: "paragraph", text: "At approximately 4 inches wide, the speaker is compact enough to fit in a pocket, bag, or desk drawer. Use it for workouts, travel, relaxing at home, or adding a little music to the workday." },
+      { type: "heading", level: 2, text: "Product Details" },
+      { type: "list", items: [
+        "Wireless speaker with retro cassette-tape styling",
+        "Full-color customization on sides A and B",
+        "Customizable case insert",
+        "Compact, portable design",
+        "Available in black",
+        "Approximately 4\" × 2.52\" × 0.48\"",
+        "Minimum quantity: 50",
+        "Standard production time: approximately 5–7 working days after artwork approval",
+      ]},
+      { type: "heading", level: 2, text: "Frequently Asked Questions" },
+      { type: "paragraph", text: "Can I customize both sides of the cassette speaker? Yes. Both the front and back of the cassette design can be fully customized in full color, along with the case insert — giving you room for a logo, campaign message, custom album art, or a playlist printout." },
+      { type: "paragraph", text: "What's the minimum order for a custom cassette speaker? The minimum order quantity is 50 units, with standard production of approximately 5–7 working days after artwork approval." },
+      { type: "paragraph", text: "Can I add a QR code to a cassette speaker giveaway? Yes. A QR code can be added to the design or packaging, linking recipients to a branded Spotify playlist, a campaign landing page, or any digital experience you want to pair with the physical gift." },
+      { type: "heading", level: 2, text: "Put Your Own Spin on It" },
+      { type: "paragraph", text: "This product becomes much more effective when the speaker, artwork, packaging, and digital experience all work together." },
+      { type: "paragraph", text: "We can help you develop the theme, create the artwork, add a playlist or QR code, and turn it into a complete branded campaign — instead of another logoed giveaway." },
+      { type: "paragraph", text: "Interested in creating your own company mixtape? Contact us for ideas, pricing, and availability." },
+    ],
+  },
