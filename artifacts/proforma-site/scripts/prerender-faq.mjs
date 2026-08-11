@@ -196,6 +196,13 @@ const trendingMeta = [
     imageSrc: "src/assets/trending/awesome-mixtape-wireless-speaker-case.jpg",
     imageAlt: "Custom branded cassette case with full-color event artwork",
   },
+  {
+    slug: "nfc-scribe",
+    pageTitle: "NFC Scribe — The Smart Branded Pen with Built-In NFC Technology | ProForma MVP Marketing",
+    metaDescription: "The NFC Scribe is a polished soft-touch metal pen with built-in NFC technology. One tap connects recipients to any website — digital business card, event page, or campaign landing page. Available with laser engraving or full-color imprint.",
+    imageSrc: "src/assets/trending/nfc-scribe.jpg",
+    imageAlt: "NFC Scribe custom branded pens in multiple colors including red, navy, gray, teal, charcoal, and white with gunmetal trim",
+  },
 ];
 
 for (const post of trendingMeta) {
@@ -357,6 +364,7 @@ const trendingSlugs = [
   "yeti-pace-purple-royal-blue",
   "squishy-dumpling-stress-toy",
   "awesome-mixtape-wireless-speaker",
+  "nfc-scribe",
 ];
 
 const allUrls = [
