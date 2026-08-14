@@ -6,6 +6,7 @@ import { posts } from "@/data/posts";
 import logoPath from "@/assets/logo.png";
 import logoWhitePath from "@/assets/logo-white.png";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
+import SiteHeader from "@/components/SiteHeader";
 import companyStoresImg from "@/assets/company-stores.png";
 import recognitionImg from "@/assets/recognition-incentives.png";
 import apparelImg from "@/assets/apparel.png";
@@ -37,48 +38,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col w-full bg-background selection:bg-secondary selection:text-white">
-      {/* Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-white/10">
-        <div className="mx-auto px-8 h-28 flex items-center justify-between max-w-screen-2xl">
-          <a href="#" className="flex items-center">
-            <img src={logoHorizontalPath} alt="ProForma MVP Marketing" className="h-12 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
-          </a>
-          <nav className="hidden md:flex items-center gap-10">
-            <a href="/" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Home</a>
-            <div className="relative group">
-              <button className="flex items-center gap-1 text-base font-display font-medium text-white/75 hover:text-white transition-colors">
-                Capabilities <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" />
-              </button>
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200 z-50">
-                <div className="bg-white rounded-xl shadow-xl border border-border py-1.5 min-w-[230px]">
-                  <a href="/awards-recognition" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Awards &amp; Recognition</a>
-                  <a href="/company-stores" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Company Stores</a>
-                  <a href="/corporate-gifting" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Corporate Gifting</a>
-                  <a href="/printing-packaging" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Print &amp; Packaging</a>
-                  <a href="/promotional-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Promotional Products</a>
-                  <a href="/trade-show-products" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Tradeshows &amp; Events</a>
-                  <a href="/branded-apparel" className="block px-5 py-2.5 text-sm font-display font-medium text-primary hover:bg-muted/50 transition-colors">Uniforms &amp; Branded Apparel</a>
-                </div>
-              </div>
-            </div>
-            <a href="#process" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
-            <a href="/blog" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Blog</a>
-            <a href="/trending" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Trending</a>
-            <a href="/testimonials" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</a>
-            <a href="/faq" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">FAQ</a>
-            <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Browse Products</a>
-            <a href="#contact" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
-          </nav>
-          <a
-            href="#contact"
-            className="hidden md:inline-flex h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-          >
-            Let's Talk
-          </a>
-        </div>
-      </header>
+      <SiteHeader currentPage="home" />
 
-      <main className="flex-grow pt-28">
+      <main className="flex-grow pt-20 md:pt-28">
         {/* Hero Section — Full-bleed overlay */}
         <section className="relative overflow-hidden min-h-[68vh] flex items-center">
           {/* Background image */}

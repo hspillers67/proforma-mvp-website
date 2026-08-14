@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { posts } from "@/data/posts";
 import logoWhitePath from "@/assets/logo-white.png";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
+import SiteHeader from "@/components/SiteHeader";
 
 const categoryColors: Record<string, string> = {
   "Giveaway Strategy": "bg-secondary/10 text-secondary",
@@ -53,30 +54,9 @@ function PostCard({ post }: { post: (typeof posts)[number] }) {
 export default function Blog() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Nav */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-white/10">
-        <div className="mx-auto px-8 h-28 flex items-center justify-between max-w-screen-2xl">
-          <Link href="/">
-            <img src={logoHorizontalPath} alt="ProForma MVP Marketing" className="h-12 w-auto cursor-pointer" style={{ filter: "brightness(0) invert(1)" }} />
-          </Link>
-          <nav className="hidden md:flex items-center gap-10">
-            <Link href="/" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Home</Link>
-            <a href="/#services" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Capabilities</a>
-            <a href="/#process" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Process</a>
-            <Link href="/blog" className="text-base font-display font-medium text-white hover:text-white transition-colors border-b border-secondary pb-0.5">Blog</Link>
-            <Link href="/trending" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Trending</Link>
-            <Link href="/testimonials" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Testimonials</Link>
-            <Link href="/faq" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">FAQ</Link>
-            <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Browse Products</a>
-            <a href="/#contact" className="text-base font-display font-medium text-white/75 hover:text-white transition-colors">Contact</a>
-          </nav>
-          <a href="/#contact" className="hidden md:inline-flex h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90">
-            Let's Talk
-          </a>
-        </div>
-      </header>
+      <SiteHeader currentPage="blog" />
 
-      <main className="flex-grow pt-28">
+      <main className="flex-grow pt-20 md:pt-28">
         {/* Hero */}
         <section className="bg-primary py-20 md:py-28 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-secondary/30 pointer-events-none" />
