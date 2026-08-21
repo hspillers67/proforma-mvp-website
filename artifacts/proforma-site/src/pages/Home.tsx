@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Printer, Monitor, Gift, Shirt, Award, ChevronDown } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import Testimonials from "@/components/Testimonials";
 import { posts } from "@/data/posts";
 import logoPath from "@/assets/logo.png";
 import logoWhitePath from "@/assets/logo-white.png";
@@ -65,14 +66,14 @@ export default function Home() {
                 <span className="w-1.5 h-1.5 rounded-full bg-secondary inline-block" />
                 Strategic Brand Partner
               </span>
-              <h1 className="text-base md:text-lg font-display font-semibold text-primary/60 tracking-wide mb-4">
+              <h2 className="text-base md:text-lg font-display font-semibold text-primary/60 tracking-wide mb-4">
                 Promotional Products, Branded Apparel &amp; Printing for Houston-Area Businesses
-              </h1>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-primary">
+              </h2>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-primary">
                 YOUR <span className="text-secondary">BRAND</span>.
                 <br />
                 EVERYWHERE.
-              </h2>
+              </h1>
               <p className="text-lg md:text-xl text-primary/70 leading-relaxed mb-10 max-w-2xl mx-auto">
                 From promotional products and branded apparel to print, signage, and company stores, we make complex projects easier—and manage every detail from idea through delivery.
               </p>
@@ -368,6 +369,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Testimonials Section */}
+        <Testimonials />
 
         {/* Contact Section */}
         <section id="contact" className="py-24 md:py-32 bg-background relative">
