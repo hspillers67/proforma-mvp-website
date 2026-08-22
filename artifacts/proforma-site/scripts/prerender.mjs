@@ -12,6 +12,11 @@ const faqs = [
       "We provide promotional products, branded apparel, and printing solutions like banners, signage, and brochures. If it can carry your logo or your message, we'll find it—and make sure it looks good.",
   },
   {
+    question: "Do you carry FR-rated or ANSI-compliant safety apparel?",
+    answer:
+      "Yes. We source FR-rated (flame-resistant) apparel and ANSI-compliant high-visibility gear for plant, jobsite, and industrial settings. PPE requirements vary by facility and even by department, so tell us your site's specific requirements and we'll match compliant options.",
+  },
+  {
     question: "Who do you typically work with?",
     answer:
       "Our clients are usually marketing managers, HR teams, and purchasing departments in industries like manufacturing, oil & gas, engineering, construction, healthcare, and education. But honestly, any business that wants to strengthen connections with employees, customers, or prospects is a fit.",
@@ -35,6 +40,20 @@ const faqs = [
     question: "Can you help with design?",
     answer:
       "Absolutely. Whether it's making your logo print-ready or brainstorming creative product ideas, our design team has you covered.",
+  },
+  {
+    question: "What information do you need to give me an accurate quote?",
+    prefix: "You don't need exact product names or SKUs to get started—just be ready to answer:",
+    bullets: [
+      "Who it's for (your team, customers, candidates, or event attendees)",
+      "The occasion (recruiting event, safety meeting, uniform program, client gift, etc.)",
+      "How many you need (even a rough range works)",
+      "Your budget, per item or total",
+      "When you need it by",
+      "Where it's going—one location or several",
+      "Whether you have logo artwork ready",
+      "Any special requirements, like FR-rated fabric, high-visibility color, or specific brand colors",
+    ],
   },
   {
     question: "What's your turnaround time?",
