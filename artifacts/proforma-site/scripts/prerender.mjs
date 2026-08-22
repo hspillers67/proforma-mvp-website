@@ -177,28 +177,28 @@ function escapeAttr(str) {
 const trendingMeta = [
   {
     slug: "yeti-pace-purple-royal-blue",
-    pageTitle: "Limited Edition Seasonal Colors: YETI Pace Purple & Royal Blue | ProForma MVP Marketing",
+    pageTitle: "YETI Pace Purple & Royal Blue | ProForma MVP Marketing",
     metaDescription: "YETI's limited edition Pace Purple and Royal Blue seasonal colors are available now for custom branding. See the full product lineup and contact ProForma MVP Marketing to order.",
     imageSrc: "src/assets/trending/yeti-pace-purple-royal-blue.png",
     imageAlt: "YETI Pace Purple and Royal Blue seasonal drinkware lineup including tumblers, water bottles, and can coolers with custom branding",
   },
   {
     slug: "squishy-dumpling-stress-toy",
-    pageTitle: "Squishy Dumpling Stress Toy — Custom Branded Giveaway | ProForma MVP Marketing",
+    pageTitle: "Squishy Dumpling Stress Toy | ProForma MVP Marketing",
     metaDescription: "The Squishy Dumpling Stress Toy is a slow-rising TPE stress reliever packaged in a recycled ABS steamer basket. Available in 7 colors with custom logo imprint.",
     imageSrc: "src/assets/trending/squishy-dumpling-stress-toy.png",
     imageAlt: "Squishy Dumpling Stress Toy in steamer basket packaging, shown in multiple colors including cream, green, pink, blue, purple, and red",
   },
   {
     slug: "awesome-mixtape-wireless-speaker",
-    pageTitle: "Custom Cassette Wireless Speaker | Retro Promotional Products | ProForma MVP Marketing",
+    pageTitle: "Custom Cassette Wireless Speaker | ProForma MVP Marketing",
     metaDescription: "Branded retro cassette speaker with full-color custom design. A trending promotional product for corporate gifting and event giveaways.",
     imageSrc: "src/assets/trending/awesome-mixtape-wireless-speaker-case.jpg",
     imageAlt: "Custom branded cassette case with full-color event artwork",
   },
   {
     slug: "nfc-scribe",
-    pageTitle: "NFC Scribe — The Smart Branded Pen with Built-In NFC Technology | ProForma MVP Marketing",
+    pageTitle: "NFC Scribe: Smart NFC Branded Pen | ProForma MVP Marketing",
     metaDescription: "The NFC Scribe is a polished soft-touch metal pen with built-in NFC technology. One tap connects recipients to any website — digital business card, event page, or campaign landing page. Available with laser engraving or full-color imprint.",
     imageSrc: "src/assets/trending/nfc-scribe.jpg",
     imageAlt: "NFC Scribe custom branded pens in multiple colors including red, navy, gray, teal, charcoal, and white with gunmetal trim",
@@ -260,42 +260,42 @@ for (const post of trendingMeta) {
 const blogMeta = [
   {
     slug: "smarter-promotional-products-houston",
-    pageTitle: "Smarter Promotional Products: What Houston Buyers Want Now | ProForma MVP Marketing",
+    pageTitle: "Smarter Promotional Products in Houston | ProForma MVP Marketing",
     metaDescription: "Houston businesses are moving past \"cheapest option wins\" thinking. Here's what smarter promotional product buying looks like in 2026.",
     imageSrc: "src/assets/blog/smarter-promotional-products-houston.png",
     imageAlt: "Branded promotional products laid out for a Houston business campaign",
   },
   {
     slug: "branded-apparel-houston-teams-will-want-to-wear",
-    pageTitle: "Branded Apparel Houston Teams Will Want to Wear | ProForma MVP Marketing",
+    pageTitle: "Branded Apparel Houston Teams Will Wear | ProForma MVP Marketing",
     metaDescription: "The best branded apparel is more than a shirt with a logo on it. Choose quality, versatile pieces decorated in a way people will genuinely want to wear.",
     imageSrc: "src/assets/blog/branded-apparel-houston-teams.png",
     imageAlt: "Custom branded apparel options for Houston teams including polos, hoodies, and performance wear",
   },
   {
     slug: "branded-apparel-vs-tech-gadgets",
-    pageTitle: "Branded Apparel vs. Tech Gadgets: Best Giveaway in Greater Houston | ProForma MVP Marketing",
+    pageTitle: "Branded Apparel vs. Tech Gadgets | ProForma MVP Marketing",
     metaDescription: "Both branded apparel and tech gadgets have serious marketing power — but which one is right for your next campaign? The answer might surprise you.",
     imageSrc: "src/assets/blog/branded-apparel-vs-tech-gadgets.jpg",
     imageAlt: "Branded apparel and tech gadgets side by side as promotional giveaway options for Houston businesses",
   },
   {
     slug: "real-cost-of-promotional-products",
-    pageTitle: "The Real Cost of Promotional Products (and How to Maximize ROI) | ProForma MVP Marketing",
+    pageTitle: "The Real Cost of Promotional Products | ProForma MVP Marketing",
     metaDescription: "Promo product costs vary widely — but when done well, branded merchandise outperforms almost every other marketing channel in cost per impression.",
     imageSrc: "src/assets/blog/real-cost-of-promotional-products.jpg",
     imageAlt: "Breakdown of promotional product costs and ROI for Houston marketing campaigns",
   },
   {
     slug: "make-onboarding-unforgettable",
-    pageTitle: "Make Onboarding Unforgettable with Personalization & Smart Solutions | ProForma MVP Marketing",
+    pageTitle: "Make Onboarding Unforgettable | ProForma MVP Marketing",
     metaDescription: "Onboarding is your first big chance to make employees and clients feel seen and appreciated. Here's how personalization and smart tech can transform that first impression.",
     imageSrc: "src/assets/blog/make-onboarding-unforgettable.jpg",
     imageAlt: "Personalized employee onboarding kit with branded items including apparel, tumbler, and welcome materials",
   },
   {
     slug: "planning-your-2026-promotional-marketing-spend",
-    pageTitle: "The Ultimate Guide to Planning Your 2026 Promotional Marketing Spend | ProForma MVP Marketing",
+    pageTitle: "2026 Promotional Marketing Spend Guide | ProForma MVP Marketing",
     metaDescription: "Strategic promotional planning separates reactive spending from intentional growth. Here's the framework we use to build campaigns that deliver real ROI.",
     imageSrc: "src/assets/blog/planning-2026-promotional-marketing.png",
     imageAlt: "2026 promotional marketing planning guide with budget framework and campaign calendar",
@@ -332,6 +332,285 @@ for (const post of blogMeta) {
   mkdirSync(join(distDir, "blog", post.slug), { recursive: true });
   writeFileSync(join(distDir, "blog", post.slug, "index.html"), html);
   console.log(`Pre-rendered /blog/${post.slug} → dist/public/blog/${post.slug}/index.html`);
+}
+
+// ── Capability (service) page prerendering ──────────────────────────────────
+
+const BUSINESS_ID = `${BASE_URL}/#business`;
+const AREA_SERVED = [
+  "Houston, TX",
+  "Katy, TX",
+  "Sugar Land, TX",
+  "Cypress, TX",
+  "The Woodlands, TX",
+  "Spring, TX",
+  "Richmond, TX",
+  "Rosenberg, TX",
+  "Pearland, TX",
+  "La Porte, TX",
+  "Baytown, TX",
+  "Texas City, TX",
+  "Galveston, TX",
+  "League City, TX",
+];
+
+// Builds a page's <head> tags (title/description/canonical/OG/Twitter) by
+// replacing the homepage defaults in baseHtml — same replacements the
+// blog/trending loops above do inline, factored out here since capability
+// pages, the testimonials page, and the blog/trending index pages all need
+// the identical treatment with no schema-specific differences.
+function buildHeadHtml({ pageTitle, metaDescription, canonical, ogImage, ogImageAlt, ogType = "website" }) {
+  let html = baseHtml
+    .replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(pageTitle)}</title>`)
+    .replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escapeAttr(metaDescription)}" />`)
+    .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${canonical}" />`)
+    .replace(/<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${escapeAttr(pageTitle)}" />`)
+    .replace(/<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${escapeAttr(metaDescription)}" />`)
+    .replace(/<meta property="og:url"[^>]*>[\n]?/, "")
+    .replace(/<meta property="og:image"[^>]*>/, `<meta property="og:image" content="${ogImage}" />`)
+    .replace(/<meta property="og:image:alt"[^>]*>/, `<meta property="og:image:alt" content="${escapeAttr(ogImageAlt)}" />`)
+    .replace(/<meta property="og:type"[^>]*>/, `<meta property="og:type" content="${ogType}" />`)
+    .replace(/<meta name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${escapeAttr(pageTitle)}" />`)
+    .replace(/<meta name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${escapeAttr(metaDescription)}" />`)
+    .replace(/<meta name="twitter:image"[^>]*>(?!\:)/, `<meta name="twitter:image" content="${ogImage}" />`)
+    .replace(/<meta name="twitter:image:alt"[^>]*>/, `<meta name="twitter:image:alt" content="${escapeAttr(ogImageAlt)}" />`);
+
+  if (!html.includes('property="og:url"')) {
+    html = html.replace(
+      /<meta property="og:type"[^>]*>/,
+      `<meta property="og:type" content="${ogType}" />\n    <meta property="og:url" content="${canonical}" />`
+    );
+  }
+  return html;
+}
+
+// Inserts one or more JSON-LD objects into <head>, right before it closes.
+function injectJsonLd(html, schemas) {
+  const scripts = schemas
+    .map((schema) => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`)
+    .join("\n    ");
+  return html.replace("</head>", `${scripts}\n  </head>`);
+}
+
+const capabilityPages = [
+  {
+    route: "corporate-gifting",
+    pageTitle: "Corporate Gifting Services | ProForma MVP Marketing",
+    metaDescription: "Curated corporate gift bundles for prospecting, client appreciation, and employee recognition — sourced, branded, and delivered by ProForma MVP Marketing.",
+    imageSrc: "src/assets/corporate-gifting-hero.jpg",
+    imageAlt: "Personalized corporate gift box, curated and branded for a client campaign",
+    serviceName: "Corporate Gifting Services",
+    serviceType: "Corporate Gifting",
+    // This page also has its own visible FAQ block — mirrored here so we can
+    // emit FAQPage schema too. Keep in sync with the FAQ section in
+    // src/pages/CorporateGifting.tsx if that copy changes.
+    faqs: [
+      { q: "Can I order just one gift?", a: "Yes. Whether you need a single executive gift or hundreds for a client campaign, we'll curate a solution that fits your needs." },
+      { q: "Can gifts include our logo?", a: "Absolutely. We offer branded packaging, custom inserts, promotional products, and personalized touches that reflect your brand without feeling overly promotional." },
+      { q: "Do you ship nationwide?", a: "Yes. We can ship directly to individual recipients or to your office for hand delivery." },
+      { q: "What's the typical turnaround time?", a: "Most projects are completed within two to three weeks depending on customization and quantity. If you're working on a tight deadline, let us know and we'll recommend options that fit your timeline." },
+    ],
+  },
+  {
+    route: "trade-show-products",
+    pageTitle: "Trade Show & Event Products | ProForma MVP Marketing",
+    metaDescription: "Banner stands, table throws, backdrops, and attendee giveaways for Houston-area trade shows — sourced and coordinated by ProForma MVP Marketing.",
+    imageSrc: "src/assets/trade-show-hero.png",
+    imageAlt: "Trade show displays — banner stands, table covers, backdrops, signage and more",
+    serviceName: "Trade Show & Event Products",
+    serviceType: "Trade Show & Event Marketing Products",
+  },
+  {
+    route: "branded-apparel",
+    pageTitle: "Branded Apparel & Uniforms | ProForma MVP Marketing",
+    metaDescription: "Corporate apparel, uniforms, and safety workwear — decorated and delivered for teams of every size by ProForma MVP Marketing in Katy, TX.",
+    imageSrc: "src/assets/branded-apparel-hero.png",
+    imageAlt: "Branded apparel — vests, hoodies, quarter-zips, polos, and hats with custom logos",
+    serviceName: "Branded Apparel & Uniforms",
+    serviceType: "Branded Apparel & Uniforms",
+  },
+  {
+    route: "promotional-products",
+    pageTitle: "Promotional Products | ProForma MVP Marketing",
+    metaDescription: "Branded merchandise for trade shows, client gifts, employee recognition, and onboarding kits — sourced by ProForma MVP Marketing in Houston, TX.",
+    imageSrc: "src/assets/promo-products-collage.png",
+    imageAlt: "Promotional products — drinkware, bags, headwear, apparel and more",
+    serviceName: "Promotional Products",
+    serviceType: "Promotional Products",
+  },
+  {
+    route: "company-stores",
+    pageTitle: "Company Stores | ProForma MVP Marketing",
+    metaDescription: "Custom online merch stores — powered by Proforma's ProStores™ platform — for employee apparel, recognition, and uniform programs in Houston, TX.",
+    imageSrc: "src/assets/company-stores-hero.png",
+    imageAlt: "Company stores — custom online branded merchandise programs",
+    serviceName: "Company Store Programs",
+    serviceType: "Company Store / Online Ordering Platform",
+  },
+  {
+    route: "printing-packaging",
+    pageTitle: "Printing, Signage & Packaging | ProForma MVP Marketing",
+    metaDescription: "Business cards, brochures, window graphics, event signage, and custom packaging — produced for Houston-area businesses by ProForma MVP Marketing.",
+    imageSrc: "src/assets/print-packaging-hero.png",
+    imageAlt: "Custom business cards and print materials for Houston area businesses",
+    serviceName: "Printing, Signage & Packaging",
+    serviceType: "Printing, Signage & Packaging",
+  },
+  {
+    route: "awards-recognition",
+    pageTitle: "Employee Recognition & Awards | ProForma MVP Marketing",
+    metaDescription: "Engraved awards, anniversary gifts, plaques, and recognition programs that make the moment land — sourced by ProForma MVP Marketing in Katy, TX.",
+    imageSrc: "src/assets/awards-recognition-hero.jpg",
+    imageAlt: "Custom crystal award engraved for Master Machinery Inc. — employee recognition",
+    serviceName: "Employee Recognition & Awards",
+    serviceType: "Employee Recognition & Awards",
+  },
+];
+
+for (const page of capabilityPages) {
+  const canonical = `${BASE_URL}/${page.route}`;
+  const ogImage = resolveOgImage(page.imageSrc);
+
+  let html = buildHeadHtml({
+    pageTitle: page.pageTitle,
+    metaDescription: page.metaDescription,
+    canonical,
+    ogImage,
+    ogImageAlt: page.imageAlt,
+  });
+
+  const schemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: page.serviceName,
+      serviceType: page.serviceType,
+      description: page.metaDescription,
+      provider: { "@id": BUSINESS_ID },
+      areaServed: AREA_SERVED,
+      url: canonical,
+    },
+  ];
+
+  if (page.faqs) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: page.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    });
+  }
+
+  html = injectJsonLd(html, schemas);
+
+  mkdirSync(join(distDir, page.route), { recursive: true });
+  writeFileSync(join(distDir, page.route, "index.html"), html);
+  console.log(`Pre-rendered /${page.route} → dist/public/${page.route}/index.html`);
+}
+
+// ── Testimonials page prerendering ───────────────────────────────────────────
+
+// Mirrors the review list in src/pages/TestimonialsPage.tsx — keep in sync if
+// that copy changes. All 14 are genuine 5-star Google reviews (confirmed by
+// the site owner); reviewCount below reflects the real, current Google
+// Business Profile total (5.0 average, 19 reviews) rather than just the
+// count of reviews quoted on this page.
+const testimonialReviews = [
+  { name: "Arin Ennis", quote: "Just placed my second bulk order with Proforma for my small business. Holly has been so lovely and so helpful to work with. I've been incredibly pleased with the customer service, prompt response time, and level of care during the ordering process. The products have been exactly as pictured and I look forward to more orders in the future!" },
+  { name: "Mariya Richardson", quote: "Holly at Proforma MVP Marketing was fantastic to work with. I ordered logo'd bags for a trade show, and they were a huge hit with everyone who stopped by our booth. Holly was communicative, professional, and made the entire process easy from start to finish." },
+  { name: "Denise Copeland", quote: "Holly/Proforma MVP Marketing are incredible! I placed a last-minute order of monogrammed golf gloves, and they were able to process and get the gloves to me way ahead of schedule. They never cease to amaze me, and the quality is always first class!" },
+  { name: "Lexi Terrault", quote: "I can't say enough great things about this team! They're an absolute pleasure to work with — professional, responsive, and always deliver top-quality products. Even with rush jobs and tight deadlines, they consistently come through." },
+  { name: "Julio Fuentes", quote: "Holly and her team are fantastic to work with. They are prompt, fast at communicating with you, and have a staff that works hard to make your vision become a reality." },
+  { name: "Donna Struchen", quote: "I have been dealing with Proforma MVP Marketing for 3 years and have found their service and cooperation above and beyond my expectations. Their service representative is more than willing to go the extra mile to satisfy the customer." },
+  { name: "Amanda Garza", quote: "Highly efficient group of people. This company is very reliable and all of their employees are super friendly as well. Above all, great prices! Highly recommend to everyone!" },
+  { name: "Marie Pham", quote: "I have been doing business with this company for a few years now. They are professional, punctual and have exactly what we are looking for, for our company uniforms. Thank you for the excellent service!" },
+  { name: "David Hoke", quote: "Proforma's customer service is second to none!! Their account managers are very knowledgeable, and they deliver a great product at a fair price. I would highly recommend contacting Proforma for any of your marketing needs." },
+  { name: "Holly Buckels", quote: "Proforma always offers creative options. I love working with them. All of our orders have been fulfilled and delivered exactly as planned." },
+  { name: "John & Susan Leonard", quote: "I've used them personally and for business. They are great for anything from promotional items for work, chocolates for holidays for clients, to wedding giveaways, etc. They are easy to work with, ship quickly and always have wonderful customer service. I will always use Proforma for all of my marketing and gift needs!" },
+  { name: "Roland", quote: "Always enjoy working with Keith Leonard and everyone at Proforma. They have a huge selection of promotional products with great prices and very fast delivery." },
+  { name: "Cathy Rath", quote: "The service I received was excellent, and the product I ordered — blue pens — with my business information were high quality and a very good price. I recommend Proforma MVP Marketing to any business owner who wants to get noticed." },
+  { name: "ARP Materials", quote: "We've been working with Proforma for about a year. Great products and wonderful customer service. Very thorough! Thank you for the service." },
+];
+
+{
+  const canonical = `${BASE_URL}/testimonials`;
+  const pageTitle = "Client Reviews & Testimonials | ProForma MVP Marketing";
+  const metaDescription = "See what Houston-area marketers and business owners say about working with ProForma MVP Marketing — real, verified Google reviews.";
+  const ogImage = `${BASE_URL}/og-image.png`;
+
+  let html = buildHeadHtml({
+    pageTitle,
+    metaDescription,
+    canonical,
+    ogImage,
+    ogImageAlt: "ProForma MVP Marketing — Your Brand. Everywhere.",
+  });
+
+  // The review[] array only lists the 14 reviews whose full text is actually
+  // visible on this page — every entry here corresponds to real, on-page
+  // content. aggregateRating.reviewCount (19) is the true GBP total, which is
+  // higher than the number of full reviews quoted on-page; that's expected
+  // and not inflating the review[] list itself.
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": BUSINESS_ID,
+    name: "Proforma MVP Marketing",
+    url: BASE_URL,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "19",
+    },
+    review: testimonialReviews.map((t) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: t.name },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: t.quote,
+    })),
+  };
+
+  html = injectJsonLd(html, [reviewSchema]);
+
+  mkdirSync(join(distDir, "testimonials"), { recursive: true });
+  writeFileSync(join(distDir, "testimonials", "index.html"), html);
+  console.log("Pre-rendered /testimonials → dist/public/testimonials/index.html");
+}
+
+// ── Blog / Trending index page prerendering ──────────────────────────────────
+// Title/description/canonical/OG only — no schema on these two index pages.
+
+const indexPages = [
+  {
+    route: "blog",
+    pageTitle: "Blog & Insights | ProForma MVP Marketing",
+    metaDescription: "Practical guides, industry trends, and strategies for branded merchandise, promotional products, and print — from ProForma MVP Marketing.",
+  },
+  {
+    route: "trending",
+    pageTitle: "Trending Products | ProForma MVP Marketing",
+    metaDescription: "Limited editions, seasonal drops, and new arrivals in promotional products and branded merchandise — curated for Greater Houston businesses.",
+  },
+];
+
+for (const page of indexPages) {
+  const canonical = `${BASE_URL}/${page.route}`;
+  const ogImage = `${BASE_URL}/og-image.png`;
+
+  const html = buildHeadHtml({
+    pageTitle: page.pageTitle,
+    metaDescription: page.metaDescription,
+    canonical,
+    ogImage,
+    ogImageAlt: "ProForma MVP Marketing — Your Brand. Everywhere.",
+  });
+
+  mkdirSync(join(distDir, page.route), { recursive: true });
+  writeFileSync(join(distDir, page.route, "index.html"), html);
+  console.log(`Pre-rendered /${page.route} → dist/public/${page.route}/index.html`);
 }
 
 // ── Sitemap ──────────────────────────────────────────────────────────────────

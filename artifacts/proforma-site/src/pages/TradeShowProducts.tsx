@@ -63,6 +63,18 @@ export default function TradeShowProducts() {
           </div>
         </section>
 
+        {/* Quick Answer: Trade Show Giveaways in Houston */}
+        <section className="py-8 md:py-10 bg-white">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <div className="border border-border rounded-2xl px-7 py-6 bg-muted/20">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">Trade Show Giveaways in Houston</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                ProForma MVP Marketing sources, brands, and delivers trade show giveaways for Houston-area businesses — apparel, drinkware, tech accessories, tote bags, and other branded items attendees actually keep. We coordinate sourcing, custom branding, and on-time delivery ahead of your event date, so your booth has giveaways worth remembering long after the show.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Intro copy */}
         <section className="py-8 md:py-10 bg-muted/30">
           <div className="container mx-auto px-6 max-w-4xl">

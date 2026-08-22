@@ -135,8 +135,19 @@ export default function CorporateGifting() {
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Whether you're sending one thoughtful thank-you gift or launching a nationwide client appreciation campaign, we'll help you create gifts people genuinely enjoy receiving.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Tell us who you're gifting, your budget, and your timeline—we'll take care of the rest.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Recognizing a specific milestone or promotion? Our{" "}
+              <Link to="/awards-recognition" className="text-secondary font-semibold hover:underline">
+                awards &amp; recognition
+              </Link>{" "}
+              programs are built for that. Gifting an entire team or department? A{" "}
+              <Link to="/company-stores" className="text-secondary font-semibold hover:underline">
+                company store
+              </Link>{" "}
+              lets every recipient pick their own item from a curated, branded shop.
             </p>
           </div>
         </section>
