@@ -423,7 +423,7 @@ export const posts: Post[] = [
       { type: "paragraph", text: "Because when workwear is part of your safety program, \"close enough\" isn't much of a strategy." },
     ],
   },
-];
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export function getPost(slug: string): Post | undefined {
   return posts.find((p) => p.slug === slug);
