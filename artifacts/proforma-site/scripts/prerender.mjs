@@ -319,6 +319,13 @@ const blogMeta = [
     imageSrc: "src/assets/blog/planning-2026-promotional-marketing.png",
     imageAlt: "2026 promotional marketing planning guide with budget framework and campaign calendar",
   },
+  {
+    slug: "is-your-workwear-keeping-up-with-your-workplace",
+    pageTitle: "Is Your Workwear Keeping Up? | ProForma MVP Marketing",
+    metaDescription: "Safety requirements for workwear vary by job, hazard, and industry, and change over time. Here's how to know if your uniform program still fits.",
+    imageSrc: "src/assets/blog/is-your-workwear-keeping-up-with-your-workplace.png",
+    imageAlt: "Female industrial worker in FR coveralls, hard hat, and safety glasses representing workplace-appropriate protective workwear",
+  },
 ];
 
 for (const post of blogMeta) {
@@ -656,6 +663,7 @@ const blogSlugs = [
   "real-cost-of-promotional-products",
   "make-onboarding-unforgettable",
   "planning-your-2026-promotional-marketing-spend",
+  "is-your-workwear-keeping-up-with-your-workplace",
 ];
 
 const trendingSlugs = [
