@@ -62,12 +62,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-display font-semibold tracking-widest uppercase mb-6 shadow-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-secondary inline-block" />
-                Strategic Brand Partner
-              </span>
               <h2 className="text-base md:text-lg font-display font-semibold text-primary/60 tracking-wide mb-4">
-                Promotional Products, Branded Apparel &amp; Printing for Houston-Area Businesses
+                PROMOTIONAL PRODUCTS • BRANDED APPAREL • PRINT • COMPANY STORES
               </h2>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-primary">
                 YOUR <span className="text-secondary">BRAND</span>.
@@ -75,7 +71,7 @@ export default function Home() {
                 EVERYWHERE.
               </h1>
               <p className="text-lg md:text-xl text-primary/70 leading-relaxed mb-10 max-w-2xl mx-auto">
-                From promotional products and branded apparel to print, signage, and company stores, we make complex projects easier—and manage every detail from idea through delivery.
+                Based in Greater Houston and serving clients nationwide, we're more than a product source—we're a strategic partner for your brand, making complex projects easier from idea through delivery.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
