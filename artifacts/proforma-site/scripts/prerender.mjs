@@ -245,6 +245,13 @@ const blogMeta = [
     imageSrc: "src/assets/blog/is-your-workwear-keeping-up-with-your-workplace.png",
     imageAlt: "Female industrial worker in FR coveralls, hard hat, and safety glasses representing workplace-appropriate protective workwear",
   },
+  {
+    slug: "7-fall-promo-ideas-that-fit-the-season",
+    pageTitle: "7 Fall Promo Ideas That Fit the Season | ProForma MVP Marketing",
+    metaDescription: "Skip the generic pumpkins-and-leaves theme. The best fall giveaways fit naturally into tailgates, fire pits, and cooler mornings. Here are seven ideas with real staying power.",
+    imageSrc: "src/assets/blog/fall-promo-ideas-that-fit-the-season.jpg",
+    imageAlt: "Fall promotional products flat lay including a quarter zip, beanie, camp mug, plaid blanket, bamboo cutting board, folding chair, and football",
+  },
 ];
 
 for (const post of blogMeta) {
@@ -577,6 +584,7 @@ const blogSlugs = [
   "make-onboarding-unforgettable",
   "planning-your-2026-promotional-marketing-spend",
   "is-your-workwear-keeping-up-with-your-workplace",
+  "7-fall-promo-ideas-that-fit-the-season",
 ];
 
 const allUrls = [
