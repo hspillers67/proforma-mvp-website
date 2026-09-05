@@ -64,7 +64,7 @@ export default function Home() {
                   EVERYWHERE.
                 </h1>
                 <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
-                  Based in Greater Houston, we serve clients nationwide. As your strategic partner, we make complex projects easier by managing every detail—from idea through delivery.
+                  Based in Greater Houston, serving clients nationwide. As your strategic partner, we handle every detail from idea through delivery.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
