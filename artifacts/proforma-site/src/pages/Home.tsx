@@ -102,7 +102,7 @@ export default function Home() {
           <div className="max-w-screen-2xl mx-auto px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div className="max-w-2xl">
-                <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6">Capabilities</h2>
+                <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6">Capabilities.</h2>
                 <p className="text-xl text-muted-foreground">
                   We help busy marketing, sales, and HR teams manage every detail—from product recommendations and artwork to production, delivery and multi-location ordering.
                 </p>
@@ -221,7 +221,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
               <div className="max-w-xl">
                 <div className="text-xs font-display font-semibold tracking-widest uppercase text-secondary mb-3">Resources</div>
-                <h2 className="text-3xl md:text-5xl font-bold text-primary">Latest from the blog</h2>
+                <h2 className="text-3xl md:text-5xl font-bold text-primary">Latest from the blog.</h2>
               </div>
               <a href="/blog" className="inline-flex items-center gap-2 text-sm font-display font-semibold text-secondary hover:gap-3 transition-all shrink-0">
                 View all posts <ArrowRight className="w-4 h-4" />
@@ -318,7 +318,7 @@ export default function Home() {
               >
                 <div className="text-xs font-display font-semibold tracking-widest uppercase text-secondary mb-4">Our Advantage</div>
                 <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 leading-tight">
-                  Why Houston-Area Businesses Work With Us
+                  Why Houston-area businesses work with us.
                 </h2>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">

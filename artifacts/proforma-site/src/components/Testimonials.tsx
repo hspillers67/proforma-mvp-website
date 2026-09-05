@@ -78,7 +78,7 @@ export default function Testimonials() {
             </svg>
             <span className="text-sm font-display font-semibold text-muted-foreground uppercase tracking-wider">Google Reviews</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">What our clients say</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">What our clients say.</h2>
           <p className="text-lg text-muted-foreground">
             Marketers trust us to deliver. Here's what they say after working with us.
           </p>
