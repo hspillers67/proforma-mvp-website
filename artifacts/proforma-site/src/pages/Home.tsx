@@ -42,59 +42,63 @@ export default function Home() {
       <SiteHeader currentPage="home" />
 
       <main className="flex-grow pt-20 md:pt-28">
-        {/* Hero Section — Full-bleed overlay */}
-        <section className="relative overflow-hidden min-h-[68vh] flex items-center">
-          {/* Background image */}
-          <img
-            src={heroSwatchesImg}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-          />
-          {/* Light overlay — keeps text readable while letting image brightness through */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-white/10 pointer-events-none" />
+        {/* Hero Section — Split layout: navy copy panel + full-contrast image */}
+        <section className="relative overflow-hidden bg-primary">
+          <div className="flex flex-col lg:flex-row lg:min-h-[50vh]">
+            {/* Copy panel */}
+            <div className="w-full min-w-0 lg:w-1/2 bg-primary flex items-center">
+              <motion.div
+                className="w-full min-w-0 max-w-2xl mx-auto px-8 py-16 md:py-20 md:px-12 lg:px-16 text-center"
+                initial={{ opacity: 0, y: 28 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-base md:text-lg font-display font-semibold text-white/70 tracking-wide mb-4">
+                  PROMOTIONAL PRODUCTS • BRANDED APPAREL
+                  <br />
+                  CORPORATE GIFTING • COMPANY STORES
+                </h2>
+                <h1 className="text-3xl sm:text-6xl lg:text-[40px] xl:text-[54px] 2xl:text-[60px] font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-white break-words">
+                  <span className="whitespace-nowrap">YOUR <span className="text-secondary">BRAND</span>.</span>
+                  <br />
+                  EVERYWHERE.
+                </h1>
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
+                  Based in Greater Houston, we serve clients nationwide. As your strategic partner, we make complex projects easier by managing every detail—from idea through delivery.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="#contact"
+                    className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  >
+                    Let's Talk
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
+                  <a
+                    href="#services"
+                    className="inline-flex h-14 items-center justify-center rounded-md border-2 border-white bg-transparent px-8 text-base font-display font-semibold text-white shadow-sm transition-colors hover:bg-white hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  >
+                    Explore Capabilities
+                  </a>
+                </div>
+              </motion.div>
+            </div>
 
-          {/* Copy — centered over image */}
-          <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-8 flex justify-center">
-            <motion.div
-              className="max-w-3xl text-center"
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-base md:text-lg font-display font-semibold text-primary/60 tracking-wide mb-4">
-                PROMOTIONAL PRODUCTS • BRANDED APPAREL • PRINT • COMPANY STORES
-              </h2>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8 font-display uppercase text-primary">
-                YOUR <span className="text-secondary">BRAND</span>.
-                <br />
-                EVERYWHERE.
-              </h1>
-              <p className="text-lg md:text-xl text-primary/70 leading-relaxed mb-10 max-w-2xl mx-auto">
-                Based in Greater Houston and serving clients nationwide, we're more than a product source—we're a strategic partner for your brand, making complex projects easier from idea through delivery.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="#contact"
-                  className="inline-flex h-14 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                >
-                  Let's Talk
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-                <a
-                  href="#services"
-                  className="inline-flex h-14 items-center justify-center rounded-md border-2 border-primary/50 bg-white/60 backdrop-blur-sm px-8 text-base font-display font-semibold text-primary shadow-sm transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                >
-                  Explore Capabilities
-                </a>
-              </div>
-            </motion.div>
+            {/* Hero photograph — normal contrast, no overlay */}
+            <div className="relative w-full min-w-0 h-72 sm:h-96 md:h-[420px] lg:h-auto lg:w-1/2">
+              <img
+                src={heroSwatchesImg}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover object-[75%_center]"
+              />
+            </div>
           </div>
         </section>
 
 
         {/* Services Section */}
-        <section id="services" className="pt-20 pb-32 md:pt-24 md:pb-40 bg-muted/30">
+        <section id="services" className="py-24 md:py-32 bg-muted/30">
           <div className="max-w-screen-2xl mx-auto px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div className="max-w-2xl">
