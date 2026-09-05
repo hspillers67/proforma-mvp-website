@@ -8,6 +8,18 @@
   PORT = "3000"
 
 [[redirects]]
+  from = "/trending"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/trending/*"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 404

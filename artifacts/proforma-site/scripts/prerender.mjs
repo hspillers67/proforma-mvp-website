@@ -132,7 +132,7 @@ mkdirSync(join(distDir, "faq"), { recursive: true });
 writeFileSync(join(distDir, "faq", "index.html"), faqHtml);
 console.log("Pre-rendered /faq → dist/public/faq/index.html");
 
-// ── Trending post prerendering ────────────────────────────────────────────────
+// ── Shared prerendering helpers ─────────────────────────────────────────────
 const BASE_URL = "https://www.proformamvpmarketing.com";
 
 // Read Vite manifest to resolve hashed asset filenames for og:image.
@@ -191,87 +191,6 @@ function resolveOgImage(srcPath) {
 
 function escapeAttr(str) {
   return str.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
-}
-
-const trendingMeta = [
-  {
-    slug: "yeti-pace-purple-royal-blue",
-    pageTitle: "YETI Pace Purple & Royal Blue | ProForma MVP Marketing",
-    metaDescription: "YETI's limited edition Pace Purple and Royal Blue seasonal colors are available now for custom branding. See the full product lineup and contact ProForma MVP Marketing to order.",
-    imageSrc: "src/assets/trending/yeti-pace-purple-royal-blue.png",
-    imageAlt: "YETI Pace Purple and Royal Blue seasonal drinkware lineup including tumblers, water bottles, and can coolers with custom branding",
-  },
-  {
-    slug: "squishy-dumpling-stress-toy",
-    pageTitle: "Squishy Dumpling Stress Toy | ProForma MVP Marketing",
-    metaDescription: "The Squishy Dumpling Stress Toy is a slow-rising TPE stress reliever packaged in a recycled ABS steamer basket. Available in 7 colors with custom logo imprint.",
-    imageSrc: "src/assets/trending/squishy-dumpling-stress-toy.png",
-    imageAlt: "Squishy Dumpling Stress Toy in steamer basket packaging, shown in multiple colors including cream, green, pink, blue, purple, and red",
-  },
-  {
-    slug: "awesome-mixtape-wireless-speaker",
-    pageTitle: "Custom Cassette Wireless Speaker | ProForma MVP Marketing",
-    metaDescription: "Branded retro cassette speaker with full-color custom design. A trending promotional product for corporate gifting and event giveaways.",
-    imageSrc: "src/assets/trending/awesome-mixtape-wireless-speaker-case.jpg",
-    imageAlt: "Custom branded cassette case with full-color event artwork",
-  },
-  {
-    slug: "nfc-scribe",
-    pageTitle: "NFC Scribe: Smart NFC Branded Pen | ProForma MVP Marketing",
-    metaDescription: "The NFC Scribe is a polished soft-touch metal pen with built-in NFC technology. One tap connects recipients to any website — digital business card, event page, or campaign landing page. Available with laser engraving or full-color imprint.",
-    imageSrc: "src/assets/trending/nfc-scribe.jpg",
-    imageAlt: "NFC Scribe custom branded pens in multiple colors including red, navy, gray, teal, charcoal, and white with gunmetal trim",
-  },
-];
-
-for (const post of trendingMeta) {
-  const canonical = `${BASE_URL}/trending/${post.slug}`;
-  const ogImage = resolveOgImage(post.imageSrc);
-
-  const headTags = `
-    <title>${escapeAttr(post.pageTitle)}</title>
-    <meta name="description" content="${escapeAttr(post.metaDescription)}" />
-    <link rel="canonical" href="${canonical}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="${escapeAttr(post.pageTitle)}" />
-    <meta property="og:description" content="${escapeAttr(post.metaDescription)}" />
-    <meta property="og:url" content="${canonical}" />
-    <meta property="og:image" content="${ogImage}" />
-    <meta property="og:image:alt" content="${escapeAttr(post.imageAlt)}" />
-    <meta property="og:site_name" content="ProForma MVP Marketing" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="${escapeAttr(post.pageTitle)}" />
-    <meta name="twitter:description" content="${escapeAttr(post.metaDescription)}" />
-    <meta name="twitter:image" content="${ogImage}" />
-    <meta name="twitter:image:alt" content="${escapeAttr(post.imageAlt)}" />`;
-
-  // Replace homepage meta tags with post-specific ones
-  let html = baseHtml
-    .replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(post.pageTitle)}</title>`)
-    .replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escapeAttr(post.metaDescription)}" />`)
-    .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${canonical}" />`)
-    .replace(/<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${escapeAttr(post.pageTitle)}" />`)
-    .replace(/<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${escapeAttr(post.metaDescription)}" />`)
-    .replace(/<meta property="og:url"[^>]*>[\n]?/, "") // remove if present
-    .replace(/<meta property="og:image"[^>]*>/, `<meta property="og:image" content="${ogImage}" />`)
-    .replace(/<meta property="og:image:alt"[^>]*>/, `<meta property="og:image:alt" content="${escapeAttr(post.imageAlt)}" />`)
-    .replace(/<meta property="og:type"[^>]*>/, `<meta property="og:type" content="article" />`)
-    .replace(/<meta name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${escapeAttr(post.pageTitle)}" />`)
-    .replace(/<meta name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${escapeAttr(post.metaDescription)}" />`)
-    .replace(/<meta name="twitter:image"[^>]*>(?!\:)/, `<meta name="twitter:image" content="${ogImage}" />`)
-    .replace(/<meta name="twitter:image:alt"[^>]*>/, `<meta name="twitter:image:alt" content="${escapeAttr(post.imageAlt)}" />`);
-
-  // Also inject a canonical og:url tag after og:type if not already present
-  if (!html.includes('property="og:url"')) {
-    html = html.replace(
-      /<meta property="og:type"[^>]*>/,
-      `<meta property="og:type" content="article" />\n    <meta property="og:url" content="${canonical}" />`
-    );
-  }
-
-  mkdirSync(join(distDir, "trending", post.slug), { recursive: true });
-  writeFileSync(join(distDir, "trending", post.slug, "index.html"), html);
-  console.log(`Pre-rendered /trending/${post.slug} → dist/public/trending/${post.slug}/index.html`);
 }
 
 // ── Blog post prerendering ────────────────────────────────────────────────────
@@ -606,19 +525,14 @@ const testimonialReviews = [
   console.log("Pre-rendered /testimonials → dist/public/testimonials/index.html");
 }
 
-// ── Blog / Trending index page prerendering ──────────────────────────────────
-// Title/description/canonical/OG only — no schema on these two index pages.
+// ── Blog index page prerendering ──────────────────────────────────────────────
+// Title/description/canonical/OG only — no schema on this index page.
 
 const indexPages = [
   {
     route: "blog",
     pageTitle: "Blog & Insights | ProForma MVP Marketing",
     metaDescription: "Practical guides, industry trends, and strategies for branded merchandise, promotional products, and print — from ProForma MVP Marketing.",
-  },
-  {
-    route: "trending",
-    pageTitle: "Trending Products | ProForma MVP Marketing",
-    metaDescription: "Limited editions, seasonal drops, and new arrivals in promotional products and branded merchandise — curated for Greater Houston businesses.",
   },
 ];
 
@@ -644,7 +558,6 @@ for (const page of indexPages) {
 const staticRoutes = [
   "/",
   "/blog",
-  "/trending",
   "/testimonials",
   "/faq",
   "/company-stores",
@@ -666,17 +579,9 @@ const blogSlugs = [
   "is-your-workwear-keeping-up-with-your-workplace",
 ];
 
-const trendingSlugs = [
-  "yeti-pace-purple-royal-blue",
-  "squishy-dumpling-stress-toy",
-  "awesome-mixtape-wireless-speaker",
-  "nfc-scribe",
-];
-
 const allUrls = [
   ...staticRoutes,
   ...blogSlugs.map((s) => `/blog/${s}`),
-  ...trendingSlugs.map((s) => `/trending/${s}`),
 ];
 
 const today = new Date().toISOString().split("T")[0];
@@ -689,7 +594,7 @@ ${allUrls
     <loc>${BASE_URL}${url}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${url === "/" ? "weekly" : "monthly"}</changefreq>
-    <priority>${url === "/" ? "1.0" : url.startsWith("/trending/") || url.startsWith("/blog/") ? "0.8" : "0.7"}</priority>
+    <priority>${url === "/" ? "1.0" : url.startsWith("/blog/") ? "0.8" : "0.7"}</priority>
   </url>`
   )
   .join("\n")}

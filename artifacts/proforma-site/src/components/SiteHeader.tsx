@@ -6,7 +6,6 @@ import logoHorizontalPath from "@/assets/logo-horizontal.png";
 type Page =
   | "home"
   | "blog"
-  | "trending"
   | "capabilities"
   | "testimonials"
   | "faq"
@@ -83,7 +82,6 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
 
             <a href="/#process" className={`text-base font-display font-medium ${defaultCls}`}>Process</a>
             <Link href="/blog" className={`text-base font-display font-medium ${currentPage === "blog" ? activeCls : defaultCls}`}>Blog</Link>
-            <Link href="/trending" className={`text-base font-display font-medium ${currentPage === "trending" ? activeCls : defaultCls}`}>Trending</Link>
             <Link href="/testimonials" className={`text-base font-display font-medium ${currentPage === "testimonials" ? activeCls : defaultCls}`}>Testimonials</Link>
             <Link href="/faq" className={`text-base font-display font-medium ${currentPage === "faq" ? activeCls : defaultCls}`}>FAQ</Link>
             <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className={`text-base font-display font-medium ${defaultCls}`}>Browse Products</a>
@@ -155,9 +153,6 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
           </a>
           <a href="/blog" onClick={close} className="flex items-center h-12 text-base font-display font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10">
             Blog
-          </a>
-          <a href="/trending" onClick={close} className="flex items-center h-12 text-base font-display font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10">
-            Trending
           </a>
           <a href="/testimonials" onClick={close} className="flex items-center h-12 text-base font-display font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10">
             Testimonials
