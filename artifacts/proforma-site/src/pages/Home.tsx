@@ -98,7 +98,7 @@ export default function Home() {
 
 
         {/* Services Section */}
-        <section id="services" className="py-24 md:py-32 bg-muted/30">
+        <section id="services" className="pt-24 pb-16 md:pt-32 md:pb-20 bg-muted/30">
           <div className="max-w-screen-2xl mx-auto px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div className="max-w-2xl">
@@ -216,7 +216,7 @@ export default function Home() {
 
 
         {/* Blog Preview Section */}
-        <section className="py-24 md:py-32 bg-muted/30">
+        <section className="pt-16 pb-24 md:pt-20 md:pb-32 bg-muted/30 border-t border-border">
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
               <div className="max-w-xl">
