@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { posts } from "@/data/posts";
@@ -52,7 +53,13 @@ function PostCard({ post }: { post: (typeof posts)[number] }) {
   );
 }
 
+const POSTS_PER_PAGE = 6;
+
 export default function Blog() {
+  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
+  const visiblePosts = posts.slice(0, visibleCount);
+  const hasMore = visibleCount < posts.length;
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader currentPage="blog" />
@@ -80,10 +87,25 @@ export default function Blog() {
         <section className="py-20 md:py-28">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {posts.map((post) => (
+              {visiblePosts.map((post) => (
                 <PostCard key={post.slug} post={post} />
               ))}
             </div>
+
+            {hasMore && (
+              <div className="mt-12 text-center">
+                <button
+                  type="button"
+                  onClick={() => setVisibleCount((c) => c + POSTS_PER_PAGE)}
+                  className="inline-flex h-12 items-center justify-center rounded-md border-2 border-secondary px-8 text-base font-display font-semibold text-secondary transition-colors hover:bg-secondary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  Load more articles
+                </button>
+                <p className="mt-3 text-xs text-muted-foreground">
+                  Showing {visiblePosts.length} of {posts.length}
+                </p>
+              </div>
+            )}
           </div>
         </section>
 
