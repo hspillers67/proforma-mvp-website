@@ -252,11 +252,18 @@ const blogMeta = [
     imageSrc: "src/assets/blog/fall-promo-ideas-that-fit-the-season.jpg",
     imageAlt: "Fall promotional products flat lay including a quarter zip, beanie, camp mug, plaid blanket, bamboo cutting board, folding chair, and football",
   },
+  {
+    slug: "fall-corporate-apparel-in-houston",
+    pageTitle: "Fall Corporate Apparel in Houston | ProForma MVP Marketing",
+    metaDescription: "Fall apparel for Houston teams: the best layering pieces, what works for oil and gas, construction, manufacturing, and schools, and when to order.",
+    imageSrc: "src/assets/blog/fall-corporate-apparel-in-houston.jpg",
+    imageAlt: "Four Houston coworkers in quarter-zips, a vest, and a soft-shell jacket walking outside in fall sunshine with the downtown skyline behind them",
+  },
 ];
 
 for (const post of blogMeta) {
   const canonical = `${BASE_URL}/blog/${post.slug}`;
-  const ogImage = resolveOgImage(post.imageSrc);
+  const ogImage = post.imageSrc ? resolveOgImage(post.imageSrc) : `${BASE_URL}/og-image.png`;
 
   let html = baseHtml
     .replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(post.pageTitle)}</title>`)
@@ -585,6 +592,7 @@ const blogSlugs = [
   "planning-your-2026-promotional-marketing-spend",
   "is-your-workwear-keeping-up-with-your-workplace",
   "7-fall-promo-ideas-that-fit-the-season",
+  "fall-corporate-apparel-in-houston",
 ];
 
 const allUrls = [

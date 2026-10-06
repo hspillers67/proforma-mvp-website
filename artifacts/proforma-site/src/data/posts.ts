@@ -6,6 +6,7 @@ import imgBrandedLooks from "@/assets/blog/branded-apparel-houston-teams.png";
 import imgSmarterBuying from "@/assets/blog/smarter-promotional-products-houston.png";
 import imgWorkwear from "@/assets/blog/is-your-workwear-keeping-up-with-your-workplace.png";
 import imgFallPromo from "@/assets/blog/fall-promo-ideas-that-fit-the-season.jpg";
+import imgFallApparel from "@/assets/blog/fall-corporate-apparel-in-houston.jpg";
 
 export type ContentBlock =
   | { type: "paragraph"; text: string }
@@ -496,6 +497,45 @@ export const posts: Post[] = [
       { type: "paragraph", text: "Because the goal isn't to put your logo on more stuff." },
       { type: "paragraph", text: "It's to put your brand on something people are genuinely happy to keep." },
       { type: "paragraph", text: "And fall gives us plenty of good opportunities to do exactly that." },
+    ],
+  },
+  {
+    slug: "fall-corporate-apparel-in-houston",
+    title: "Fall Corporate Apparel in Houston: What to Order When \"Sweater Weather\" Means 78 Degrees",
+    excerpt: "In Houston, fall apparel isn't about warmth. It's about getting through a 20-degree swing before lunch. Here's what to order, and when to order it.",
+    category: "Planning",
+    date: "October 6, 2026",
+    readTime: "3 min read",
+    image: imgFallApparel,
+    content: [
+      { type: "paragraph", text: "Fall in Houston is a state of mind." },
+      { type: "paragraph", text: "The calendar says October. The thermometer says 85. And somewhere, a marketing manager is picking out heavyweight hoodies for the whole team." },
+      { type: "paragraph", text: "Let's not do that." },
+      { type: "paragraph", text: "Fall apparel here plays by different rules. Mornings can be crisp. Afternoons usually aren't. And the office AC is set to \"meat locker\" no matter what month it is." },
+      { type: "paragraph", text: "So, the goal isn't warmth. It's getting through a 20-degree swing before lunch." },
+      { type: "heading", level: 2, text: "The pieces that work here" },
+      { type: "heading", level: 3, text: "Quarter-zips" },
+      { type: "paragraph", text: "The unofficial uniform of Houston business casual. They work over a polo, come off easily by lunch, and look sharp with an embroidered logo. If you order one fall piece, make it this one." },
+      { type: "heading", level: 3, text: "Vests" },
+      { type: "paragraph", text: "Soft shell, puffer, or fleece. Warm where it counts, no sleeves to overheat in. Great for field teams, sales teams, and anyone who lives in their truck." },
+      { type: "heading", level: 3, text: "Lightweight soft-shell jackets" },
+      { type: "paragraph", text: "Wind and light rain resistant, not bulky. They'll get worn from November to March, which in Houston is basically the whole winter." },
+      { type: "heading", level: 3, text: "Long sleeve performance tees" },
+      { type: "paragraph", text: "Sun protection and a little warmth for crews working outside." },
+      { type: "heading", level: 3, text: "Flannels and shackets" },
+      { type: "paragraph", text: "The fun option. A great fit for company events, fall festivals, or a team that's a little more casual." },
+      { type: "heading", level: 3, text: "Beanies" },
+      { type: "paragraph", text: "Small, affordable, and weirdly beloved. People will wear a good beanie with a logo on it far longer than you'd expect." },
+      { type: "heading", level: 2, text: "When to order" },
+      { type: "paragraph", text: "Earlier than you think." },
+      { type: "paragraph", text: "Fall apparel overlaps with the holiday gifting rush, and blank inventory on popular styles can get tight fast. Colors and sizes you want in October might be gone in November." },
+      { type: "paragraph", text: "A good rule: give yourself 3 to 4 weeks for standard decorated apparel. More if you're doing custom colors, multiple locations, or a large order." },
+      { type: "paragraph", text: "And if you're thinking about holiday gifts for employees or clients, now's the time to start that conversation too. Fall apparel makes a pretty great gift, which is convenient, since you're already ordering it." },
+      { type: "heading", level: 2, text: "One more thing" },
+      { type: "paragraph", text: "The best company apparel isn't the most expensive. It's the stuff people pull out of the closet on a Saturday." },
+      { type: "paragraph", text: "Pick pieces that fit well, feel good, and make sense for how your team works. That's what gets your logo out in the world." },
+      { type: "paragraph", text: "Need help figuring out what fits your team? Let's talk. I'll help you find the right pieces, the right decoration, and the right timing, without the guesswork." },
+      { type: "paragraph", text: "Because nobody needs 200 heavyweight hoodies in a Houston October." },
     ],
   },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
