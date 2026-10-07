@@ -5,7 +5,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
-import Admin from "@/pages/Admin";
 import ThankYou from "@/pages/ThankYou";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
@@ -40,7 +39,6 @@ function Router() {
       <Route path="/employee-gifts-recognition">{() => { window.location.replace("/awards-recognition"); return null; }}</Route>
       <Route path="/trending">{() => { window.location.replace("/blog"); return null; }}</Route>
       <Route path="/trending/:slug">{() => { window.location.replace("/blog"); return null; }}</Route>
-      <Route path="/admin" component={Admin} />
       <Route path="/thank-you" component={ThankYou} />
       <Route component={NotFound} />
     </Switch>
