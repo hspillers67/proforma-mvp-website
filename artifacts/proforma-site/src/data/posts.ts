@@ -28,7 +28,7 @@ export interface Post {
   content: ContentBlock[];
 }
 
-export const posts: Post[] = [
+export const posts: Post[] = ([
   {
     slug: "smarter-promotional-products-houston",
     title: "Smarter Promotional Products: What Houston Buyers Want Now",
@@ -538,7 +538,7 @@ export const posts: Post[] = [
       { type: "paragraph", text: "Because nobody needs 200 heavyweight hoodies in a Houston October." },
     ],
   },
-].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+] satisfies Post[]).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export function getPost(slug: string): Post | undefined {
   return posts.find((p) => p.slug === slug);
