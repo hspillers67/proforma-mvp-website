@@ -403,7 +403,7 @@ export default function Home() {
                       </div>
                       <div>
                         <p className="font-display font-medium text-white">Email</p>
-                        <a href="mailto:info.mvp@proforma.com" className="text-sm hover:text-white transition-colors">info.mvp@proforma.com</a>
+                        <a href="mailto:info@proformamvpmarketing.com" className="text-sm hover:text-white transition-colors">info@proformamvpmarketing.com</a>
                       </div>
                     </div>
                     <div className="flex items-start gap-4 text-primary-foreground/70">
