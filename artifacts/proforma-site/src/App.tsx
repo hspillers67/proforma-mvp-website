@@ -45,6 +45,9 @@ function Router() {
   );
 }
 
+// Also used by src/entry-server.tsx to pre-render pages at build time.
+export { Router as Routes };
+
 function App() {
   return (
     <HelmetProvider>
