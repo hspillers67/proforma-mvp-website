@@ -82,26 +82,8 @@ const faqs = [
   },
 ];
 
-function escape(str) {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
-function faqToHtml(faq) {
-  const parts = [];
-  if (faq.prefix) parts.push(`<p>${escape(faq.prefix)}</p>`);
-  if (faq.bullets) {
-    parts.push(
-      "<ul>" + faq.bullets.map((b) => `<li>${escape(b)}</li>`).join("") + "</ul>"
-    );
-  }
-  if (faq.answer) parts.push(`<p>${escape(faq.answer)}</p>`);
-  return `<div><h2>${escape(faq.question)}</h2>${parts.join("")}</div>`;
-}
-
+// Mirrors the Q&A in src/pages/FAQPage.tsx — used only for the FAQPage
+// schema below (the visible page content now comes from the real React page).
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -117,20 +99,28 @@ const faqSchema = {
   })),
 };
 
-const staticContent = `<div id="faq-prerender"><h1>Frequently Asked Questions</h1>${faqs.map(faqToHtml).join("")}</div>`;
-
 const baseHtml = readFileSync(join(distDir, "index.html"), "utf-8");
 
-const faqHtml = baseHtml
-  .replace(
-    "</head>",
-    `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n</head>`
-  )
-  .replace("<div id=\"root\"></div>", `<div id="root">${staticContent}</div>`);
+// Empty app shell for routes that aren't pre-rendered (e.g. /thank-you, old
+// redirect paths). netlify.toml serves this as the 404 fallback so the client
+// router can still render those routes. It must stay content-free: serving a
+// pre-rendered page here would hydrate against the wrong route.
+writeFileSync(join(distDir, "404.html"), baseHtml);
 
-mkdirSync(join(distDir, "faq"), { recursive: true });
-writeFileSync(join(distDir, "faq", "index.html"), faqHtml);
-console.log("Pre-rendered /faq → dist/public/faq/index.html");
+// ── Body pre-rendering (for AI crawlers that don't run JavaScript) ──────────
+// The SSR bundle is built by `vite build --ssr src/entry-server.tsx` right
+// before this script runs (see package.json "build"). Each page's real React
+// output is placed inside <div id="root">, and main.tsx hydrates it in the
+// browser, so visitors see exactly the same site as before.
+const { render } = await import(join(__dir, "..", "dist", "server", "entry-server.js"));
+
+function withBody(html, route) {
+  const body = render(route);
+  if (!html.includes('<div id="root"></div>')) {
+    throw new Error(`Could not find empty #root to fill for ${route}`);
+  }
+  return html.replace('<div id="root"></div>', () => `<div id="root">${body}</div>`);
+}
 
 // ── Shared prerendering helpers ─────────────────────────────────────────────
 const BASE_URL = "https://www.proformamvpmarketing.com";
@@ -289,7 +279,7 @@ for (const post of blogMeta) {
   }
 
   mkdirSync(join(distDir, "blog", post.slug), { recursive: true });
-  writeFileSync(join(distDir, "blog", post.slug, "index.html"), html);
+  writeFileSync(join(distDir, "blog", post.slug, "index.html"), withBody(html, `/blog/${post.slug}`));
   console.log(`Pre-rendered /blog/${post.slug} → dist/public/blog/${post.slug}/index.html`);
 }
 
@@ -466,7 +456,7 @@ for (const page of capabilityPages) {
   html = injectJsonLd(html, schemas);
 
   mkdirSync(join(distDir, page.route), { recursive: true });
-  writeFileSync(join(distDir, page.route, "index.html"), html);
+  writeFileSync(join(distDir, page.route, "index.html"), withBody(html, `/${page.route}`));
   console.log(`Pre-rendered /${page.route} → dist/public/${page.route}/index.html`);
 }
 
@@ -535,7 +525,7 @@ const testimonialReviews = [
   html = injectJsonLd(html, [reviewSchema]);
 
   mkdirSync(join(distDir, "testimonials"), { recursive: true });
-  writeFileSync(join(distDir, "testimonials", "index.html"), html);
+  writeFileSync(join(distDir, "testimonials", "index.html"), withBody(html, "/testimonials"));
   console.log("Pre-rendered /testimonials → dist/public/testimonials/index.html");
 }
 
@@ -554,7 +544,7 @@ for (const page of indexPages) {
   const canonical = `${BASE_URL}/${page.route}`;
   const ogImage = `${BASE_URL}/og-image.png`;
 
-  const html = buildHeadHtml({
+  let html = buildHeadHtml({
     pageTitle: page.pageTitle,
     metaDescription: page.metaDescription,
     canonical,
@@ -563,9 +553,32 @@ for (const page of indexPages) {
   });
 
   mkdirSync(join(distDir, page.route), { recursive: true });
-  writeFileSync(join(distDir, page.route, "index.html"), html);
+  writeFileSync(join(distDir, page.route, "index.html"), withBody(html, `/${page.route}`));
   console.log(`Pre-rendered /${page.route} → dist/public/${page.route}/index.html`);
 }
+
+// ── FAQ page prerendering ────────────────────────────────────────────────────
+// Previously this page reused the homepage <head>, so its canonical pointed at
+// the homepage and told search engines to treat it as a duplicate.
+{
+  const canonical = `${BASE_URL}/faq`;
+  let html = buildHeadHtml({
+    pageTitle: "FAQ: Promotional Products & Branded Apparel | ProForma MVP Marketing",
+    metaDescription: "Answers on products, FR and hi-vis safety apparel, company stores, minimums, turnaround times, and quotes from ProForma MVP Marketing in Katy, TX.",
+    canonical,
+    ogImage: `${BASE_URL}/og-image.png`,
+    ogImageAlt: "ProForma MVP Marketing — Your Brand. Everywhere.",
+  });
+  html = injectJsonLd(html, [faqSchema]);
+  mkdirSync(join(distDir, "faq"), { recursive: true });
+  writeFileSync(join(distDir, "faq", "index.html"), withBody(html, "/faq"));
+  console.log("Pre-rendered /faq → dist/public/faq/index.html");
+}
+
+// ── Homepage prerendering ────────────────────────────────────────────────────
+// Written last because every page above is built from the empty index.html.
+writeFileSync(join(distDir, "index.html"), withBody(baseHtml, "/"));
+console.log("Pre-rendered / → dist/public/index.html");
 
 // ── Sitemap ──────────────────────────────────────────────────────────────────
 
