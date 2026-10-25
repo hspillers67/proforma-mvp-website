@@ -17,6 +17,8 @@ import TradeShowProducts from "@/pages/TradeShowProducts";
 import PrintingPackaging from "@/pages/PrintingPackaging";
 import AwardsRecognition from "@/pages/AwardsRecognition";
 import CorporateGifting from "@/pages/CorporateGifting";
+import IndustryPage from "@/pages/IndustryPage";
+import IndustriesHub from "@/pages/IndustriesHub";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +38,8 @@ function Router() {
       <Route path="/printing-signage">{() => { window.location.replace("/printing-packaging"); return null; }}</Route>
       <Route path="/awards-recognition" component={AwardsRecognition} />
       <Route path="/corporate-gifting" component={CorporateGifting} />
+      <Route path="/industries" component={IndustriesHub} />
+      <Route path="/industries/:slug" component={IndustryPage} />
       <Route path="/employee-gifts-recognition">{() => { window.location.replace("/awards-recognition"); return null; }}</Route>
       <Route path="/trending">{() => { window.location.replace("/blog"); return null; }}</Route>
       <Route path="/trending/:slug">{() => { window.location.replace("/blog"); return null; }}</Route>
