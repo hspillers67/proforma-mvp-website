@@ -12,6 +12,9 @@ export default function IndustriesHub() {
         {/* Focus industries (page headline) */}
         <section style={{ backgroundColor: "#F5F5F5" }} className="py-10 md:py-14">
           <div className="container mx-auto px-6 max-w-5xl">
+            <p className="text-sm font-display font-semibold uppercase tracking-wider text-secondary mb-3">
+              Industries we serve
+            </p>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-primary">{industriesHub.h1}</h1>
             <div className="w-14 h-1 mt-5 mb-8" style={{ backgroundColor: "#9C0057" }} />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -37,10 +40,7 @@ export default function IndustriesHub() {
         {/* Other industries */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6 max-w-5xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">And businesses of every kind</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-4xl">
-              Beyond our focus industries, we also work with:
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Other Industries We Serve</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
               {otherIndustries.map((o) => (
                 <div key={o.name} className="border-l-4 border-secondary pl-5">
