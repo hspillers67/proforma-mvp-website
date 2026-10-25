@@ -9,35 +9,22 @@ export default function IndustriesHub() {
       <SiteHeader currentPage="industries" />
 
       <main className="flex-grow pt-20 md:pt-28">
-        {/* Page Header */}
+        {/* Focus industries (page headline) */}
         <section style={{ backgroundColor: "#F5F5F5" }} className="py-10 md:py-14">
-          <div className="container mx-auto px-6 max-w-4xl">
+          <div className="container mx-auto px-6 max-w-5xl">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-primary">{industriesHub.h1}</h1>
-            <div className="w-14 h-1 mt-5 mb-5" style={{ backgroundColor: "#9C0057" }} />
-            <p className="text-xl md:text-2xl font-display font-semibold leading-snug text-primary mb-4">
-              {industriesHub.lead}
-            </p>
-            <p className="text-lg leading-relaxed" style={{ color: "#444444" }}>
-              {industriesHub.answer}
-            </p>
-          </div>
-        </section>
-
-        {/* Focus industries */}
-        <section className="py-8 md:py-12 bg-white">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 max-w-5xl mx-auto">Where we have the deepest experience</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="w-14 h-1 mt-5 mb-8" style={{ backgroundColor: "#9C0057" }} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {industries.map((i) => (
                 <a
                   key={i.slug}
                   href={`/industries/${i.slug}`}
-                  className="group block bg-muted/30 border border-border rounded-xl px-7 py-6 hover:shadow-md transition-shadow"
+                  className="group block bg-white border border-border rounded-xl px-7 py-6 hover:shadow-md transition-shadow"
                 >
-                  <h3 className="font-display font-semibold text-primary text-xl mb-2 flex items-center gap-2">
+                  <h2 className="font-display font-semibold text-primary text-xl mb-2 flex items-center gap-2">
                     {i.name}
                     <ArrowRight className="w-4 h-4 text-secondary transition-transform group-hover:translate-x-1" />
-                  </h3>
+                  </h2>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {i.supply.slice(0, 3).map((s) => s.title).join(" · ")}
                   </p>
@@ -48,11 +35,11 @@ export default function IndustriesHub() {
         </section>
 
         {/* Other industries */}
-        <section className="py-8 md:py-12 bg-muted/30">
+        <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6 max-w-5xl">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">And businesses of every kind</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-4xl">
-              Every business has customers to reach, employees to recognize, and a reputation to build. We also work with:
+              Beyond our focus industries, we also work with:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
               {otherIndustries.map((o) => (
