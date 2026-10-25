@@ -19,7 +19,7 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
         <section style={{ backgroundColor: "#F5F5F5" }} className="py-10 md:py-14">
           <div className="container mx-auto px-6 max-w-4xl">
             <p className="text-sm font-display font-semibold uppercase tracking-wider text-secondary mb-3">
-              Industries we serve · {industry.name}
+              Industry focus · {industry.name}
             </p>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-primary">{industry.h1}</h1>
             <div className="w-14 h-1 mt-5 mb-5" style={{ backgroundColor: "#9C0057" }} />
@@ -108,7 +108,8 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
         <section className="py-8 bg-white">
           <div className="container mx-auto px-6 max-w-4xl">
             <p className="text-muted-foreground">
-              Other industries we serve:{" "}
+              <a href="/industries" className="text-secondary font-semibold hover:underline">All industries we serve</a>
+              {" · "}Other industry focus areas:{" "}
               {others.map((o, idx) => (
                 <span key={o.slug}>
                   <a href={`/industries/${o.slug}`} className="text-secondary font-semibold hover:underline">{o.name}</a>

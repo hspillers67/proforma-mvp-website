@@ -112,7 +112,7 @@ writeFileSync(join(distDir, "404.html"), baseHtml);
 // before this script runs (see package.json "build"). Each page's real React
 // output is placed inside <div id="root">, and main.tsx hydrates it in the
 // browser, so visitors see exactly the same site as before.
-const { render, industries } = await import(join(__dir, "..", "dist", "server", "entry-server.js"));
+const { render, industries, industriesHub } = await import(join(__dir, "..", "dist", "server", "entry-server.js"));
 
 function withBody(html, route) {
   const body = render(route);
@@ -597,6 +597,34 @@ for (const ind of industries) {
   console.log(`Pre-rendered /${route} → dist/public/${route}/index.html`);
 }
 
+// Industries hub
+{
+  const canonical = `${BASE_URL}/industries`;
+  let html = buildHeadHtml({
+    pageTitle: industriesHub.pageTitle,
+    metaDescription: industriesHub.metaDescription,
+    canonical,
+    ogImage: `${BASE_URL}/og-image.png`,
+    ogImageAlt: "ProForma MVP Marketing — Your Brand. Everywhere.",
+  });
+  html = injectJsonLd(html, [
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Industries we serve",
+      itemListElement: industries.map((ind, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        name: ind.name,
+        url: `${BASE_URL}/industries/${ind.slug}`,
+      })),
+    },
+  ]);
+  mkdirSync(join(distDir, "industries"), { recursive: true });
+  writeFileSync(join(distDir, "industries", "index.html"), withBody(html, "/industries"));
+  console.log("Pre-rendered /industries → dist/public/industries/index.html");
+}
+
 // ── FAQ page prerendering ────────────────────────────────────────────────────
 // Previously this page reused the homepage <head>, so its canonical pointed at
 // the homepage and told search engines to treat it as a duplicate.
@@ -634,6 +662,7 @@ const staticRoutes = [
   "/trade-show-products",
   "/printing-packaging",
   "/awards-recognition",
+  "/industries",
   ...industries.map((i) => `/industries/${i.slug}`),
 ];
 

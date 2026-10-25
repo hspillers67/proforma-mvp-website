@@ -32,29 +32,29 @@ export interface Industry {
 
 export const industries: Industry[] = [
   {
-    slug: "oil-gas",
-    name: "Oil & Gas",
-    pageTitle: "Promotional Products & FR Apparel for Houston Oil & Gas | ProForma MVP Marketing",
+    slug: "energy-petrochemical",
+    name: "Energy & Petrochemical",
+    pageTitle: "Promotional Products & FR Apparel for Houston Energy & Petrochemical | ProForma MVP Marketing",
     metaDescription:
-      "Branded FR and hi-vis apparel, safety program awards, and trade show giveaways for Houston-area oil and gas companies. One local contact, from sourcing to delivery.",
-    h1: "Promotional Products & Branded Apparel for Houston Oil & Gas Companies",
+      "Branded FR and hi-vis apparel, safety program awards, and trade show merchandise for Houston-area oil and gas, petrochemical, and chemical companies.",
+    h1: "Promotional Products & Branded Apparel for Houston Energy & Petrochemical Companies",
     answer:
-      "ProForma MVP Marketing supplies branded FR-rated apparel, hi-vis workwear, safety program awards, and trade show merchandise to oil and gas companies across Greater Houston. We're based in Katy and handle everything from sourcing to delivery.",
+      "ProForma MVP Marketing supplies branded FR-rated apparel, hi-vis workwear, safety program awards, and trade show merchandise to oil and gas, petrochemical, and chemical companies across Greater Houston. We're based in Katy and handle everything from sourcing to delivery.",
     intro:
-      "Oil and gas teams don't need more stuff with a logo on it. They need gear that meets site requirements, holds up in Texas heat, and gets to the right location on time. That's the job.",
-    supplyHeading: "What we supply for oil & gas",
+      "Energy and petrochemical teams don't need more stuff with a logo on it. They need gear that meets site requirements, holds up in Texas heat, and gets to the right plant, office, or field site on time. That's the job.",
+    supplyHeading: "What we supply for energy & petrochemical",
     supply: [
       { title: "FR-rated apparel", description: "Flame-resistant shirts, coveralls, and outerwear decorated with your logo, matched to your site's requirements." },
-      { title: "Hi-vis workwear", description: "ANSI-compliant high-visibility vests, shirts, and jackets for field and plant crews." },
+      { title: "Hi-vis workwear", description: "ANSI-compliant high-visibility vests, shirts, and jackets for field, plant, and refinery crews." },
       { title: "Safety program awards", description: "Milestone gifts and recognition items for incident-free days, safety stand-downs, and training completions." },
       { title: "Corporate & office apparel", description: "Polos, quarter-zips, and outerwear for office teams, engineers, and client meetings." },
       { title: "Trade show & conference merch", description: "Booth giveaways and team apparel for events like OTC and industry conferences." },
       { title: "Onboarding kits", description: "Welcome kits for new hires and contractors, built and shipped to each location." },
     ],
-    differentHeading: "Why it's different in oil & gas",
+    differentHeading: "Why it's different in energy & petrochemical",
     different: [
       "PPE requirements vary by facility, and sometimes by department. FR apparel has to be FR all the way through, including the decoration. Tell us your site's specific requirements and we'll match compliant options rather than guessing.",
-      "Crews are spread across offices, plants, and field sites. Getting the right sizes to the right place matters as much as the product itself.",
+      "Teams are spread across offices, plants, refineries, and field sites. Getting the right sizes to the right place matters as much as the product itself.",
     ],
     programs: [
       { title: "Company stores", description: "An online store where crews order approved FR and hi-vis gear, so every location gets the same compliant items." },
@@ -62,9 +62,9 @@ export const industries: Industry[] = [
     ],
     faqs: [
       { q: "Do you supply FR-rated apparel with company logos?", a: "Yes. We source flame-resistant apparel and decorate it with your logo using methods appropriate for FR garments. Share your site's PPE requirements and we'll match compliant options." },
-      { q: "Can you ship to multiple field sites?", a: "Yes. We can split orders by location and ship directly to offices, plants, or field sites, or set up a company store so each site orders its own." },
-      { q: "Do you handle trade show merchandise for oil and gas events?", a: "Yes. We supply booth giveaways, team apparel, and displays for industry conferences and trade shows, including Houston events like OTC." },
-      { q: "Where are you located?", a: "We're based in Katy, Texas, and serve oil and gas companies across Greater Houston, including the Energy Corridor, Pasadena, Baytown, and the Gulf Coast." },
+      { q: "Do you work with petrochemical and chemical plants, not just oil and gas?", a: "Yes. We supply branded workwear, safety program items, and corporate merchandise to oil and gas, refining, petrochemical, and chemical companies." },
+      { q: "Can you ship to multiple plants and field sites?", a: "Yes. We can split orders by location and ship directly to offices, plants, or field sites, or set up a company store so each site orders its own." },
+      { q: "Where are you located?", a: "We're based in Katy, Texas, and serve energy and petrochemical companies across Greater Houston, including the Energy Corridor, Pasadena, Baytown, the Ship Channel, and the Gulf Coast." },
     ],
     ctaHeading: "Need gear that meets site requirements?",
   },
@@ -143,28 +143,28 @@ export const industries: Industry[] = [
     ctaHeading: "Planning your next school event?",
   },
   {
-    slug: "construction",
-    name: "Construction",
-    pageTitle: "Branded Hi-Vis Apparel & Promo Products for Houston Construction | ProForma MVP Marketing",
+    slug: "construction-industrial",
+    name: "Construction & Industrial Services",
+    pageTitle: "Branded Hi-Vis Apparel & Promo Products for Houston Construction & Industrial Services | ProForma MVP Marketing",
     metaDescription:
-      "Hi-vis workwear, branded crew apparel, hard hat stickers, and safety recognition for Houston-area construction companies. Sourced and delivered from Katy, TX.",
-    h1: "Branded Apparel & Promotional Products for Houston Construction Companies",
+      "Hi-vis workwear, branded crew apparel, hard hat stickers, and safety recognition for Houston-area construction companies and industrial contractors.",
+    h1: "Branded Apparel & Promotional Products for Houston Construction & Industrial Services",
     answer:
-      "ProForma MVP Marketing supplies hi-vis workwear, branded crew apparel, safety recognition items, and jobsite signage to construction companies across Greater Houston. We're based in Katy and handle sourcing through delivery.",
+      "ProForma MVP Marketing supplies hi-vis workwear, branded crew apparel, safety recognition items, and jobsite signage to construction companies, trades, and industrial service contractors across Greater Houston. We're based in Katy and handle sourcing through delivery.",
     intro:
-      "On a jobsite, your logo is on every crew member, every truck, and every sign. Branded gear that holds up in Houston heat keeps your crews safe, visible, and easy to recognize.",
-    supplyHeading: "What we supply for construction",
+      "On a jobsite or a plant turnaround, your logo is on every crew member, every truck, and every sign. Branded gear that holds up in Houston heat keeps your crews safe, visible, and easy to recognize.",
+    supplyHeading: "What we supply for construction & industrial services",
     supply: [
       { title: "Hi-vis workwear", description: "ANSI-compliant high-visibility shirts, vests, and jackets with your logo." },
       { title: "Crew apparel", description: "Durable, breathable shirts and outerwear built for long days outside." },
+      { title: "FR options for plant work", description: "Flame-resistant apparel for crews working inside refineries and plants, matched to site requirements." },
       { title: "Hard hat stickers & decals", description: "Logo stickers and decals for hard hats, equipment, and vehicles." },
       { title: "Safety recognition", description: "Rewards for safety milestones, toolbox talks, and training completions." },
-      { title: "Jobsite signage", description: "Banners, fence wraps, and signs that mark your projects and your brand." },
-      { title: "Client & subcontractor gifts", description: "Project completion and appreciation gifts for clients and trade partners." },
+      { title: "Jobsite signage & partner gifts", description: "Banners and fence wraps for your projects, plus appreciation gifts for clients and trade partners." },
     ],
-    differentHeading: "Why it's different in construction",
+    differentHeading: "Why it's different in construction & industrial services",
     different: [
-      "A crew working alongside traffic doesn't have the same needs as one working inside a building. Hi-vis requirements depend on the job, so tell us where your crews work and we'll match the right gear.",
+      "A crew working alongside traffic doesn't have the same needs as one working inside a building or a plant. Hi-vis and FR requirements depend on the job, so tell us where your crews work and we'll match the right gear.",
       "Houston heat is its own requirement. Lightweight, moisture-wicking fabrics make the difference between gear crews wear and gear that stays in the truck.",
     ],
     programs: [
@@ -173,9 +173,9 @@ export const industries: Industry[] = [
     ],
     faqs: [
       { q: "Do you supply ANSI-compliant hi-vis apparel with company logos?", a: "Yes. We source ANSI-compliant high-visibility vests, shirts, and jackets and decorate them with your logo. Tell us where your crews work and we'll match the right class of gear." },
+      { q: "Do you work with industrial contractors, not just builders?", a: "Yes. We work with general contractors, trades, and industrial service companies, including crews that work inside plants and refineries." },
       { q: "Can you make hard hat stickers and jobsite signage?", a: "Yes. We supply hard hat stickers, equipment decals, banners, fence wraps, and other jobsite signage." },
-      { q: "What apparel works best in Houston heat?", a: "Lightweight, moisture-wicking performance fabrics work best for long days outside. We'll recommend options your crews will actually wear." },
-      { q: "Where do you serve?", a: "We're based in Katy, Texas, and work with construction companies across Greater Houston, including Katy, Houston, Sugar Land, The Woodlands, and Pearland." },
+      { q: "Where do you serve?", a: "We're based in Katy, Texas, and work with construction and industrial service companies across Greater Houston, including Katy, Houston, Pasadena, Baytown, Sugar Land, and Pearland." },
     ],
     ctaHeading: "Ready to outfit your crews?",
   },
@@ -184,3 +184,26 @@ export const industries: Industry[] = [
 export function getIndustry(slug: string): Industry | undefined {
   return industries.find((i) => i.slug === slug);
 }
+
+// Shown on the /industries hub, so visitors (and AI tools) see that the four
+// focus industries aren't the only businesses we work with.
+export const otherIndustries: { name: string; examples: string }[] = [
+  { name: "Healthcare & life sciences", examples: "Clinics, medical device and biomedical companies, labs" },
+  { name: "Hospitality, venues & events", examples: "Event venues, ranches, hotels, restaurants" },
+  { name: "Retail & consumer brands", examples: "Product brands, dealerships, local retailers" },
+  { name: "Engineering & professional services", examples: "Engineering firms, law and accounting firms, consultants" },
+  { name: "Home & local service businesses", examples: "Pool, landscaping, HVAC, and other service companies" },
+  { name: "Nonprofits & associations", examples: "Charities, chambers, member associations, events" },
+  { name: "Marketing & creative agencies", examples: "Agencies sourcing merchandise for their own clients" },
+];
+
+export const industriesHub = {
+  pageTitle: "Industries We Serve | ProForma MVP Marketing",
+  metaDescription:
+    "Promotional products, branded apparel, and corporate gifts for Houston-area businesses. Deep experience in energy, manufacturing, construction, and education, and businesses of every kind.",
+  h1: "Industries We Serve",
+  lead:
+    "We know these industries well. We bring the same strategic approach to businesses of every kind.",
+  answer:
+    "ProForma MVP Marketing provides promotional products, branded apparel, print, company stores, and corporate gifts to businesses across Greater Houston. Most of our clients come from energy and petrochemical, manufacturing, construction and industrial services, and education.",
+};

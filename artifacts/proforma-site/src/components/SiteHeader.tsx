@@ -27,10 +27,11 @@ const capabilities = [
 ];
 
 const industryLinks = [
-  { href: "/industries/oil-gas", label: "Oil & Gas" },
+  { href: "/industries", label: "All Industries" },
+  { href: "/industries/energy-petrochemical", label: "Energy & Petrochemical" },
   { href: "/industries/manufacturing", label: "Manufacturing" },
+  { href: "/industries/construction-industrial", label: "Construction & Industrial" },
   { href: "/industries/education", label: "Education" },
-  { href: "/industries/construction", label: "Construction" },
 ];
 
 export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {

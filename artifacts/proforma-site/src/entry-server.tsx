@@ -30,4 +30,4 @@ export function render(url: string): string {
 }
 
 // Industry page copy, used by scripts/prerender.mjs for titles and schema.
-export { industries } from "./data/industries";
+export { industries, industriesHub } from "./data/industries";
