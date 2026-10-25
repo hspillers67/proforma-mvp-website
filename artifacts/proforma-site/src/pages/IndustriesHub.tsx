@@ -40,10 +40,7 @@ export default function IndustriesHub() {
         {/* Other industries */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-6 max-w-5xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">And Businesses of Every Kind</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-4xl">
-              Beyond our focus industries, we also work with:
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Beyond Our Focus Industries</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
               {otherIndustries.map((o) => (
                 <div key={o.name} className="border-l-4 border-secondary pl-5">
