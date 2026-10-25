@@ -26,13 +26,7 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
             <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#444444" }}>
               {industry.answer}
             </p>
-          </div>
-        </section>
-
-        {/* Intro copy */}
-        <section className="py-8 md:py-10 bg-muted/30">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{industry.intro}</p>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-4">{industry.intro}</p>
           </div>
         </section>
 

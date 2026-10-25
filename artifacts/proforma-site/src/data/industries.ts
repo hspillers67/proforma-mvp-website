@@ -108,12 +108,12 @@ export const industries: Industry[] = [
   {
     slug: "education",
     name: "Education",
-    pageTitle: "Promotional Products & Spirit Wear for Houston Schools | ProForma MVP Marketing",
+    pageTitle: "Promotional Products, Apparel & Event Signage for Houston Community Colleges | ProForma MVP Marketing",
     metaDescription:
-      "Staff apparel, spirit wear, event giveaways, and recognition items for Houston-area schools, districts, and colleges. One local contact in Katy, TX.",
-    h1: "Promotional Products & Spirit Wear for Houston-Area Schools",
+      "Apparel, event giveaways and signage, and recognition items for Houston-area community colleges. One local contact in Katy, TX.",
+    h1: "Promotional Products, Apparel, and Event Signage for Houston-Area Community Colleges",
     answer:
-      "ProForma MVP Marketing supplies staff apparel, spirit wear, event giveaways, and recognition items to schools, school districts, and colleges across Greater Houston. We're based in Katy and handle sourcing, decoration, and delivery.",
+      "ProForma MVP Marketing supplies apparel, event giveaways and signage, and recognition items to colleges across Greater Houston. We're based in Katy and handle sourcing, decoration, and delivery.",
     intro:
       "Schools need products that fit tight budgets and still feel current to students and staff. Whether it's a campus event, staff appreciation week, or a new spirit wear line, we help you get it right the first time.",
     supplyHeading: "What we supply for education",
@@ -203,7 +203,7 @@ export const industriesHub = {
     "Promotional products, branded apparel, and corporate gifts for Houston-area businesses. Deep experience in energy, manufacturing, construction, and education, and businesses of every kind.",
   h1: "Industries We Serve",
   lead:
-    "We know these industries well. We bring the same strategic approach to businesses of every kind.",
+    "While we know these very well, we bring the same strategic approach to businesses of every kind.",
   answer:
-    "ProForma MVP Marketing provides promotional products, branded apparel, print, company stores, and corporate gifts to businesses across Greater Houston. Most of our clients come from energy and petrochemical, manufacturing, construction and industrial services, and education.",
+    "ProForma MVP Marketing provides promotional products, branded apparel, print, company stores, and corporate gifts to businesses across Greater Houston and beyond. Most of our clients come from energy and petrochemical, manufacturing, construction and industrial services, and education.",
 };
