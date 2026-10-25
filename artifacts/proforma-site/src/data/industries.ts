@@ -201,9 +201,5 @@ export const industriesHub = {
   pageTitle: "Industries We Serve | ProForma MVP Marketing",
   metaDescription:
     "Promotional products, branded apparel, and corporate gifts for Houston-area businesses. Deep experience in energy, manufacturing, construction, and education, and businesses of every kind.",
-  h1: "Industries We Serve",
-  lead:
-    "While we know these very well, we bring the same strategic approach to businesses of every kind.",
-  answer:
-    "ProForma MVP Marketing provides promotional products, branded apparel, print, company stores, and corporate gifts to businesses across Greater Houston and beyond. Most of our clients come from energy and petrochemical, manufacturing, construction and industrial services, and education.",
+  h1: "Where We Have the Deepest Experience",
 };
