@@ -28,3 +28,6 @@ export function render(url: string): string {
     </HelmetProvider>,
   );
 }
+
+// Industry page copy, used by scripts/prerender.mjs for titles and schema.
+export { industries } from "./data/industries";
