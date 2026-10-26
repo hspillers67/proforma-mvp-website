@@ -1,21 +1,52 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Printer, Monitor, Gift, Shirt, Award, ChevronDown } from "lucide-react";
+import { ArrowRight, MapPin, Printer, Monitor, Gift, Shirt, Award } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
-import { posts } from "@/data/posts";
-import logoPath from "@/assets/logo.png";
 import logoWhitePath from "@/assets/logo-white.png";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
 import SiteHeader from "@/components/SiteHeader";
-import companyStoresImg from "@/assets/company-stores.png";
-import recognitionImg from "@/assets/recognition-incentives.png";
-import apparelImg from "@/assets/apparel.png";
-import promoProductsImg from "@/assets/promo-products.png";
-import printSignageImg from "@/assets/print-signage.jpg";
-import tradeshowsImg from "@/assets/tradeshows-events.png";
-import heroSwatchesImg from "@assets/cover_1782665562519.png";
-import ourAdvantageImg from "@/assets/our-advantage.jpg";
+// Optimized WebP copies — regenerate with scripts/optimize-images.py
+import heroSwatchesImg from "@/assets/optimized/hero-swatches-2000.webp";
+import companyStoresImg from "@/assets/optimized/company-stores-365.webp";
+import promoProducts480 from "@/assets/optimized/promo-products-480.webp";
+import promoProducts960 from "@/assets/optimized/promo-products-960.webp";
+import apparel480 from "@/assets/optimized/apparel-480.webp";
+import apparel640 from "@/assets/optimized/apparel-640.webp";
+import tradeshows480 from "@/assets/optimized/tradeshows-events-480.webp";
+import tradeshows960 from "@/assets/optimized/tradeshows-events-960.webp";
+import printSignage480 from "@/assets/optimized/print-signage-480.webp";
+import printSignage640 from "@/assets/optimized/print-signage-640.webp";
+import recognition480 from "@/assets/optimized/recognition-incentives-480.webp";
+import recognition640 from "@/assets/optimized/recognition-incentives-640.webp";
+import ourAdvantage640 from "@/assets/optimized/our-advantage-640.webp";
+import ourAdvantage1080 from "@/assets/optimized/our-advantage-1080.webp";
+
+/** Capability cards: 1 col on mobile, 2 on tablet, 3 on desktop. */
+const CARD_SIZES = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
+
+const advantagePoints = [
+  {
+    title: "The Power of Proforma",
+    text: "You get one responsive local contact backed by the buying power and supplier network of Proforma.",
+  },
+  {
+    title: "Built on Real Experience",
+    text: "As a former marketing director, our founder understands deadlines, brand standards, and the pressure to make the right choice the first time. We are proudly based in Katy and serve clients all across the Greater Houston area, Texas, and beyond.",
+  },
+  {
+    title: "Strategic Sourcing",
+    text: "We don't just send you a catalog of 10,000 items. We curate specific, high-impact products that align with your brand strategy and budget.",
+  },
+  {
+    title: "Flawless Execution",
+    text: "From vectorizing artwork to managing complex global shipping logistics, we handle the details so you can focus on your campaign.",
+  },
+  {
+    title: "Proactive Timeline Management",
+    text: "We plan ahead, track every milestone, and keep you informed from order to delivery. If a deadline isn't realistic, we'll tell you upfront and help determine the best path forward.",
+  },
+];
 
 export default function Home() {
   useEffect(() => {
@@ -90,6 +121,10 @@ export default function Home() {
                 src={heroSwatchesImg}
                 alt=""
                 aria-hidden="true"
+                width={2000}
+                height={600}
+                fetchPriority="high"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover object-[75%_center]"
               />
             </div>
@@ -116,6 +151,7 @@ export default function Home() {
                   title: "Company Stores",
                   href: "/company-stores",
                   image: companyStoresImg,
+                  srcSet: `${companyStoresImg} 365w`,
                   description: "",
                   bullets: ["Custom company web stores", "Multi-location ordering", "Uniform program management", "On-demand fulfillment"],
                 },
@@ -123,7 +159,8 @@ export default function Home() {
                   icon: <Gift className="w-5 h-5" />,
                   title: "Promotional Products",
                   href: "/promotional-products",
-                  image: promoProductsImg,
+                  image: promoProducts480,
+                  srcSet: `${promoProducts480} 480w, ${promoProducts960} 960w`,
                   description: "",
                   bullets: ["Giveaways that get noticed", "Event swag that stands out", "Eco-friendly & Made in USA options", "Employee & client gifts that connect"],
                 },
@@ -131,7 +168,8 @@ export default function Home() {
                   icon: <Shirt className="w-5 h-5" />,
                   title: "Uniforms & Branded Apparel",
                   href: "/branded-apparel",
-                  image: apparelImg,
+                  image: apparel480,
+                  srcSet: `${apparel480} 480w, ${apparel640} 640w`,
                   description: "",
                   bullets: ["Corporate polos & button-downs", "Branded hoodies & jackets", "Custom headwear & caps", "High-quality safety apparel"],
                 },
@@ -139,7 +177,8 @@ export default function Home() {
                   icon: <MapPin className="w-5 h-5" />,
                   title: "Tradeshows & Events",
                   href: "/trade-show-products",
-                  image: tradeshowsImg,
+                  image: tradeshows480,
+                  srcSet: `${tradeshows480} 480w, ${tradeshows960} 960w`,
                   description: "",
                   bullets: ["Retractable banner stands", "Custom table throws", "Event booth backdrops", "Popular attendee giveaways"],
                 },
@@ -147,7 +186,8 @@ export default function Home() {
                   icon: <Printer className="w-5 h-5" />,
                   title: "Print & Packaging",
                   href: "/printing-packaging",
-                  image: printSignageImg,
+                  image: printSignage480,
+                  srcSet: `${printSignage480} 480w, ${printSignage640} 640w`,
                   description: "",
                   bullets: ["Business cards & stationery", "Marketing brochures & flyers", "Large-format window graphics", "Outdoor & indoor event signs"],
                 },
@@ -155,7 +195,8 @@ export default function Home() {
                   icon: <Award className="w-5 h-5" />,
                   title: "Awards & Recognition",
                   href: "/awards-recognition",
-                  image: recognitionImg,
+                  image: recognition480,
+                  srcSet: `${recognition480} 480w, ${recognition640} 640w`,
                   description: "",
                   bullets: ["Engraved glass & crystal awards", "Employee anniversary gifts", "Premium corporate plaques", "Luxury custom gifts"],
                 },
@@ -170,7 +211,11 @@ export default function Home() {
                   <div className="relative w-full aspect-[3/2] overflow-hidden">
                     <img
                       src={service.image}
+                      srcSet={service.srcSet}
+                      sizes={CARD_SIZES}
                       alt={service.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     {/* Permanent bottom text — always visible, fades out on hover (desktop) */}
@@ -215,99 +260,8 @@ export default function Home() {
         </section>
 
 
-        {/* Blog Preview Section */}
-        <section className="pt-16 pb-24 md:pt-20 md:pb-32 bg-muted/30 border-t border-border">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-              <div className="max-w-xl">
-                <div className="text-xs font-display font-semibold tracking-widest uppercase text-secondary mb-3">Resources</div>
-                <h2 className="text-3xl md:text-5xl font-bold text-primary">Latest from the blog.</h2>
-              </div>
-              <a href="/blog" className="inline-flex items-center gap-2 text-sm font-display font-semibold text-secondary hover:gap-3 transition-all shrink-0">
-                View all posts <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
-              {posts.slice(0, 2).map((post) => (
-                <motion.a
-                  key={post.slug}
-                  href={`/blog/${post.slug}`}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4 }}
-                  className="group flex flex-col bg-white border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className="w-full aspect-[16/9] overflow-hidden bg-primary/10">
-                    {post.image ? (
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center">
-                        <img src={logoWhitePath} alt="" className="w-1/3 opacity-30" />
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-7 flex flex-col flex-grow">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="text-xs font-display font-semibold text-secondary bg-secondary/10 px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                      <span className="text-xs text-muted-foreground">{post.date}</span>
-                    </div>
-                    <h3 className="font-bold text-primary text-lg leading-snug mb-3 group-hover:text-secondary transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 flex-grow mb-5">
-                      {post.excerpt}
-                    </p>
-                    <span className="inline-flex items-center gap-1.5 text-sm font-display font-semibold text-secondary group-hover:gap-2.5 transition-all">
-                      Read article <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </div>
-                </motion.a>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section id="process" className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
-          <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-secondary/20 to-transparent pointer-events-none" />
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-3xl mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">Not just another vendor.</h2>
-              <p className="text-lg md:text-xl text-primary-foreground/80">
-                We operate as an extension of your marketing team. No more chasing down proofs, worrying about color matching, or stressing about delivery dates.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="relative">
-                <div className="text-secondary font-display font-bold text-6xl mb-4 opacity-60">01</div>
-                <h4 className="text-xl font-bold mb-3">Strategic Sourcing</h4>
-                <p className="text-primary-foreground/70">We don't just send you a catalog of 10,000 items. We curate specific, high-impact products that align with your brand strategy and budget.</p>
-              </div>
-              <div className="relative">
-                <div className="text-secondary font-display font-bold text-6xl mb-4 opacity-60">02</div>
-                <h4 className="text-xl font-bold mb-3">Flawless Execution</h4>
-                <p className="text-primary-foreground/70">From vectorizing artwork to managing complex global shipping logistics, we handle the details so you can focus on your campaign.</p>
-              </div>
-              <div className="relative">
-                <div className="text-secondary font-display font-bold text-6xl mb-4 opacity-60">03</div>
-                <h4 className="text-xl font-bold mb-3">Proactive Timeline Management</h4>
-                <p className="text-primary-foreground/70">We plan ahead, track every milestone, and keep you informed from order to delivery. If a deadline isn't realistic, we'll tell you upfront and help determine the best path forward.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Work With Us Section */}
-        <section className="py-24 md:py-32 bg-background">
+        {/* Why Work With Us — merged "Not just another vendor" + "Our Advantage" */}
+        <section id="process" className="py-24 md:py-32 bg-background">
           <div className="max-w-screen-2xl mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
               <motion.div
@@ -316,29 +270,25 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-xs font-display font-semibold tracking-widest uppercase text-secondary mb-4">Our Advantage</div>
-                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 leading-tight">
+                <div className="text-xs font-display font-semibold tracking-widest uppercase text-secondary mb-4">Not just another vendor</div>
+                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6 leading-tight">
                   Why Houston-area businesses work with us.
                 </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+                  We operate as an extension of your marketing team. No more chasing down proofs, worrying about color matching, or stressing about delivery dates.
+                </p>
                 <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1">
-                      <span className="text-secondary font-bold text-sm">01</span>
+                  {advantagePoints.map((point, i) => (
+                    <div key={point.title} className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1">
+                        <span className="text-secondary font-bold text-sm">{String(i + 1).padStart(2, "0")}</span>
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-primary mb-1">{point.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{point.text}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-primary mb-1">The Power of Proforma</h4>
-                      <p className="text-muted-foreground leading-relaxed">You get one responsive local contact backed by the buying power and supplier network of Proforma.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1">
-                      <span className="text-secondary font-bold text-sm">02</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-primary mb-1">Built on Real Experience</h4>
-                      <p className="text-muted-foreground leading-relaxed">As a former marketing director, our founder understands deadlines, brand standards, and the pressure to make the right choice the first time. We are proudly based in Katy and serve clients all across the Greater Houston area, Texas, and beyond.</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
                 <div className="mt-10">
                   <a
@@ -358,10 +308,14 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="rounded-2xl overflow-hidden ring-2 ring-secondary/30 shadow-[0_0_0_6px_rgba(156,0,87,0.08),0_12px_40px_rgba(156,0,87,0.30),0_24px_64px_rgba(156,0,87,0.18)]"
               >
-                <div className="aspect-[4/3] w-full overflow-hidden">
+                <div className="aspect-[4/5] w-full overflow-hidden">
                   <img
-                    src={ourAdvantageImg}
+                    src={ourAdvantage640}
+                    srcSet={`${ourAdvantage640} 640w, ${ourAdvantage1080} 1080w`}
+                    sizes="(min-width: 768px) 50vw, 100vw"
                     alt="Proforma branded promotional products on the beach"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -371,7 +325,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <Testimonials />
+        <Testimonials limit={3} showAllLink />
 
         {/* Contact Section */}
         <section id="contact" className="py-24 md:py-32 bg-background relative">
@@ -379,7 +333,7 @@ export default function Home() {
             <div className="bg-card border border-border shadow-2xl rounded-3xl overflow-hidden flex flex-col md:flex-row">
               <div className="w-full md:w-5/12 bg-primary p-10 md:p-12 flex flex-col justify-between">
                 <div>
-                  <img src={logoWhitePath} alt="ProForma MVP Marketing" className="h-14 w-auto mb-8" />
+                  <img src={logoWhitePath} alt="ProForma MVP Marketing" loading="lazy" decoding="async" className="h-14 w-auto mb-8" />
                   <h3 className="text-3xl font-bold text-white mb-4">Let's talk about your next project.</h3>
                   <p className="text-primary-foreground/70 mb-8">
                     Fill out the form with a few details, and our team will get back to you within 24 hours with strategic recommendations.
@@ -432,7 +386,7 @@ export default function Home() {
       <footer className="bg-primary text-primary-foreground py-12 border-t border-primary-foreground/10">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <img src={logoHorizontalPath} alt="ProForma MVP Marketing" className="h-8 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
+            <img src={logoHorizontalPath} alt="ProForma MVP Marketing" loading="lazy" decoding="async" className="h-8 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
             <p className="text-sm text-primary-foreground/50">
               &copy; {new Date().getFullYear()} ProForma MVP Marketing. All rights reserved.
             </p>
