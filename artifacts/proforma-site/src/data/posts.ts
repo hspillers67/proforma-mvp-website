@@ -7,6 +7,7 @@ import imgSmarterBuying from "@/assets/blog/smarter-promotional-products-houston
 import imgWorkwear from "@/assets/blog/is-your-workwear-keeping-up-with-your-workplace.png";
 import imgFallPromo from "@/assets/blog/fall-promo-ideas-that-fit-the-season.jpg";
 import imgFallApparel from "@/assets/blog/fall-corporate-apparel-in-houston.jpg";
+import imgUniquePromo from "@/assets/blog/unique-promotional-products.jpg";
 
 export type ContentBlock =
   | { type: "paragraph"; text: string }
@@ -25,6 +26,8 @@ export interface Post {
   date: string;
   readTime: string;
   image: string | null;
+  /** Optional header shape override (width / height) for banners that need more height than the default. */
+  bannerAspect?: number;
   content: ContentBlock[];
 }
 
@@ -545,7 +548,8 @@ export const posts: Post[] = ([
     category: "Giveaway Strategy",
     date: "October 26, 2026",
     readTime: "5 min read",
-    image: null,
+    image: imgUniquePromo,
+    bannerAspect: 21 / 8,
     content: [
       { type: "heading", level: 2, text: "Standing Out from the Crowd" },
       { type: "paragraph", text: "You\u2019ve probably left a [trade show](/trade-show-products) with a bag full of branded pens, stress balls, and brochures. But a few weeks later, which company names could you still remember?" },
