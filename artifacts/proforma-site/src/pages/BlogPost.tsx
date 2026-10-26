@@ -5,10 +5,34 @@ import logoWhitePath from "@/assets/logo-white.png";
 import logoHorizontalPath from "@/assets/logo-horizontal.png";
 import SiteHeader from "@/components/SiteHeader";
 
+// Renders inline [link text](/path) and **bold** inside post text.
+function Inline({ text }: { text: string }) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (link) {
+          const [, label, href] = link;
+          const cls = "text-secondary font-semibold underline underline-offset-2 hover:text-primary transition-colors";
+          return /^https?:\/\//.test(href) ? (
+            <a key={i} href={href} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>
+          ) : (
+            <Link key={i} href={href} className={cls}>{label}</Link>
+          );
+        }
+        const bold = part.match(/^\*\*([^*]+)\*\*$/);
+        if (bold) return <strong key={i} className="font-semibold text-primary">{bold[1]}</strong>;
+        return part;
+      })}
+    </>
+  );
+}
+
 function Block({ block }: { block: ContentBlock }) {
   switch (block.type) {
     case "paragraph":
-      return <p className="text-foreground leading-relaxed text-base md:text-[17px]">{block.text}</p>;
+      return <p className="text-foreground leading-relaxed text-base md:text-[17px]"><Inline text={block.text} /></p>;
 
     case "heading":
       if (block.level === 2) {
@@ -22,7 +46,7 @@ function Block({ block }: { block: ContentBlock }) {
           {block.items.map((item, i) => (
             <li key={i} className="flex gap-3 text-base md:text-[17px] text-foreground leading-relaxed">
               <span className="mt-2 w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
-              <span>{item}</span>
+              <span><Inline text={item} /></span>
             </li>
           ))}
         </ul>
@@ -56,7 +80,7 @@ function Block({ block }: { block: ContentBlock }) {
       return (
         <div className="bg-secondary/5 border-l-4 border-secondary rounded-r-xl px-6 py-5">
           <p className="text-xs font-display font-bold uppercase tracking-widest text-secondary mb-2">{block.label}</p>
-          <p className="text-foreground leading-relaxed">{block.text}</p>
+          <p className="text-foreground leading-relaxed"><Inline text={block.text} /></p>
         </div>
       );
 

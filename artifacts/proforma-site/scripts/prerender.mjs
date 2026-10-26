@@ -249,6 +249,13 @@ const blogMeta = [
     imageSrc: "src/assets/blog/fall-corporate-apparel-in-houston.jpg",
     imageAlt: "Four Houston coworkers in quarter-zips, a vest, and a soft-shell jacket walking outside in fall sunshine with the downtown skyline behind them",
   },
+  {
+    slug: "unique-promotional-products-competitors-arent-using",
+    pageTitle: "Unique Promotional Products Your Competitors Aren't Using | ProForma MVP Marketing",
+    metaDescription: "Skip the forgettable pens and stress balls. Eight unique promotional product ideas, from tech kits to puzzles, that people actually keep.",
+    imageSrc: null,
+    imageAlt: "",
+  },
 ];
 
 for (const post of blogMeta) {
@@ -676,6 +683,7 @@ const blogSlugs = [
   "is-your-workwear-keeping-up-with-your-workplace",
   "7-fall-promo-ideas-that-fit-the-season",
   "fall-corporate-apparel-in-houston",
+  "unique-promotional-products-competitors-arent-using",
 ];
 
 const allUrls = [
