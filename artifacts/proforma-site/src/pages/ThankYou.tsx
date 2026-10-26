@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
-import logoPath from "@/assets/logo.png";
+import logoPath from "@/assets/optimized/logo-80.webp";
+import logo2xPath from "@/assets/optimized/logo-160.webp";
 
 export default function ThankYou() {
   return (
@@ -9,7 +10,7 @@ export default function ThankYou() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 h-20 flex items-center">
           <a href="/">
-            <img src={logoPath} alt="ProForma MVP Marketing" className="h-12 w-auto" />
+            <img src={logoPath} srcSet={`${logoPath} 1x, ${logo2xPath} 2x`} alt="ProForma MVP Marketing" className="h-12 w-auto" />
           </a>
         </div>
       </header>

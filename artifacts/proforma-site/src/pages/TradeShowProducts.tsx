@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import logoHorizontalPath from "@/assets/logo-horizontal.png";
+import logoHorizontalPath from "@/assets/optimized/logo-horizontal-160.webp";
+import logoHorizontal2xPath from "@/assets/optimized/logo-horizontal-320.webp";
 import SiteHeader from "@/components/SiteHeader";
 import tradeShowHeroImg from "@/assets/trade-show-hero.png";
 
@@ -166,7 +167,7 @@ export default function TradeShowProducts() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <img
-              src={logoHorizontalPath}
+              src={logoHorizontalPath} srcSet={`${logoHorizontalPath} 1x, ${logoHorizontal2xPath} 2x`}
               alt="ProForma MVP Marketing"
               className="h-8 w-auto"
               style={{ filter: "brightness(0) invert(1)" }}

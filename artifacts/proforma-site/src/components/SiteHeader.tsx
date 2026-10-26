@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { ChevronDown, Menu, X } from "lucide-react";
-import logoHorizontalPath from "@/assets/logo-horizontal.png";
+import logoHorizontalPath from "@/assets/optimized/logo-horizontal-160.webp";
+import logoHorizontal2xPath from "@/assets/optimized/logo-horizontal-320.webp";
 
 type Page =
   | "home"
@@ -66,7 +67,7 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
           {/* Logo */}
           <Link href="/" onClick={close}>
             <img
-              src={logoHorizontalPath}
+              src={logoHorizontalPath} srcSet={`${logoHorizontalPath} 1x, ${logoHorizontal2xPath} 2x`}
               alt="ProForma MVP Marketing"
               className="h-9 md:h-12 w-auto cursor-pointer"
               style={{ filter: "brightness(0) invert(1)" }}
