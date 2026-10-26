@@ -63,7 +63,16 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
-export default function Testimonials() {
+type TestimonialsProps = {
+  /** Show only the first N reviews (all when omitted). */
+  limit?: number;
+  /** Add a "Read all reviews" link to the Testimonials page. */
+  showAllLink?: boolean;
+};
+
+export default function Testimonials({ limit, showAllLink = false }: TestimonialsProps = {}) {
+  const shown = limit ? testimonials.slice(0, limit) : testimonials;
+
   return (
     <section className="py-24 md:py-32 bg-white border-y border-border">
       <div className="container mx-auto px-6">
@@ -92,7 +101,7 @@ export default function Testimonials() {
           viewport={{ once: true, margin: "-80px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {testimonials.map((t) => (
+          {shown.map((t) => (
             <motion.div
               key={t.name}
               variants={item}
@@ -119,7 +128,15 @@ export default function Testimonials() {
         </motion.div>
 
         {/* CTA */}
-        <div className="mt-12 text-center">
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+          {showAllLink && (
+            <a
+              href="/testimonials"
+              className="inline-flex h-12 items-center justify-center rounded-md border-2 border-primary px-8 text-base font-display font-semibold text-primary transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              Read all reviews
+            </a>
+          )}
           <a
             href="#contact"
             className="inline-flex h-12 items-center justify-center rounded-md bg-secondary px-8 text-base font-display font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
