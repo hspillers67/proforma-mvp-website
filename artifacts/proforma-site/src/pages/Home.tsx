@@ -3,12 +3,16 @@ import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Printer, Monitor, Gift, Shirt, Award } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
-import logoWhitePath from "@/assets/logo-white.png";
-import logoHorizontalPath from "@/assets/logo-horizontal.png";
+import logoWhitePath from "@/assets/optimized/logo-white-90.webp";
+import logoWhite2xPath from "@/assets/optimized/logo-white-180.webp";
+import logoHorizontalPath from "@/assets/optimized/logo-horizontal-160.webp";
+import logoHorizontal2xPath from "@/assets/optimized/logo-horizontal-320.webp";
 import SiteHeader from "@/components/SiteHeader";
 // Optimized WebP copies — regenerate with scripts/optimize-images.py
-import heroSwatchesImg from "@/assets/optimized/hero-swatches-2000.webp";
-import companyStoresImg from "@/assets/optimized/company-stores-365.webp";
+// Hero is cropped to the part of the photo the layout actually shows (see optimize-images.py)
+import heroSwatches640 from "@/assets/optimized/hero-swatches-crop-640.webp";
+import heroSwatches1100 from "@/assets/optimized/hero-swatches-crop-1100.webp";
+import companyStoresImg from "@/assets/optimized/company-stores-crop-365.webp";
 import promoProducts480 from "@/assets/optimized/promo-products-480.webp";
 import promoProducts960 from "@/assets/optimized/promo-products-960.webp";
 import apparel480 from "@/assets/optimized/apparel-480.webp";
@@ -118,10 +122,14 @@ export default function Home() {
             {/* Hero photograph — normal contrast, no overlay */}
             <div className="relative w-full min-w-0 h-72 sm:h-96 md:h-[420px] lg:h-auto lg:w-1/2">
               <img
-                src={heroSwatchesImg}
+                src={heroSwatches1100}
+                srcSet={`${heroSwatches640} 640w, ${heroSwatches1100} 1100w`}
+                // Below lg the box is height-bound (h-72/96/420px) and the 1.83:1 image
+                // covers it, so its rendered width is ~1.83x the box height.
+                sizes="(min-width: 1024px) 50vw, (min-width: 768px) 770px, (min-width: 640px) 705px, 530px"
                 alt=""
                 aria-hidden="true"
-                width={2000}
+                width={1100}
                 height={600}
                 fetchPriority="high"
                 decoding="async"
@@ -151,7 +159,7 @@ export default function Home() {
                   title: "Company Stores",
                   href: "/company-stores",
                   image: companyStoresImg,
-                  srcSet: `${companyStoresImg} 365w`,
+                  srcSet: `${companyStoresImg} 365w`, // pre-cropped to the card's 3:2
                   description: "",
                   bullets: ["Custom company web stores", "Multi-location ordering", "Uniform program management", "On-demand fulfillment"],
                 },
@@ -333,7 +341,7 @@ export default function Home() {
             <div className="bg-card border border-border shadow-2xl rounded-3xl overflow-hidden flex flex-col md:flex-row">
               <div className="w-full md:w-5/12 bg-primary p-10 md:p-12 flex flex-col justify-between">
                 <div>
-                  <img src={logoWhitePath} alt="ProForma MVP Marketing" loading="lazy" decoding="async" className="h-14 w-auto mb-8" />
+                  <img src={logoWhitePath} srcSet={`${logoWhitePath} 1x, ${logoWhite2xPath} 2x`} alt="ProForma MVP Marketing" loading="lazy" decoding="async" className="h-14 w-auto mb-8" />
                   <h3 className="text-3xl font-bold text-white mb-4">Let's talk about your next project.</h3>
                   <p className="text-primary-foreground/70 mb-8">
                     Fill out the form with a few details, and our team will get back to you within 24 hours with strategic recommendations.
@@ -386,7 +394,7 @@ export default function Home() {
       <footer className="bg-primary text-primary-foreground py-12 border-t border-primary-foreground/10">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <img src={logoHorizontalPath} alt="ProForma MVP Marketing" loading="lazy" decoding="async" className="h-8 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
+            <img src={logoHorizontalPath} srcSet={`${logoHorizontalPath} 1x, ${logoHorizontal2xPath} 2x`} alt="ProForma MVP Marketing" loading="lazy" decoding="async" className="h-8 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
             <p className="text-sm text-primary-foreground/50">
               &copy; {new Date().getFullYear()} ProForma MVP Marketing. All rights reserved.
             </p>

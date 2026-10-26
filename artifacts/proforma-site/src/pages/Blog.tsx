@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { posts } from "@/data/posts";
-import logoWhitePath from "@/assets/logo-white.png";
-import logoHorizontalPath from "@/assets/logo-horizontal.png";
+import logoWhitePath from "@/assets/optimized/logo-white-90.webp";
+import logoWhite2xPath from "@/assets/optimized/logo-white-180.webp";
+import logoWhiteLargePath from "@/assets/optimized/logo-white-480.webp";
+import logoHorizontalPath from "@/assets/optimized/logo-horizontal-160.webp";
 import SiteHeader from "@/components/SiteHeader";
 
 const categoryColors: Record<string, string> = {
@@ -24,7 +26,7 @@ function PostCard({ post }: { post: (typeof posts)[number] }) {
           {post.image ? (
             <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           ) : (
-            <img src={logoWhitePath} alt="ProForma MVP Marketing" className="w-2/5 opacity-40" />
+            <img src={logoWhiteLargePath} alt="ProForma MVP Marketing" className="w-2/5 opacity-40" />
           )}
         </div>
         {/* Content */}
@@ -131,7 +133,7 @@ export default function Blog() {
       <footer className="bg-primary text-primary-foreground py-12 border-t border-primary-foreground/10">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <img src={logoWhitePath} alt="ProForma MVP Marketing" className="h-10 w-auto" />
+            <img src={logoWhitePath} srcSet={`${logoWhitePath} 1x, ${logoWhite2xPath} 2x`} alt="ProForma MVP Marketing" className="h-10 w-auto" />
             <p className="text-sm text-primary-foreground/50">
               &copy; {new Date().getFullYear()} ProForma MVP Marketing. All rights reserved.
             </p>

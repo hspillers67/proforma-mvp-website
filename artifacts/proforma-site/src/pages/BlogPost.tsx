@@ -1,8 +1,10 @@
 import { Link, useParams } from "wouter";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
 import { getPost, type ContentBlock } from "@/data/posts";
-import logoWhitePath from "@/assets/logo-white.png";
-import logoHorizontalPath from "@/assets/logo-horizontal.png";
+import logoWhitePath from "@/assets/optimized/logo-white-90.webp";
+import logoWhite2xPath from "@/assets/optimized/logo-white-180.webp";
+import logoWhiteLargePath from "@/assets/optimized/logo-white-480.webp";
+import logoHorizontalPath from "@/assets/optimized/logo-horizontal-160.webp";
 import SiteHeader from "@/components/SiteHeader";
 
 // Renders inline [link text](/path) and **bold** inside post text.
@@ -127,7 +129,7 @@ export default function BlogPost() {
           {post.image ? (
             <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
           ) : (
-            <img src={logoWhitePath} alt="ProForma MVP Marketing" className="h-24 opacity-30" />
+            <img src={logoWhiteLargePath} alt="ProForma MVP Marketing" className="h-24 opacity-30" />
           )}
         </div>
 
@@ -193,7 +195,7 @@ export default function BlogPost() {
       <footer className="bg-primary text-primary-foreground py-12 border-t border-primary-foreground/10">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <img src={logoWhitePath} alt="ProForma MVP Marketing" className="h-10 w-auto" />
+            <img src={logoWhitePath} srcSet={`${logoWhitePath} 1x, ${logoWhite2xPath} 2x`} alt="ProForma MVP Marketing" className="h-10 w-auto" />
             <p className="text-sm text-primary-foreground/50">
               &copy; {new Date().getFullYear()} ProForma MVP Marketing. All rights reserved.
             </p>
