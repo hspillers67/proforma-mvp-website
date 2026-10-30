@@ -1,5 +1,6 @@
-import { readFileSync, mkdirSync, writeFileSync, readdirSync } from "fs";
-import { join, dirname } from "path";
+import { readFileSync, mkdirSync, writeFileSync, readdirSync, existsSync } from "fs";
+import { execFileSync } from "child_process";
+import { join, dirname, isAbsolute } from "path";
 import { fileURLToPath } from "url";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
@@ -112,7 +113,7 @@ writeFileSync(join(distDir, "404.html"), baseHtml);
 // before this script runs (see package.json "build"). Each page's real React
 // output is placed inside <div id="root">, and main.tsx hydrates it in the
 // browser, so visitors see exactly the same site as before.
-const { render, industries, industriesHub } = await import(join(__dir, "..", "dist", "server", "entry-server.js"));
+const { render, industries, industriesHub, posts } = await import(join(__dir, "..", "dist", "server", "entry-server.js"));
 
 function withBody(html, route) {
   const body = render(route);
@@ -656,50 +657,84 @@ writeFileSync(join(distDir, "index.html"), withBody(baseHtml, "/"));
 console.log("Pre-rendered / → dist/public/index.html");
 
 // ── Sitemap ──────────────────────────────────────────────────────────────────
+// <lastmod> must be the date a page's content really changed. Stamping every
+// URL with the build date tells search engines and AI crawlers that everything
+// changed on every deploy, which teaches them to ignore the field.
+//
+// - Blog posts: the post's own published date from src/data/posts.ts.
+// - /blog: the newest post's date.
+// - Other pages: the last git commit that touched that page's source files.
+//   If the date can't be known for certain (no git, or a shallow clone that
+//   doesn't reach the change), <lastmod> is left out rather than guessed.
 
-const staticRoutes = [
-  "/",
-  "/blog",
-  "/testimonials",
-  "/faq",
-  "/company-stores",
-  "/corporate-gifting",
-  "/promotional-products",
-  "/branded-apparel",
-  "/trade-show-products",
-  "/printing-packaging",
-  "/awards-recognition",
-  "/industries",
-  ...industries.map((i) => `/industries/${i.slug}`),
+const SRC = join(__dir, "..", "src");
+const pageSources = {
+  "/": ["pages/Home.tsx"],
+  "/testimonials": ["pages/TestimonialsPage.tsx", "components/Testimonials.tsx"],
+  "/faq": ["pages/FAQPage.tsx"],
+  "/company-stores": ["pages/CompanyStores.tsx"],
+  "/corporate-gifting": ["pages/CorporateGifting.tsx"],
+  "/promotional-products": ["pages/PromotionalProducts.tsx"],
+  "/branded-apparel": ["pages/BrandedApparel.tsx"],
+  "/trade-show-products": ["pages/TradeShowProducts.tsx"],
+  "/printing-packaging": ["pages/PrintingPackaging.tsx"],
+  "/awards-recognition": ["pages/AwardsRecognition.tsx"],
+  "/industries": ["pages/IndustriesHub.tsx", "data/industries.ts"],
+  ...Object.fromEntries(
+    industries.map((i) => [`/industries/${i.slug}`, ["pages/IndustryPage.tsx", "data/industries.ts"]])
+  ),
+};
+
+let shallowBoundary = new Set();
+let gitOk = true;
+try {
+  const shallowFile = execFileSync("git", ["rev-parse", "--git-path", "shallow"], { cwd: SRC, encoding: "utf-8" }).trim();
+  const abs = isAbsolute(shallowFile) ? shallowFile : join(SRC, shallowFile);
+  if (existsSync(abs)) shallowBoundary = new Set(readFileSync(abs, "utf-8").split(/\s+/).filter(Boolean));
+} catch {
+  gitOk = false;
+}
+
+function gitLastModified(files) {
+  if (!gitOk) return null;
+  try {
+    const out = execFileSync("git", ["log", "-1", "--format=%H %cs", "--", ...files.map((f) => join(SRC, f))], {
+      cwd: SRC,
+      encoding: "utf-8",
+    }).trim();
+    if (!out) return null;
+    const [hash, date] = out.split(" ");
+    // A shallow clone's oldest commit stands in for all earlier history, so
+    // its date isn't the real change date for these files.
+    if (shallowBoundary.has(hash)) return null;
+    return date;
+  } catch {
+    return null;
+  }
+}
+
+// "July 1, 2026" → "2026-07-01", without a timezone shift.
+function postDate(dateStr) {
+  const d = new Date(dateStr);
+  if (Number.isNaN(d.getTime())) return null;
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
+
+const postDates = posts.map((p) => postDate(p.date)).filter(Boolean).sort();
+const entries = [
+  ...Object.entries(pageSources).map(([url, files]) => ({ url, lastmod: gitLastModified(files) })),
+  { url: "/blog", lastmod: postDates[postDates.length - 1] ?? null },
+  ...posts.map((p) => ({ url: `/blog/${p.slug}`, lastmod: postDate(p.date) })),
 ];
-
-const blogSlugs = [
-  "smarter-promotional-products-houston",
-  "branded-apparel-houston-teams-will-want-to-wear",
-  "branded-apparel-vs-tech-gadgets",
-  "real-cost-of-promotional-products",
-  "make-onboarding-unforgettable",
-  "planning-your-2026-promotional-marketing-spend",
-  "is-your-workwear-keeping-up-with-your-workplace",
-  "7-fall-promo-ideas-that-fit-the-season",
-  "fall-corporate-apparel-in-houston",
-  "unique-promotional-products-competitors-arent-using",
-];
-
-const allUrls = [
-  ...staticRoutes,
-  ...blogSlugs.map((s) => `/blog/${s}`),
-];
-
-const today = new Date().toISOString().split("T")[0];
+const allUrls = entries.map((e) => e.url);
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allUrls
+${entries
   .map(
-    (url) => `  <url>
-    <loc>${BASE_URL}${url}</loc>
-    <lastmod>${today}</lastmod>
+    ({ url, lastmod }) => `  <url>
+    <loc>${BASE_URL}${url}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ""}
     <changefreq>${url === "/" ? "weekly" : "monthly"}</changefreq>
     <priority>${url === "/" ? "1.0" : url.startsWith("/blog/") ? "0.8" : "0.7"}</priority>
   </url>`
@@ -708,4 +743,4 @@ ${allUrls
 </urlset>`;
 
 writeFileSync(join(distDir, "sitemap.xml"), sitemap);
-console.log(`Sitemap → dist/public/sitemap.xml (${allUrls.length} URLs)`);
+console.log(`Sitemap → dist/public/sitemap.xml (${allUrls.length} URLs, ${entries.filter((e) => e.lastmod).length} with dates)`);

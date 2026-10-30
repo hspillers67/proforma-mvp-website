@@ -31,3 +31,6 @@ export function render(url: string): string {
 
 // Industry page copy, used by scripts/prerender.mjs for titles and schema.
 export { industries, industriesHub } from "./data/industries";
+
+// Blog posts, used by scripts/prerender.mjs for sitemap dates.
+export { posts } from "./data/posts";
