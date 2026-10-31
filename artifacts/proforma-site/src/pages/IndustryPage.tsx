@@ -80,6 +80,12 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
               <a href="/branded-apparel" className="text-secondary font-semibold hover:underline">Uniforms &amp; Branded Apparel</a>
               {" · "}
               <a href="/awards-recognition" className="text-secondary font-semibold hover:underline">Awards &amp; Recognition</a>
+              {industry.relatedPosts?.map((rp) => (
+                <span key={rp.href}>
+                  {" · "}
+                  <a href={rp.href} className="text-secondary font-semibold hover:underline">{rp.label}</a>
+                </span>
+              ))}
             </p>
           </div>
         </section>

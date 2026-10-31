@@ -257,7 +257,32 @@ const blogMeta = [
     imageSrc: "src/assets/blog/unique-promotional-products.jpg",
     imageAlt: "Unique promotional products on a wooden table, including a tech pouch, watercolor set, sewing kit, seed packet, bottle sling, wooden puzzle, collapsible pet bowl, and kitchen timer with a QR code tag",
   },
+  {
+    slug: "promo-distributor-vs-ordering-online",
+    pageTitle: "Promo Distributor vs. Ordering Online | ProForma MVP Marketing",
+    metaDescription: "Ordering promo products online vs. working with a distributor: an honest look at cost, quality, timing, and risk, and when each one makes sense.",
+    imageSrc: "src/assets/blog/promo-distributor-vs-ordering-online.jpg",
+    imageAlt: "Split image: ordering a branded polo on a laptop checkout page, next to a distributor reviewing a printed proof, fabric swatches, and a production checklist",
+  },
 ];
+
+// Pull FAQ pairs (an H3 question followed by a paragraph answer) from a post's
+// "Frequently Asked Questions" section, for FAQPage structured data.
+function postFaqs(slug) {
+  const post = posts.find((p) => p.slug === slug);
+  if (!post) return [];
+  const plain = (t) => t.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*([^*]+)\*\*/g, "$1");
+  const start = post.content.findIndex((b) => b.type === "heading" && b.level === 2 && /frequently asked questions/i.test(b.text));
+  if (start === -1) return [];
+  const faqs = [];
+  for (let i = start + 1; i < post.content.length; i++) {
+    const b = post.content[i];
+    if (b.type === "heading" && b.level === 2) break;
+    const next = post.content[i + 1];
+    if (b.type === "heading" && b.level === 3 && next?.type === "paragraph") faqs.push({ q: plain(b.text), a: plain(next.text) });
+  }
+  return faqs;
+}
 
 for (const post of blogMeta) {
   const canonical = `${BASE_URL}/blog/${post.slug}`;
@@ -284,6 +309,17 @@ for (const post of blogMeta) {
       /<meta property="og:type"[^>]*>/,
       `<meta property="og:type" content="article" />\n    <meta property="og:url" content="${canonical}" />`
     );
+  }
+
+  const faqs = postFaqs(post.slug);
+  if (faqs.length) {
+    html = injectJsonLd(html, [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+      },
+    ]);
   }
 
   mkdirSync(join(distDir, "blog", post.slug), { recursive: true });

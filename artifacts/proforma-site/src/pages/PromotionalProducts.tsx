@@ -79,6 +79,10 @@ export default function PromotionalProducts() {
               <a href="/trade-show-products" className="text-secondary font-semibold hover:underline">Trade show giveaways</a>.
               {" "}Client gifts. Employee appreciation. Onboarding kits. New location openings. Whatever the occasion, we make sure your brand shows up looking sharp.
             </p>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-6">
+              Not sure whether to order online or work with a distributor?{" "}
+              <a href="/blog/promo-distributor-vs-ordering-online" className="text-secondary font-semibold hover:underline">Here's an honest side-by-side</a>.
+            </p>
           </div>
         </section>
 

@@ -29,6 +29,7 @@ const faqs = [
       "Company stores that simplify ordering and eliminate errors.",
       "Decades of experience + Proforma's $650M buying power.",
     ],
+    related: { text: "Comparing options? Read", label: "Promo Distributor vs. Ordering Online", href: "/blog/promo-distributor-vs-ordering-online" },
   },
   {
     question: "Do you offer company stores for employees, clients, events, and retail?",
@@ -126,6 +127,12 @@ export default function FAQPage() {
                       </ul>
                     )}
                     {faq.answer && <p>{faq.answer}</p>}
+                    {faq.related && (
+                      <p>
+                        {faq.related.text}{" "}
+                        <Link href={faq.related.href} className="text-secondary font-semibold hover:underline">{faq.related.label}</Link>.
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
