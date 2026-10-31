@@ -107,6 +107,10 @@ export default function CompanyStores() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Stores can be open 24/7 or run as a limited-time pop-up. We handle fulfillment, inventory, and customer support so you don't have to.
             </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-6">
+              Planning next year?{" "}
+              <a href="/blog/planning-your-2027-promotional-products-budget" className="text-secondary font-semibold hover:underline">See how a company store fits into your 2027 promo budget</a>.
+            </p>
           </div>
         </section>
 
