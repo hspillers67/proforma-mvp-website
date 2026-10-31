@@ -150,6 +150,10 @@ export default function CorporateGifting() {
               </Link>{" "}
               lets every recipient pick their own item from a curated, branded shop.
             </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              Building next year's gifting plan?{" "}
+              <Link to="/blog/planning-your-2027-promotional-products-budget" className="text-secondary font-semibold hover:underline">Here's how to plan your 2027 promo budget</Link>.
+            </p>
           </div>
         </section>
 
