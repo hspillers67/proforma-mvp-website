@@ -28,6 +28,8 @@ export interface Industry {
   programs: IndustryItem[];
   faqs: IndustryFaq[];
   ctaHeading: string;
+  // Optional blog posts to link from the page's "Related" line.
+  relatedPosts?: { label: string; href: string }[];
 }
 
 export const industries: Industry[] = [
@@ -66,6 +68,7 @@ export const industries: Industry[] = [
       { q: "Can you ship to multiple plants and field sites?", a: "Yes. We can split orders by location and ship directly to offices, plants, or field sites, or set up a company store so each site orders its own." },
       { q: "Where are you located?", a: "We're based in Katy, Texas, and serve energy and petrochemical companies across Greater Houston, including the Energy Corridor, Pasadena, Baytown, the Ship Channel, and the Gulf Coast." },
     ],
+    relatedPosts: [{ label: "Promo Distributor vs. Ordering Online", href: "/blog/promo-distributor-vs-ordering-online" }],
     ctaHeading: "Need gear that meets site requirements?",
   },
   {
@@ -177,6 +180,7 @@ export const industries: Industry[] = [
       { q: "Can you make hard hat stickers and jobsite signage?", a: "Yes. We supply hard hat stickers, equipment decals, banners, fence wraps, and other jobsite signage." },
       { q: "Where do you serve?", a: "We're based in Katy, Texas, and work with construction and industrial service companies across Greater Houston, including Katy, Houston, Pasadena, Baytown, Sugar Land, and Pearland." },
     ],
+    relatedPosts: [{ label: "Promo Distributor vs. Ordering Online", href: "/blog/promo-distributor-vs-ordering-online" }],
     ctaHeading: "Ready to outfit your crews?",
   },
 ];

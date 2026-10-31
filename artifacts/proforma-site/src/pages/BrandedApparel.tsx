@@ -111,6 +111,10 @@ export default function BrandedApparel() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Tell us who's wearing it, where they're wearing it, and what impression you want to make. We'll handle the rest — from decoration method to sizing to delivery.
             </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              Wondering how that compares with ordering shirts online yourself?{" "}
+              <a href="/blog/promo-distributor-vs-ordering-online" className="text-secondary font-semibold hover:underline">See the side-by-side comparison</a>.
+            </p>
           </div>
         </section>
 
