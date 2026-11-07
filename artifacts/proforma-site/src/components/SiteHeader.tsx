@@ -75,7 +75,7 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
             />
           </Link>
 
-          {/* Desktop: product search on top, nav + CTA below */}
+          {/* Desktop: product search on top, nav below */}
           <div className="hidden min-[1120px]:flex flex-col items-end gap-2">
           <ProductSearch className="w-full max-w-md" />
           <div className="flex items-center gap-5 xl:gap-7 2xl:gap-10">
@@ -117,14 +117,6 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
             <a href="https://proformamvpmarketing.espwebsites.com/" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${defaultCls}`}>Browse Products</a>
             <a href="/#contact" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${defaultCls}`}>Contact</a>
           </nav>
-
-          {/* Desktop CTA */}
-          <a
-            href="/#contact"
-            className="inline-flex shrink-0 whitespace-nowrap h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90"
-          >
-            Let's Talk
-          </a>
           </div>
           </div>
 
