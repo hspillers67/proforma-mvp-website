@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Gift } from "lucide-react";
 import { getActiveBanner } from "@/data/seasonalBanners";
 
 /**
- * Slim seasonal promo strip at the very top of the fixed header.
- * Content and dates live in src/data/seasonalBanners.ts.
+ * Seasonal promo strip at the very top of the fixed header.
+ * Content, colors and dates live in src/data/seasonalBanners.ts.
  * Sets --strip-h so page content and the mobile menu clear the taller header.
  */
 export default function SeasonalStrip() {
@@ -21,19 +21,21 @@ export default function SeasonalStrip() {
 
   return (
     <>
-      <style>{`:root{--strip-h:2.25rem}`}</style>
+      <style>{`:root{--strip-h:3rem}`}</style>
       <a
         href={banner.href}
         {...(isExternal ? { rel: "noopener" } : {})}
-        className="group flex h-9 items-center justify-center gap-2 bg-secondary px-4 text-white text-xs sm:text-sm font-display font-medium hover:bg-secondary/90 transition-colors"
+        style={{ backgroundColor: banner.background, borderBottom: `2px solid ${banner.accent}` }}
+        className="group flex h-12 items-center justify-center gap-2.5 px-4 text-white text-sm md:text-base font-display font-semibold transition-[filter] hover:brightness-110"
       >
+        <Gift className="w-5 h-5 shrink-0" style={{ color: banner.accent }} aria-hidden="true" />
         <span className="truncate">
           <span className="hidden sm:inline">{banner.message}</span>
           <span className="sm:hidden">{banner.shortMessage}</span>
           <span className="hidden sm:inline"> — </span>
-          <span className="hidden sm:inline font-semibold underline underline-offset-2">{banner.linkText}</span>
+          <span className="hidden sm:inline underline underline-offset-4" style={{ color: banner.accent }}>{banner.linkText}</span>
         </span>
-        <ArrowRight className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5" />
+        <ArrowRight className="w-5 h-5 shrink-0 transition-transform group-hover:translate-x-1" style={{ color: banner.accent }} aria-hidden="true" />
       </a>
     </>
   );

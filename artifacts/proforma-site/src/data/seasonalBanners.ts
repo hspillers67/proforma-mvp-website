@@ -11,6 +11,7 @@
  *   shortMessage — shorter text for phones (keep it under ~40 characters)
  *   linkText     — the clickable call to action at the end
  *   href         — where it goes (ESP collection, a page on the site, /#contact)
+ *   background   — strip color (hex); accent — icon/link color (hex)
  */
 export interface SeasonalBanner {
   start: string;
@@ -19,17 +20,21 @@ export interface SeasonalBanner {
   shortMessage: string;
   linkText: string;
   href: string;
+  background: string;
+  accent: string;
 }
 
 export const seasonalBanners: SeasonalBanner[] = [
   {
     start: "2026-11-01",
     end: "2026-12-15",
-    message: "🎁 Holiday food gifts with free shipping on nearly the entire Maple Ridge line",
-    shortMessage: "🎁 Free shipping on holiday food gifts",
+    message: "Free shipping on nearly the entire line of our favorite holiday food gifts",
+    shortMessage: "Free shipping on holiday food gifts",
     linkText: "Shop gourmet gifts",
     // TODO: replace with the Maple Ridge collection URL on the ESP site
     href: "/corporate-gifting",
+    background: "#0F4D32", // evergreen
+    accent: "#F2C75C", // warm gold
   },
 ];
 
