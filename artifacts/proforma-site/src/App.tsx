@@ -19,6 +19,7 @@ import AwardsRecognition from "@/pages/AwardsRecognition";
 import CorporateGifting from "@/pages/CorporateGifting";
 import IndustryPage from "@/pages/IndustryPage";
 import IndustriesHub from "@/pages/IndustriesHub";
+import ChatWidget from "@/components/ChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,7 @@ function App() {
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
             <Router />
           </WouterRouter>
+          <ChatWidget />
           <Toaster />
         </TooltipProvider>
       </QueryClientProvider>
