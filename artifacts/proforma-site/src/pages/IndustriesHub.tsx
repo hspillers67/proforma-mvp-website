@@ -9,7 +9,7 @@ export default function IndustriesHub() {
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader currentPage="industries" />
 
-      <main className="flex-grow pt-20 md:pt-28">
+      <main className="flex-grow pt-[calc(5rem+var(--strip-h,0px))] md:pt-[calc(7rem+var(--strip-h,0px))]">
         {/* Focus industries (page headline) */}
         <section style={{ backgroundColor: "#F5F5F5" }} className="py-10 md:py-14">
           <div className="container mx-auto px-6 max-w-5xl">

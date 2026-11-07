@@ -123,7 +123,7 @@ export default function BlogPost() {
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader currentPage="blog" />
 
-      <main className="flex-grow pt-20 md:pt-28">
+      <main className="flex-grow pt-[calc(5rem+var(--strip-h,0px))] md:pt-[calc(7rem+var(--strip-h,0px))]">
         {/* Hero */}
         <div style={post.bannerAspect ? { aspectRatio: String(post.bannerAspect) } : undefined} className="w-full aspect-[21/6] md:aspect-[21/5] bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center overflow-hidden">
           {post.image ? (

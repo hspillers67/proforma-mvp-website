@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { ChevronDown, Menu, X } from "lucide-react";
 import ProductSearch from "@/components/ProductSearch";
+import SeasonalStrip from "@/components/SeasonalStrip";
 import logoHorizontalPath from "@/assets/optimized/logo-horizontal-160.webp";
 import logoHorizontal2xPath from "@/assets/optimized/logo-horizontal-320.webp";
 
@@ -63,6 +64,7 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-white/10">
+        <SeasonalStrip />
         <div className="mx-auto px-6 md:px-8 h-20 md:h-28 flex items-center justify-between max-w-screen-2xl">
 
           {/* Logo */}
@@ -143,8 +145,8 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
 
       {/* Mobile menu panel */}
       <div
-        className={`fixed top-20 md:top-28 left-0 right-0 z-40 min-[1120px]:hidden bg-primary border-b border-white/10 overflow-y-auto transition-all duration-300 ${
-          isOpen ? "max-h-[calc(100dvh-5rem)] md:max-h-[calc(100dvh-7rem)] opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+        className={`fixed top-[calc(5rem+var(--strip-h,0px))] md:top-[calc(7rem+var(--strip-h,0px))] left-0 right-0 z-40 min-[1120px]:hidden bg-primary border-b border-white/10 overflow-y-auto transition-all duration-300 ${
+          isOpen ? "max-h-[calc(100dvh-5rem-var(--strip-h,0px))] md:max-h-[calc(100dvh-7rem-var(--strip-h,0px))] opacity-100" : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
         <nav className="flex flex-col px-6 py-6 gap-1">

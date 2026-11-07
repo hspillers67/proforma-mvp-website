@@ -66,7 +66,7 @@ export default function Blog() {
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader currentPage="blog" />
 
-      <main className="flex-grow pt-20 md:pt-28">
+      <main className="flex-grow pt-[calc(5rem+var(--strip-h,0px))] md:pt-[calc(7rem+var(--strip-h,0px))]">
         {/* Hero */}
         <section className="bg-primary py-20 md:py-28 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-secondary/30 pointer-events-none" />
