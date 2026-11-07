@@ -110,7 +110,7 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
             <Link href="/blog" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${currentPage === "blog" ? activeCls : defaultCls}`}>Blog</Link>
             <Link href="/testimonials" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${currentPage === "testimonials" ? activeCls : defaultCls}`}>Testimonials</Link>
             <Link href="/faq" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${currentPage === "faq" ? activeCls : defaultCls}`}>FAQ</Link>
-            <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${defaultCls}`}>Browse Products</a>
+            <a href="https://proformamvpmarketing.espwebsites.com/" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${defaultCls}`}>Browse Products</a>
             <a href="/#contact" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${defaultCls}`}>Contact</a>
           </nav>
 
@@ -204,7 +204,7 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
           <a href="/faq" onClick={close} className="flex items-center h-12 text-base font-display font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10">
             FAQ
           </a>
-          <a href="https://proformamvpmarketing.espwebsites.com/" target="_blank" rel="noopener noreferrer" onClick={close} className="flex items-center h-12 text-base font-display font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10">
+          <a href="https://proformamvpmarketing.espwebsites.com/" onClick={close} className="flex items-center h-12 text-base font-display font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10">
             Browse Products
           </a>
           <a href="/#contact" onClick={close} className="flex items-center h-12 text-base font-display font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10">

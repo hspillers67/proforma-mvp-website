@@ -127,8 +127,6 @@ export default function CompanyStores() {
               </a>
               <a
                 href="https://proformamvpmarketing.espwebsites.com/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex h-14 items-center justify-center rounded-md border-2 border-white/70 bg-white/10 backdrop-blur-sm px-10 text-base font-display font-semibold text-white shadow-sm transition-colors hover:bg-white hover:text-primary"
               >
                 Browse Products
