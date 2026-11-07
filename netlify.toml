@@ -2,6 +2,9 @@
   command = "pnpm --filter @workspace/proforma-site run build"
   publish = "artifacts/proforma-site/dist/public"
 
+[functions]
+  directory = "netlify/functions"
+
 [build.environment]
   NODE_VERSION = "24"
   BASE_PATH = "/"
