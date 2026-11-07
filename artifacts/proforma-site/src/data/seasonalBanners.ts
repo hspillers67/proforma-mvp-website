@@ -31,8 +31,8 @@ export const seasonalBanners: SeasonalBanner[] = [
     message: "Free shipping on nearly the entire line of our favorite holiday food gifts",
     shortMessage: "Free shipping on holiday food gifts",
     linkText: "Shop gourmet gifts",
-    // TODO: replace with the Maple Ridge collection URL on the ESP site
-    href: "/corporate-gifting",
+    // Maple Ridge holiday food gifts collection (ESP / mypromooffice)
+    href: "https://portal.mypromooffice.com/collections/3c4309c7-d27e-4611-bfbb-577b78b12379?accessCode=87864cf99de34d31b26edef22d67f0a3",
     background: "#0F4D32", // evergreen
     accent: "#F2C75C", // warm gold
   },
