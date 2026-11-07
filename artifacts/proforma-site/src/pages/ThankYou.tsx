@@ -15,7 +15,7 @@ export default function ThankYou() {
         </div>
       </header>
 
-      <main className="flex-grow flex items-center justify-center pt-20 px-6">
+      <main className="flex-grow flex items-center justify-center pt-[calc(5rem+var(--strip-h,0px))] px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}

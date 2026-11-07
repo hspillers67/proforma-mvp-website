@@ -106,7 +106,7 @@ export default function TestimonialsPage() {
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader currentPage="testimonials" />
 
-      <main className="flex-grow pt-20 md:pt-28">
+      <main className="flex-grow pt-[calc(5rem+var(--strip-h,0px))] md:pt-[calc(7rem+var(--strip-h,0px))]">
         {/* Page Header */}
         <section className="bg-primary text-primary-foreground py-20 md:py-28">
           <div className="container mx-auto px-6">

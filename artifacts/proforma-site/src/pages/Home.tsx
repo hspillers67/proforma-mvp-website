@@ -76,7 +76,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col w-full bg-background selection:bg-secondary selection:text-white">
       <SiteHeader currentPage="home" />
 
-      <main className="flex-grow pt-20 md:pt-28">
+      <main className="flex-grow pt-[calc(5rem+var(--strip-h,0px))] md:pt-[calc(7rem+var(--strip-h,0px))]">
         {/* Hero Section — Split layout: navy copy panel + full-contrast image */}
         <section className="relative overflow-hidden bg-primary">
           <div className="flex flex-col lg:flex-row lg:min-h-[50vh]">
