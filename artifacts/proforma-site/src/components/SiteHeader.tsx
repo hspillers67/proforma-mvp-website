@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { ChevronDown, Menu, X } from "lucide-react";
+import ProductSearch from "@/components/ProductSearch";
 import logoHorizontalPath from "@/assets/optimized/logo-horizontal-160.webp";
 import logoHorizontal2xPath from "@/assets/optimized/logo-horizontal-320.webp";
 
@@ -74,7 +75,10 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
             />
           </Link>
 
-          {/* Desktop nav */}
+          {/* Desktop: product search on top, nav below */}
+          <div className="hidden min-[1120px]:flex flex-col items-end gap-2">
+          <ProductSearch className="w-full max-w-md" />
+          <div className="flex items-center gap-5 xl:gap-7 2xl:gap-10">
           <nav className="hidden min-[1120px]:flex items-center gap-5 xl:gap-7 2xl:gap-10">
             <Link href="/" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${currentPage === "home" ? activeCls : defaultCls}`}>Home</Link>
 
@@ -113,14 +117,8 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
             <a href="https://proformamvpmarketing.espwebsites.com/" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${defaultCls}`}>Browse Products</a>
             <a href="/#contact" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${defaultCls}`}>Contact</a>
           </nav>
-
-          {/* Desktop CTA */}
-          <a
-            href="/#contact"
-            className="hidden min-[1120px]:inline-flex shrink-0 whitespace-nowrap h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90"
-          >
-            Let's Talk
-          </a>
+          </div>
+          </div>
 
           {/* Mobile hamburger */}
           <button
@@ -150,6 +148,9 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
         }`}
       >
         <nav className="flex flex-col px-6 py-6 gap-1">
+
+          {/* Product search */}
+          <ProductSearch className="mb-3" onSearch={close} />
 
           {/* Home */}
           <a href="/" onClick={close} className="flex items-center h-12 text-base font-display font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10">
