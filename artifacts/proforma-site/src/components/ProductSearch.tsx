@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useId, useState, type FormEvent } from "react";
 import { Search } from "lucide-react";
 
 const ESP_SEARCH_URL = "https://proformamvpmarketing.espwebsites.com/products";
@@ -15,6 +15,7 @@ interface ProductSearchProps {
  */
 export default function ProductSearch({ autoFocus, className = "", onSearch }: ProductSearchProps) {
   const [query, setQuery] = useState("");
+  const inputId = useId();
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -33,9 +34,9 @@ export default function ProductSearch({ autoFocus, className = "", onSearch }: P
       onSubmit={handleSubmit}
       className={`flex items-center border-b-2 border-white/80 focus-within:border-white ${className}`}
     >
-      <label htmlFor="product-search" className="sr-only">Search for products</label>
+      <label htmlFor={inputId} className="sr-only">Search for products</label>
       <input
-        id="product-search"
+        id={inputId}
         name="q"
         type="search"
         value={query}

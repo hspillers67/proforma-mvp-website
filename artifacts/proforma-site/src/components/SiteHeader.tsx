@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { ChevronDown, Menu, Search, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import ProductSearch from "@/components/ProductSearch";
 import logoHorizontalPath from "@/assets/optimized/logo-horizontal-160.webp";
 import logoHorizontal2xPath from "@/assets/optimized/logo-horizontal-320.webp";
@@ -40,7 +40,6 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [capOpen, setCapOpen] = useState(false);
   const [indOpen, setIndOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
   const [location] = useLocation();
 
   // Close mobile menu on route change
@@ -48,16 +47,7 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
     setIsOpen(false);
     setCapOpen(false);
     setIndOpen(false);
-    setSearchOpen(false);
   }, [location]);
-
-  // Close desktop search with Escape
-  useEffect(() => {
-    if (!searchOpen) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setSearchOpen(false); };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [searchOpen]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -85,7 +75,10 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
             />
           </Link>
 
-          {/* Desktop nav */}
+          {/* Desktop: product search on top, nav + CTA below */}
+          <div className="hidden min-[1120px]:flex flex-col items-end gap-2">
+          <ProductSearch className="w-full max-w-md" />
+          <div className="flex items-center gap-5 xl:gap-7 2xl:gap-10">
           <nav className="hidden min-[1120px]:flex items-center gap-5 xl:gap-7 2xl:gap-10">
             <Link href="/" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${currentPage === "home" ? activeCls : defaultCls}`}>Home</Link>
 
@@ -125,22 +118,14 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
             <a href="/#contact" className={`text-sm xl:text-base font-display font-medium whitespace-nowrap ${defaultCls}`}>Contact</a>
           </nav>
 
-          {/* Desktop product search toggle + CTA */}
-          <div className="hidden min-[1120px]:flex items-center gap-3 shrink-0">
-          <button
-            onClick={() => setSearchOpen((v) => !v)}
-            aria-label={searchOpen ? "Close product search" : "Search products"}
-            aria-expanded={searchOpen}
-            className="flex items-center justify-center w-11 h-11 rounded-full text-white hover:bg-white/10 transition-colors"
-          >
-            {searchOpen ? <X className="w-5 h-5" /> : <Search className="w-5 h-5" />}
-          </button>
+          {/* Desktop CTA */}
           <a
             href="/#contact"
             className="inline-flex shrink-0 whitespace-nowrap h-11 items-center justify-center rounded-md bg-secondary px-7 text-sm font-display font-semibold text-white shadow transition-colors hover:bg-secondary/90"
           >
             Let's Talk
           </a>
+          </div>
           </div>
 
           {/* Mobile hamburger */}
@@ -153,15 +138,6 @@ export default function SiteHeader({ currentPage = "other" }: SiteHeaderProps) {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Desktop product search bar (drops down below the header) */}
-        {searchOpen && (
-          <div className="hidden min-[1120px]:block absolute top-full left-0 right-0 bg-primary border-b border-white/10 shadow-lg">
-            <div className="mx-auto max-w-screen-2xl px-6 md:px-8 py-5 flex justify-end">
-              <ProductSearch autoFocus className="w-full max-w-2xl" onSearch={() => setSearchOpen(false)} />
-            </div>
-          </div>
-        )}
       </header>
 
       {/* Mobile menu overlay */}
