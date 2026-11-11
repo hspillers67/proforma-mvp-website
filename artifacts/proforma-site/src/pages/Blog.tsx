@@ -14,6 +14,7 @@ const categoryColors: Record<string, string> = {
   "Employee Experience": "bg-emerald-50 text-emerald-700",
   "Planning": "bg-amber-50 text-amber-700",
   "Sourcing & Compliance": "bg-blue-50 text-blue-700",
+  "Buying Guides": "bg-violet-50 text-violet-700",
 };
 
 function PostCard({ post }: { post: (typeof posts)[number] }) {
