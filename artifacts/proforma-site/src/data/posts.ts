@@ -34,8 +34,8 @@ export interface Post {
 
 export const posts: Post[] = ([
   {
-    slug: "promo-distributor-vs-ordering-online",
-    title: "Promo Distributor vs. Ordering Online: Which Is Right for Your Next Order?",
+    slug: "promo-products-pro-vs-ordering-online",
+    title: "Working With a Promo Products Pro vs. Ordering Online: Which Is Right for Your Next Order?",
     excerpt: "Ordering branded merchandise online is fast for simple jobs. A distributor earns its keep when the order gets bigger, riskier, or more important. Here's how to tell which you need.",
     category: "Buying Guides",
     date: "November 11, 2026",

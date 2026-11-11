@@ -29,7 +29,7 @@ const faqs = [
       "Company stores that simplify ordering and eliminate errors.",
       "Decades of experience + Proforma's $650M buying power.",
     ],
-    related: { text: "Comparing options? Read", label: "Promo Distributor vs. Ordering Online", href: "/blog/promo-distributor-vs-ordering-online" },
+    related: { text: "Comparing options? Read", label: "Working With a Promo Products Pro vs. Ordering Online", href: "/blog/promo-products-pro-vs-ordering-online" },
   },
   {
     question: "Do you offer company stores for employees, clients, events, and retail?",

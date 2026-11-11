@@ -258,9 +258,9 @@ const blogMeta = [
     imageAlt: "Unique promotional products on a wooden table, including a tech pouch, watercolor set, sewing kit, seed packet, bottle sling, wooden puzzle, collapsible pet bowl, and kitchen timer with a QR code tag",
   },
   {
-    slug: "promo-distributor-vs-ordering-online",
-    pageTitle: "Promo Distributor vs. Ordering Online | ProForma MVP Marketing",
-    metaDescription: "Ordering promo products online vs. working with a distributor: an honest look at cost, quality, timing, and risk, and when each one makes sense.",
+    slug: "promo-products-pro-vs-ordering-online",
+    pageTitle: "Promo Products Pro vs. Ordering Online | ProForma MVP Marketing",
+    metaDescription: "Ordering promo products online vs. working with a promo products pro: an honest look at cost, quality, timing, and risk, and when each one makes sense.",
     imageSrc: "src/assets/blog/promo-distributor-vs-ordering-online.jpg",
     imageAlt: "Split image: ordering a branded polo on a laptop checkout page, next to a distributor reviewing a printed proof, fabric swatches, and a production checklist",
   },

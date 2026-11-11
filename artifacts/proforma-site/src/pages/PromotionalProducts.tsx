@@ -81,7 +81,7 @@ export default function PromotionalProducts() {
             </p>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-6">
               Not sure whether to order online or work with a distributor?{" "}
-              <a href="/blog/promo-distributor-vs-ordering-online" className="text-secondary font-semibold hover:underline">Here's an honest side-by-side</a>.
+              <a href="/blog/promo-products-pro-vs-ordering-online" className="text-secondary font-semibold hover:underline">Here's an honest side-by-side</a>.
             </p>
           </div>
         </section>
