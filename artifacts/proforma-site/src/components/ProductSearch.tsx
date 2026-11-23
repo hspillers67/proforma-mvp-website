@@ -1,7 +1,7 @@
 import { useId, useState, type FormEvent } from "react";
 import { Search } from "lucide-react";
 
-const ESP_SEARCH_URL = "https://proformamvpmarketing.espwebsites.com/products";
+const ESP_SEARCH_URL = "https://products.proformamvpmarketing.com/products";
 
 interface ProductSearchProps {
   autoFocus?: boolean;
