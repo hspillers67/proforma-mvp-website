@@ -188,6 +188,13 @@ function escapeAttr(str) {
 
 const blogMeta = [
   {
+    slug: "planning-your-2027-promotional-products-budget",
+    pageTitle: "Plan Your 2027 Promotional Products Budget | ProForma MVP Marketing",
+    metaDescription: "A practical guide to planning your 2027 promotional products budget: start from this year's spend, map the calendar by quarter, and avoid rush fees.",
+    imageSrc: "src/assets/blog/planning-2027-promotional-products-budget.jpg",
+    imageAlt: "Desk with a laptop showing a 2027 promotional budget by category and quarter, an open January 2027 planner, and a branded tumbler and notebook",
+  },
+  {
     slug: "smarter-promotional-products-houston",
     pageTitle: "Smarter Promotional Products in Houston | ProForma MVP Marketing",
     metaDescription: "Houston businesses are moving past \"cheapest option wins\" thinking. Here's what smarter promotional product buying looks like in 2026.",
